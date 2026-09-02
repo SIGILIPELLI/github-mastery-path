@@ -1,0 +1,102 @@
+site_name: GitHub & Git Mastery Path
+site_description: A structured, module-wise Git version control and GitHub training program from entry level to master level.
+site_url: https://sigilipelli.github.io/github-mastery-path/
+repo_url: https://github.com/SIGILIPELLI/github-mastery-path
+repo_name: github-mastery-path
+
+theme:
+  name: material
+  favicon: assets/favicon.svg
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Privacy Policy: privacy.md
+  - "Level 1 · Entry":
+      - Overview: level-1/index.md
+      - "01 · What Is Git & Why Version Control?": level-1/01-what-is-git-why-version-control.md
+      - "02 · Installing Git & Configuration": level-1/02-installing-git-config.md
+      - "03 · The Basic Workflow (init/add/commit/status/log)": level-1/03-basic-workflow.md
+      - "04 · Branching Basics": level-1/04-branching-basics.md
+      - "05 · Merging Basics": level-1/05-merging-basics.md
+      - "06 · Remotes (clone/push/pull/fetch)": level-1/06-remotes.md
+      - "07 · What Is GitHub? (repos, issues, web UI)": level-1/07-what-is-github.md
+      - "08 · Creating a GitHub Repo & Pushing": level-1/08-creating-github-repo-pushing.md
+      - "09 · .gitignore Basics": level-1/09-gitignore-basics.md
+      - "10 · Project — Clone, Fork & Ship a Repo": level-1/10-project-clone-fork-ship.md
+  - "Level 2 · Intermediate":
+      - Overview: level-2/index.md
+      - "01 · Merge Conflicts & Resolution": level-2/01-merge-conflicts-resolution.md
+      - "02 · Rebase vs Merge": level-2/02-rebase-vs-merge.md
+      - "03 · Pull Requests (create, review, merge)": level-2/03-pull-requests.md
+      - "04 · GitHub Issues & Project Boards": level-2/04-issues-project-boards.md
+      - "05 · Branch Protection Rules": level-2/05-branch-protection-rules.md
+      - "06 · Tags & Releases": level-2/06-tags-releases.md
+      - "07 · Code Review Etiquette & Workflow": level-2/07-code-review-etiquette.md
+      - "08 · GitHub CLI (gh)": level-2/08-github-cli.md
+      - "09 · Forking Workflow & Contributing to OSS": level-2/09-forking-workflow-oss.md
+      - "10 · Project — Team Collaboration Workflow": level-2/10-project-team-collaboration.md
+  - "Level 3 · Advanced":
+      - Overview: level-3/index.md
+      - "01 · Git Internals (objects, refs, .git directory)": level-3/01-git-internals.md
+      - "02 · Interactive Rebase & History Rewriting": level-3/02-interactive-rebase-history-rewriting.md
+      - "03 · Cherry-Picking": level-3/03-cherry-picking.md
+      - "04 · GitHub Actions Basics (a simple CI workflow)": level-3/04-github-actions-basics.md
+      - "05 · Submodules": level-3/05-submodules.md
+      - "06 · Git Hooks": level-3/06-git-hooks.md
+      - "07 · Git Bisect & Debugging History": level-3/07-git-bisect-debugging-history.md
+      - "08 · Reflog & Recovering Lost Work": level-3/08-reflog-recovering-lost-work.md
+      - "09 · GitHub Secrets & Environments": level-3/09-github-secrets-environments.md
+      - "10 · Project — CI Pipeline for a Real Project": level-3/10-project-ci-pipeline.md
+  - "Level 4 · Master":
+      - Overview: level-4/index.md
+      - "01 · Advanced GitHub Actions (matrix, caching, reusable workflows)": level-4/01-advanced-github-actions.md
+      - "02 · Monorepo Strategies": level-4/02-monorepo-strategies.md
+      - "03 · Git Workflow Strategies (GitFlow, Trunk-Based)": level-4/03-git-workflow-strategies.md
+      - "04 · Large Repo Performance (sparse checkout, partial clone)": level-4/04-large-repo-performance.md
+      - "05 · Designing a Team Git/GitHub Workflow": level-4/05-designing-team-workflow.md
+      - "06 · GitHub Apps & Automation": level-4/06-github-apps-automation.md
+      - "07 · Release Engineering & Versioning Strategy": level-4/07-release-engineering-versioning.md
+      - "08 · Security Hardening (CODEOWNERS, signed commits, SAST)": level-4/08-security-hardening.md
+      - "09 · Self-Hosted Runners & Enterprise GitHub": level-4/09-self-hosted-runners-enterprise.md
+      - "10 · Capstone Project": level-4/10-capstone-project.md
