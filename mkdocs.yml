@@ -52,6 +52,7 @@ extra_css:
 nav:
   - Home: index.md
   - Privacy Policy: privacy.md
+  - License: license.md
   - "Level 1 · Entry":
       - Overview: level-1/index.md
       - "01 · What Is Git & Why Version Control?": level-1/01-what-is-git-why-version-control.md
