@@ -2,186 +2,190 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
+    </url>
+    <url>
+         <loc>https://sigilipelli.github.io/github-mastery-path/license/</loc>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/privacy/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/01-what-is-git-why-version-control/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/02-installing-git-config/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/03-basic-workflow/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/04-branching-basics/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/05-merging-basics/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/06-remotes/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/07-what-is-github/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/08-creating-github-repo-pushing/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/09-gitignore-basics/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-1/10-project-clone-fork-ship/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/01-merge-conflicts-resolution/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/02-rebase-vs-merge/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/03-pull-requests/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/04-issues-project-boards/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/05-branch-protection-rules/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/06-tags-releases/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/07-code-review-etiquette/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/08-github-cli/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/09-forking-workflow-oss/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-2/10-project-team-collaboration/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/01-git-internals/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/02-interactive-rebase-history-rewriting/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/03-cherry-picking/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/04-github-actions-basics/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/05-submodules/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/06-git-hooks/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/07-git-bisect-debugging-history/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/08-reflog-recovering-lost-work/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/09-github-secrets-environments/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-3/10-project-ci-pipeline/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/01-advanced-github-actions/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/02-monorepo-strategies/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/03-git-workflow-strategies/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/04-large-repo-performance/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/05-designing-team-workflow/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/06-github-apps-automation/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/07-release-engineering-versioning/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/08-security-hardening/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/09-self-hosted-runners-enterprise/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
     <url>
          <loc>https://sigilipelli.github.io/github-mastery-path/level-4/10-capstone-project/</loc>
-         <lastmod>2026-09-02</lastmod>
+         <lastmod>2026-09-04</lastmod>
     </url>
 </urlset>
