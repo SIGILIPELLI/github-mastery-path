@@ -136,6 +136,38 @@ git push -u origin main
 If this is your first push ever from this machine, you'll be prompted to
 authenticate (token or `gh auth login`) at this step.
 
+## How It Actually Works
+
+The `-u` (`--set-upstream`) flag and the "branch not tracking" errors you'll
+occasionally see both come from one small piece of metadata:
+
+- `git push -u origin main` does two separate things: it pushes your
+  objects and updates `origin`'s `refs/heads/main`, *and* it writes two
+  lines into `.git/config` — `branch.main.remote = origin` and
+  `branch.main.merge = refs/heads/main`. That's the entire "tracking
+  relationship." Every bare `git push`/`git pull` afterward reads those two
+  lines to figure out which remote and which remote branch to talk to,
+  which is why you can drop `origin main` from every subsequent command.
+- Your local commit objects are byte-for-byte the same objects that exist
+  on GitHub after a push — the SHA of a commit doesn't change when you push
+  it. This is why `git push` can be so fast the second time: Git compares
+  the SHAs it has against the SHAs the server reports having, and only
+  transmits objects the server is actually missing, packed and
+  delta-compressed together into one packfile for the connection.
+- Repo **visibility** (public/private) and features like the web file
+  browser exist entirely in GitHub's application layer, sitting in front of
+  the same bare repository — flipping a repo from private to public
+  doesn't touch a single Git object; it only changes an access-control
+  check GitHub's servers apply before serving requests for that
+  repository's data.
+- Creating an *empty* repo on GitHub (no README) matters mechanically: if
+  you'd let GitHub initialize the repo with a README, GitHub would have
+  created an initial commit server-side with no shared ancestor with your
+  local history, and your first `git push` would be rejected as
+  non-fast-forward (the same rejection mechanism from the previous
+  module) — you'd have had to `pull` and merge the unrelated histories
+  first.
+
 ## Exercise
 
 Create a new, empty GitHub repository (no README) called `git-course-demo`.

@@ -157,6 +157,36 @@ A  index.js
 
 Notice `build/` and `.env` never appear — exactly the intended effect.
 
+## How It Actually Works
+
+`.gitignore` isn't enforced by some special ignore engine — it's a filter
+consulted at exactly one point: when Git decides whether a file is a
+candidate to be *added to the index*.
+
+- `git status` and `git add -A` build their list of "untracked files" by
+  walking the working directory and checking each path against every
+  applicable ignore file (`.gitignore` in that directory and its parents,
+  `.git/info/exclude`, and the global `core.excludesfile`) using glob
+  pattern matching. A file that matches a pattern is simply skipped from
+  that candidate list — Git never even hashes it, so an ignored file has no
+  corresponding blob and doesn't touch the object database at all.
+- This is precisely why `.gitignore` **cannot un-track a file that's
+  already tracked**: if a path already has an entry in `.git/index`, Git
+  considers it explicitly tracked regardless of what any ignore pattern
+  says, and will keep reporting changes to it. Removing it requires
+  `git rm --cached <path>` (deletes the index entry, keeps the file on
+  disk) *in addition to* adding the ignore pattern.
+- Precedence resolves the same "last match wins, most specific file wins"
+  way as Git config: `.git/info/exclude` (local-only, never committed) is
+  checked, then `.gitignore` files from the repo root down to the file's
+  own directory, with a `.gitignore` deeper in the tree able to override a
+  broader pattern set higher up (e.g. `!important.log` un-ignoring a file
+  inside a directory where `*.log` is otherwise ignored).
+- GitHub's server-side "Add .gitignore" dropdown does nothing more exotic
+  than committing one of its template files as `.gitignore` in your new
+  repo's initial commit — the templates at github/gitignore are just
+  community-maintained text files, not a different mechanism.
+
 ## Exercise
 
 In a fresh repo, create a `build/` directory with a dummy file in it, an

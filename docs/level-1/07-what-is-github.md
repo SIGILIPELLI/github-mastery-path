@@ -101,6 +101,40 @@ your code already cloned) accessible from the browser. Neither replaces
 learning the Git CLI — but they're worth knowing about for quick fixes from
 a device without your usual setup.
 
+## How It Actually Works
+
+GitHub is, at its core, a giant fleet of Git servers plus a database and
+web app layered on top — understanding where the line sits between "plain
+Git" and "GitHub's own product" clarifies a lot of confusing behavior:
+
+- When you clone `https://github.com/user/repo.git`, you're talking to a
+  **bare repository** on GitHub's storage — a `.git` object database with
+  no working directory, served over the same smart HTTP protocol described
+  in the previous module. Every push you make lands as ordinary Git
+  objects (blobs/trees/commits) in that bare repo — GitHub isn't storing
+  your code in some proprietary format underneath.
+- **Forking** is not a Git concept at all — `git fork` doesn't exist.
+  GitHub implements a fork by copying the repository's object database
+  server-side (efficiently, via shared storage/hard-links where the same
+  blobs would otherwise be duplicated) into a new repo under your account,
+  with metadata linking it back to the "parent" repo so GitHub can offer
+  the pull-request UI between them. Once forked, it's a perfectly ordinary
+  Git remote — Git itself doesn't know or care that it's a "fork."
+- **Issues, pull requests, stars, and the web editor** are entirely
+  GitHub's database, not Git's — a pull request is a database row (base
+  branch, head branch, comments, review state) that *references* two Git
+  refs; merging it just runs an ordinary `git merge` (or squash/rebase) on
+  GitHub's servers and updates the base branch's ref, exactly as `git
+  merge` would locally. This is why a repo's full commit history survives
+  intact if you ever migrate away from GitHub, but its issues, PR
+  discussions, and stars do not — they live in GitHub's database, not in
+  the `.git` history.
+- **HTTPS vs. SSH** differ only in *transport and auth*, not in what's
+  transferred — both negotiate the same object/packfile exchange; HTTPS
+  authenticates via a token exchanged in the request, SSH via a public-key
+  challenge during the SSH handshake, before either one even starts
+  talking Git's protocol.
+
 ## Exercise
 
 Create a GitHub account if you don't have one (using the email from your

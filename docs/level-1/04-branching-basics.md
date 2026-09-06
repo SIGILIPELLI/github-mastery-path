@@ -130,6 +130,36 @@ git log --oneline --all --graph
 `main` (with `HEAD` pointing at it, meaning "the branch you're currently
 on") hasn't moved; `fix/typo-in-readme` has one extra commit ahead of it.
 
+## How It Actually Works
+
+A branch has almost no structure of its own — which is exactly why
+creating one is instant and "cheap" isn't marketing:
+
+- `refs/heads/main` and `refs/heads/fix/typo-in-readme` are each a plain
+  text file containing nothing but a 40-character commit SHA. `git branch
+  fix/typo-in-readme` is implemented as: read the SHA that `HEAD` currently
+  resolves to, write that SHA into a new file at
+  `.git/refs/heads/fix/typo-in-readme`. That's the whole operation — no
+  files are copied, no directories are duplicated.
+- `HEAD` itself is one more small text file, `.git/HEAD`, but it doesn't
+  hold a commit SHA directly — it holds `ref: refs/heads/<branch>`, one
+  level of indirection. `git switch <branch>` rewrites `.git/HEAD` to point
+  at the new branch's ref file, then updates every file in your working
+  directory to match that branch tip commit's tree (adding/removing/
+  modifying files as needed) and rebuilds the index to match.
+- Committing while on a branch is what actually "moves" it: after
+  `git commit` writes the new commit object, Git resolves `HEAD` →
+  `refs/heads/main`, and overwrites *that file's contents* with the new
+  commit's SHA. The branch pointer advancing is a one-line file write, not
+  a structural change to history.
+- This is also why two branches can share history for free: `fix/typo`
+  and `main` both point at commits that share the same ancestor chain —
+  nothing is duplicated until a commit is made that only one of them
+  should have, at which point the branches' single SHA pointers simply
+  diverge to different commits. Deleting a branch (`git branch -d ...`) is
+  just deleting that one ref file; the commits themselves stay in the
+  object database until garbage-collected if nothing else reaches them.
+
 ## Exercise
 
 Starting from a repo with at least one commit on `main`, create and switch

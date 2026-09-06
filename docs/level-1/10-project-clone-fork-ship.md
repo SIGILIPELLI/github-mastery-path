@@ -162,6 +162,40 @@ git log --oneline --graph
 cat tasks.txt
 ```
 
+## How It Actually Works
+
+This project touches every mechanism from the level, all at once — worth
+tying together explicitly:
+
+- **Fork + clone + `upstream`** is entirely built from remotes, and nothing
+  more: your fork is a server-side copy of the original repo's object
+  database (see module 7), your clone is a local copy of *that* copy's
+  objects, `origin` points at your fork, and adding `upstream` pointing at
+  the original just gives you a second remote to `fetch` from. `git fetch
+  upstream && git merge upstream/main` pulls in commits Git recognizes as
+  new purely by SHA comparison — if the original project and your fork
+  share ancestry (they do, since a fork copies rather than reinvents
+  history), the fetched commits slot straight into your existing DAG.
+- **Two clones of the same repo staying in sync** works because clone URLs
+  are just a network address for the same underlying object store — cloning
+  twice gives you two independent `.git/objects/` directories that happen
+  to contain identical content, addressed by identical SHAs, because SHAs
+  are computed from content alone, not from *where* the object lives. A
+  commit made in one clone and pushed becomes byte-identical, hash-
+  identical, in the other clone after a pull.
+- **A merge commit with two parents surviving a push and re-clone** proves
+  the commit DAG travels intact: pushing sends the merge commit object
+  (with both `parent` lines) and every ancestor it needs; cloning
+  reconstructs the exact same graph by walking those parent pointers from
+  the tip down, which is why `git log --graph` on the fresh clone shows the
+  identical branch/merge shape as the original.
+- **Deleting a merged branch has zero effect on history** — the branch
+  pointer (a single-line file, module 4) is removed, but every commit it
+  ever pointed to remains reachable through `main`'s own parent chain (a
+  merge commit's second parent *is* the tip of the branch you merged), so
+  nothing in the object database becomes unreachable or gets garbage-
+  collected.
+
 ## Capstone checklist
 
 By the end of this project you should have, verifiable via `git log

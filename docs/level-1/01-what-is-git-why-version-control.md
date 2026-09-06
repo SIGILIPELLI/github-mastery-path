@@ -76,6 +76,39 @@ people using Git:
 You'll meet all of these hands-on in the next few modules — this one is
 purely conceptual so the rest of the level has solid footing.
 
+## How It Actually Works
+
+The "cheap, fast branching" and "data integrity" claims above aren't
+marketing — they fall directly out of one design decision: Git doesn't
+store *diffs* between versions of files. It stores **snapshots**, addressed
+by content.
+
+- Every version of every file (a **blob**), every directory listing (a
+  **tree**), and every commit is run through SHA-1, producing a 40-character
+  hex digest. That digest *is* the object's name and its address in
+  storage — `.git/objects/<first 2 chars>/<remaining 38 chars>`.
+- Because the hash is derived purely from content, two files with identical
+  bytes anywhere in the repo — even in different commits, different
+  branches, different directories — are stored *once*. This is why creating
+  a branch costs almost nothing: a branch is just a 41-byte text file
+  (`.git/refs/heads/<name>`) holding a commit's SHA. No files are copied.
+- A commit object doesn't store a diff either — it points to one tree (the
+  full snapshot of the project at that moment) plus the SHA of its parent
+  commit(s), an author, a committer, and a message. Walking `parent` pointers
+  backward from any commit is what "history" *is* — there's no separate
+  history database, just a chain of hash pointers, which is why Git calls
+  this structure a **DAG** (directed acyclic graph) of commits.
+- Content-addressing is also the integrity guarantee: if a single bit in a
+  blob changes, its SHA changes, which changes the tree that references it,
+  which changes every commit downstream. You cannot silently corrupt or
+  rewrite history without the hashes revealing it — this is the same
+  mechanism (a Merkle tree) used by systems like Bitcoin and IPFS.
+
+You'll see these objects directly with `git cat-file` and `git hash-object`
+in Level 3's "Git Internals" module — for now, just know that everything
+Git does fast (branch, checkout, diff, log) is fast *because* it's built on
+hash-addressed snapshots rather than a linear list of patches.
+
 ## Exercise
 
 Without touching a keyboard yet: write down, in your own words, one

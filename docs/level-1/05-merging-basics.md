@@ -154,6 +154,38 @@ git branch -d feature/greeting
 a good safety net — if it refuses, double-check the branch really is fully
 merged before switching to `-D`.
 
+## How It Actually Works
+
+A merge is a three-way comparison and a specific rule for choosing which
+kind of commit to write:
+
+- Git finds the **merge base** — the most recent commit that is an ancestor
+  of *both* branch tips — by walking each branch's parent chain backward
+  and finding where the two histories first diverge. This is what makes it
+  a "three-way" merge: Git compares the merge base's tree, `HEAD`'s tree,
+  and the other branch's tree, for every file.
+- **Fast-forward**: if the merge base *is* the current branch's tip (i.e.
+  `main` hasn't moved since `feature/x` branched off), there's nothing to
+  actually merge — `feature/x`'s commits already contain everything `main`
+  has, plus more. Git just rewrites `refs/heads/main` to point straight at
+  `feature/x`'s tip commit. No new commit object is created; history stays
+  a straight line, which is why `--no-ff` exists for teams who want the
+  branch/merge event visible anyway.
+- **Three-way merge commit**: if both branches have new commits since the
+  merge base, Git computes, per file, whether only one side changed it
+  (take that side's version automatically) or both sides changed the *same
+  lines* (emit conflict markers and let you decide). Once resolved, Git
+  builds one new tree object representing the combined result and writes a
+  commit object with **two parents** — the previous tips of both branches.
+  That's the entire structural difference between a merge commit and a
+  normal commit: two `parent` lines instead of one, which is what makes
+  `git log --graph` render a join in the DAG.
+- `git merge --abort` works because nothing has been committed yet during
+  a conflicted merge — it just resets the index and working directory back
+  to match `HEAD`'s tree and deletes the in-progress merge state
+  (`.git/MERGE_HEAD`), which is the file that's tracking "you're mid-merge
+  against this other commit" in the first place.
+
 ## Exercise
 
 Create two branches, `feature/a` and `feature/b`, both starting from `main`.

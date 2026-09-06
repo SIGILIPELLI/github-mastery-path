@@ -183,6 +183,42 @@ git log --oneline
 # 07246b8 Add README
 ```
 
+## How It Actually Works
+
+Each of the five core commands maps to a concrete, inspectable operation on
+Git's object database (`.git/objects/`) and its staging file (`.git/index`):
+
+- **`git init`** creates the `.git/` skeleton: an empty `objects/` directory,
+  an empty `refs/heads/` directory, and a `HEAD` file containing
+  `ref: refs/heads/main` — a pointer to a branch that doesn't exist yet
+  (there's no commit for it to point to). `HEAD` pointing at a non-existent
+  ref is exactly why a brand-new repo has no commits but *does* have a
+  "current branch name."
+- **`git add`** takes the current content of a file, hashes it, writes it
+  into `.git/objects/` as a **blob** (if that exact content isn't already
+  stored), and records `<mode> <blob SHA> <path>` as a new entry in
+  `.git/index` — a flat binary file that *is* the staging area. Nothing
+  about a commit exists yet; `add` only ever touches the index and the
+  object store.
+- **`git commit`** does three things: (1) walks the index and builds one or
+  more **tree** objects (a tree is just a sorted list of
+  `mode/type/SHA/name` entries — one per file/subdirectory), (2) writes a
+  **commit** object containing the root tree's SHA, the current `HEAD`
+  commit's SHA as `parent`, your configured author/committer, and the
+  message, (3) updates the ref that `HEAD` points to (e.g.
+  `refs/heads/main`) to the new commit's SHA. That third step is the entire
+  mechanism of "advancing a branch."
+- **`git status`** and **`git diff`** don't touch the object database at
+  all for the common case — they compare three trees pairwise: the
+  **working directory** on disk, the **index** (staged snapshot), and the
+  tree of the **HEAD commit**. "Untracked" means present in the working
+  directory but absent from both index and HEAD's tree; "staged" means
+  present in the index but different from HEAD's tree; "modified, not
+  staged" means the working file differs from what's in the index.
+- **`git log`** simply starts at the commit `HEAD` resolves to and follows
+  `parent` pointers backward — there is no separate log file; the "log" is
+  the commit DAG itself, traversed on demand.
+
 ## Exercise
 
 Create a new folder, run `git init -b main` inside it, and set your

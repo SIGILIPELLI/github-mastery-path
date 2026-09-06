@@ -164,6 +164,41 @@ cat file.txt
 # v2
 ```
 
+## How It Actually Works
+
+`fetch`, `push`, and `pull` are just object-database synchronization over a
+network protocol — nothing about a remote repository is magic once you see
+what's actually being transferred:
+
+- A remote is a named URL stored in `.git/config` under
+  `[remote "origin"]`. `git remote add origin <url>` only writes that
+  config entry — it makes no network call.
+- `git fetch` opens a connection and runs Git's **smart HTTP/SSH
+  protocol**: your client says "here's what commit SHAs I already have,"
+  the server replies with the SHAs of its branch tips, and your client
+  computes exactly which objects (commits, trees, blobs) it's missing —
+  then the server packs *only those* objects into a single **packfile**
+  (a compressed, delta-encoded bundle) and streams it over. Fetch then
+  writes the received objects into your local `.git/objects/` and updates
+  your **remote-tracking branches** — `refs/remotes/origin/main` — to match
+  what it just saw. Your own `refs/heads/main` is deliberately *not*
+  touched by fetch; that's why `origin/main` can lag behind or ahead of
+  `main` until you merge/pull.
+- `git push` runs the same negotiation in reverse: your client tells the
+  server "I want your `refs/heads/main` to become SHA X," sends a packfile
+  of any objects the server doesn't already have, and the server only
+  accepts the ref update if it's a **fast-forward** of what it currently
+  has — i.e. the SHA you're pushing has the server's current tip as an
+  ancestor. If someone else pushed in the meantime, the server's tip moved,
+  your update is no longer a fast-forward, and the push is rejected — this
+  is the exact mechanism behind the "non-fast-forward" error, and it's
+  what forces you to `pull` (fetch + merge/rebase) before you can push
+  again.
+- `git pull` is literally shorthand for `git fetch` followed by
+  `git merge origin/<branch>` (or `git rebase` with `--rebase`) — there is
+  no separate "pull" logic in Git's object model, just those two familiar
+  operations run back to back.
+
 ## Exercise
 
 Create two local folders to simulate two "machines": `git init --bare

@@ -134,6 +134,36 @@ That's the entire one-time setup — from here on, every `git init` on this
 machine creates a `main` branch by default, and every commit is correctly
 attributed to Ada.
 
+## How It Actually Works
+
+`git config` isn't a special settings database — it's a tiny INI-format
+text file parser layered on plain files, and the "three levels" table above
+is really just three files Git reads in order and merges:
+
+- `git config --global user.name "..."` literally opens `~/.gitconfig`
+  (creating it if needed) and writes a `[user]` section with a `name = ...`
+  line. You can get the identical result by editing that file in any text
+  editor — the command just avoids formatting mistakes.
+- When Git needs a setting (say, `user.email` at commit time), it reads
+  `/etc/gitconfig`, then `~/.gitconfig`, then `.git/config` **in that
+  order**, and the *last* value it sees for a key wins. That's the entire
+  mechanism behind "local overrides global" — there's no special-casing,
+  just last-value-wins across three files concatenated in a fixed order.
+  `git config --show-origin` works by remembering which of the three files
+  it read each value from as it went.
+- Author identity matters mechanically, not just cosmetically: `user.name`
+  and `user.email` get baked as literal text into every commit object you
+  create (`author Ada Lovelace <ada@example.com> 1699999999 +0000`). Since
+  commits are content-addressed (see the previous module), changing your
+  configured identity does *not* retroactively change past commits' stored
+  author lines — it only affects commits made from that point forward.
+- `credential.helper` works by Git shelling out to a small helper program
+  (`git-credential-cache`, `git-credential-osxkeychain`, etc.) over a tiny
+  stdin/stdout protocol (`get`/`store`/`erase` with `key=value` pairs) each
+  time it needs credentials for a remote — Git itself never persists your
+  password; it delegates that entirely to the OS credential store or an
+  in-memory cache daemon.
+
 ## Exercise
 
 Install Git if you haven't already, then set your global `user.name` and
