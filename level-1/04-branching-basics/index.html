@@ -890,6 +890,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2327,6 +2338,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2470,6 +2492,35 @@ long lists organized.</p>
 </code></pre></div></p>
 <p><code>main</code> (with <code>HEAD</code> pointing at it, meaning "the branch you're currently
 on") hasn't moved; <code>fix/typo-in-readme</code> has one extra commit ahead of it.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>A branch has almost no structure of its own — which is exactly why
+creating one is instant and "cheap" isn't marketing:</p>
+<ul>
+<li><code>refs/heads/main</code> and <code>refs/heads/fix/typo-in-readme</code> are each a plain
+  text file containing nothing but a 40-character commit SHA. <code>git branch
+  fix/typo-in-readme</code> is implemented as: read the SHA that <code>HEAD</code> currently
+  resolves to, write that SHA into a new file at
+  <code>.git/refs/heads/fix/typo-in-readme</code>. That's the whole operation — no
+  files are copied, no directories are duplicated.</li>
+<li><code>HEAD</code> itself is one more small text file, <code>.git/HEAD</code>, but it doesn't
+  hold a commit SHA directly — it holds <code>ref: refs/heads/&lt;branch&gt;</code>, one
+  level of indirection. <code>git switch &lt;branch&gt;</code> rewrites <code>.git/HEAD</code> to point
+  at the new branch's ref file, then updates every file in your working
+  directory to match that branch tip commit's tree (adding/removing/
+  modifying files as needed) and rebuilds the index to match.</li>
+<li>Committing while on a branch is what actually "moves" it: after
+  <code>git commit</code> writes the new commit object, Git resolves <code>HEAD</code> →
+  <code>refs/heads/main</code>, and overwrites <em>that file's contents</em> with the new
+  commit's SHA. The branch pointer advancing is a one-line file write, not
+  a structural change to history.</li>
+<li>This is also why two branches can share history for free: <code>fix/typo</code>
+  and <code>main</code> both point at commits that share the same ancestor chain —
+  nothing is duplicated until a commit is made that only one of them
+  should have, at which point the branches' single SHA pointers simply
+  diverge to different commits. Deleting a branch (<code>git branch -d ...</code>) is
+  just deleting that one ref file; the commits themselves stay in the
+  object database until garbage-collected if nothing else reaches them.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Starting from a repo with at least one commit on <code>main</code>, create and switch
 to a branch called <code>feature/colors</code>. On that branch, create a file called

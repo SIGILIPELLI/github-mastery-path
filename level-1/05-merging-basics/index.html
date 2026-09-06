@@ -896,6 +896,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2283,6 +2294,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2425,6 +2447,37 @@ anymore:</p>
 <p><code>-d</code> (lowercase) refuses to delete a branch with unmerged commits, which is
 a good safety net — if it refuses, double-check the branch really is fully
 merged before switching to <code>-D</code>.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>A merge is a three-way comparison and a specific rule for choosing which
+kind of commit to write:</p>
+<ul>
+<li>Git finds the <strong>merge base</strong> — the most recent commit that is an ancestor
+  of <em>both</em> branch tips — by walking each branch's parent chain backward
+  and finding where the two histories first diverge. This is what makes it
+  a "three-way" merge: Git compares the merge base's tree, <code>HEAD</code>'s tree,
+  and the other branch's tree, for every file.</li>
+<li><strong>Fast-forward</strong>: if the merge base <em>is</em> the current branch's tip (i.e.
+  <code>main</code> hasn't moved since <code>feature/x</code> branched off), there's nothing to
+  actually merge — <code>feature/x</code>'s commits already contain everything <code>main</code>
+  has, plus more. Git just rewrites <code>refs/heads/main</code> to point straight at
+  <code>feature/x</code>'s tip commit. No new commit object is created; history stays
+  a straight line, which is why <code>--no-ff</code> exists for teams who want the
+  branch/merge event visible anyway.</li>
+<li><strong>Three-way merge commit</strong>: if both branches have new commits since the
+  merge base, Git computes, per file, whether only one side changed it
+  (take that side's version automatically) or both sides changed the <em>same
+  lines</em> (emit conflict markers and let you decide). Once resolved, Git
+  builds one new tree object representing the combined result and writes a
+  commit object with <strong>two parents</strong> — the previous tips of both branches.
+  That's the entire structural difference between a merge commit and a
+  normal commit: two <code>parent</code> lines instead of one, which is what makes
+  <code>git log --graph</code> render a join in the DAG.</li>
+<li><code>git merge --abort</code> works because nothing has been committed yet during
+  a conflicted merge — it just resets the index and working directory back
+  to match <code>HEAD</code>'s tree and deletes the in-progress merge state
+  (<code>.git/MERGE_HEAD</code>), which is the file that's tracking "you're mid-merge
+  against this other commit" in the first place.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Create two branches, <code>feature/a</code> and <code>feature/b</code>, both starting from <code>main</code>.
 On <code>feature/a</code>, add a new file <code>a.txt</code>. On <code>feature/b</code>, add a new file

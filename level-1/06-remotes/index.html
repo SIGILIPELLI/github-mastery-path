@@ -946,6 +946,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2327,6 +2338,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2475,6 +2497,40 @@ what the remote looked like the last time you checked in, not a live view.</p>
 <a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="c1"># v1</span>
 <a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="c1"># v2</span>
 </code></pre></div>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p><code>fetch</code>, <code>push</code>, and <code>pull</code> are just object-database synchronization over a
+network protocol — nothing about a remote repository is magic once you see
+what's actually being transferred:</p>
+<ul>
+<li>A remote is a named URL stored in <code>.git/config</code> under
+  <code>[remote "origin"]</code>. <code>git remote add origin &lt;url&gt;</code> only writes that
+  config entry — it makes no network call.</li>
+<li><code>git fetch</code> opens a connection and runs Git's <strong>smart HTTP/SSH
+  protocol</strong>: your client says "here's what commit SHAs I already have,"
+  the server replies with the SHAs of its branch tips, and your client
+  computes exactly which objects (commits, trees, blobs) it's missing —
+  then the server packs <em>only those</em> objects into a single <strong>packfile</strong>
+  (a compressed, delta-encoded bundle) and streams it over. Fetch then
+  writes the received objects into your local <code>.git/objects/</code> and updates
+  your <strong>remote-tracking branches</strong> — <code>refs/remotes/origin/main</code> — to match
+  what it just saw. Your own <code>refs/heads/main</code> is deliberately <em>not</em>
+  touched by fetch; that's why <code>origin/main</code> can lag behind or ahead of
+  <code>main</code> until you merge/pull.</li>
+<li><code>git push</code> runs the same negotiation in reverse: your client tells the
+  server "I want your <code>refs/heads/main</code> to become SHA X," sends a packfile
+  of any objects the server doesn't already have, and the server only
+  accepts the ref update if it's a <strong>fast-forward</strong> of what it currently
+  has — i.e. the SHA you're pushing has the server's current tip as an
+  ancestor. If someone else pushed in the meantime, the server's tip moved,
+  your update is no longer a fast-forward, and the push is rejected — this
+  is the exact mechanism behind the "non-fast-forward" error, and it's
+  what forces you to <code>pull</code> (fetch + merge/rebase) before you can push
+  again.</li>
+<li><code>git pull</code> is literally shorthand for <code>git fetch</code> followed by
+  <code>git merge origin/&lt;branch&gt;</code> (or <code>git rebase</code> with <code>--rebase</code>) — there is
+  no separate "pull" logic in Git's object model, just those two familiar
+  operations run back to back.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Create two local folders to simulate two "machines": <code>git init --bare
 shared.git</code> in one location to act as the remote, then clone it twice into

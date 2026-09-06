@@ -1025,6 +1025,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#capstone-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2261,6 +2272,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#capstone-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2414,6 +2436,39 @@ folder and confirm everything — including the merge commit — is there:</p>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>cat<span class="w"> </span>tasks.txt
 </code></pre></div>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>This project touches every mechanism from the level, all at once — worth
+tying together explicitly:</p>
+<ul>
+<li><strong>Fork + clone + <code>upstream</code></strong> is entirely built from remotes, and nothing
+  more: your fork is a server-side copy of the original repo's object
+  database (see module 7), your clone is a local copy of <em>that</em> copy's
+  objects, <code>origin</code> points at your fork, and adding <code>upstream</code> pointing at
+  the original just gives you a second remote to <code>fetch</code> from. <code>git fetch
+  upstream &amp;&amp; git merge upstream/main</code> pulls in commits Git recognizes as
+  new purely by SHA comparison — if the original project and your fork
+  share ancestry (they do, since a fork copies rather than reinvents
+  history), the fetched commits slot straight into your existing DAG.</li>
+<li><strong>Two clones of the same repo staying in sync</strong> works because clone URLs
+  are just a network address for the same underlying object store — cloning
+  twice gives you two independent <code>.git/objects/</code> directories that happen
+  to contain identical content, addressed by identical SHAs, because SHAs
+  are computed from content alone, not from <em>where</em> the object lives. A
+  commit made in one clone and pushed becomes byte-identical, hash-
+  identical, in the other clone after a pull.</li>
+<li><strong>A merge commit with two parents surviving a push and re-clone</strong> proves
+  the commit DAG travels intact: pushing sends the merge commit object
+  (with both <code>parent</code> lines) and every ancestor it needs; cloning
+  reconstructs the exact same graph by walking those parent pointers from
+  the tip down, which is why <code>git log --graph</code> on the fresh clone shows the
+  identical branch/merge shape as the original.</li>
+<li><strong>Deleting a merged branch has zero effect on history</strong> — the branch
+  pointer (a single-line file, module 4) is removed, but every commit it
+  ever pointed to remains reachable through <code>main</code>'s own parent chain (a
+  merge commit's second parent <em>is</em> the tip of the branch you merged), so
+  nothing in the object database becomes unreachable or gets garbage-
+  collected.</li>
+</ul>
 <h2 id="capstone-checklist">Capstone checklist<a class="headerlink" href="#capstone-checklist" title="Permanent link">&para;</a></h2>
 <p>By the end of this project you should have, verifiable via <code>git log
 --graph --all</code> and your GitHub repo page:</p>

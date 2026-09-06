@@ -1030,6 +1030,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2327,6 +2338,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2508,6 +2530,35 @@ picker, on the repo-creation page).</p>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>A  index.js
 </code></pre></div></p>
 <p>Notice <code>build/</code> and <code>.env</code> never appear — exactly the intended effect.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p><code>.gitignore</code> isn't enforced by some special ignore engine — it's a filter
+consulted at exactly one point: when Git decides whether a file is a
+candidate to be <em>added to the index</em>.</p>
+<ul>
+<li><code>git status</code> and <code>git add -A</code> build their list of "untracked files" by
+  walking the working directory and checking each path against every
+  applicable ignore file (<code>.gitignore</code> in that directory and its parents,
+  <code>.git/info/exclude</code>, and the global <code>core.excludesfile</code>) using glob
+  pattern matching. A file that matches a pattern is simply skipped from
+  that candidate list — Git never even hashes it, so an ignored file has no
+  corresponding blob and doesn't touch the object database at all.</li>
+<li>This is precisely why <code>.gitignore</code> <strong>cannot un-track a file that's
+  already tracked</strong>: if a path already has an entry in <code>.git/index</code>, Git
+  considers it explicitly tracked regardless of what any ignore pattern
+  says, and will keep reporting changes to it. Removing it requires
+  <code>git rm --cached &lt;path&gt;</code> (deletes the index entry, keeps the file on
+  disk) <em>in addition to</em> adding the ignore pattern.</li>
+<li>Precedence resolves the same "last match wins, most specific file wins"
+  way as Git config: <code>.git/info/exclude</code> (local-only, never committed) is
+  checked, then <code>.gitignore</code> files from the repo root down to the file's
+  own directory, with a <code>.gitignore</code> deeper in the tree able to override a
+  broader pattern set higher up (e.g. <code>!important.log</code> un-ignoring a file
+  inside a directory where <code>*.log</code> is otherwise ignored).</li>
+<li>GitHub's server-side "Add .gitignore" dropdown does nothing more exotic
+  than committing one of its template files as <code>.gitignore</code> in your new
+  repo's initial commit — the templates at github/gitignore are just
+  community-maintained text files, not a different mechanism.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>In a fresh repo, create a <code>build/</code> directory with a dummy file in it, an
 <code>.env</code> file with a fake secret, and a real source file like <code>main.py</code>.

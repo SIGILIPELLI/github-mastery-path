@@ -952,6 +952,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2283,6 +2294,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2404,6 +2426,39 @@ further, giving you a full cloud development environment (a container with
 your code already cloned) accessible from the browser. Neither replaces
 learning the Git CLI — but they're worth knowing about for quick fixes from
 a device without your usual setup.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>GitHub is, at its core, a giant fleet of Git servers plus a database and
+web app layered on top — understanding where the line sits between "plain
+Git" and "GitHub's own product" clarifies a lot of confusing behavior:</p>
+<ul>
+<li>When you clone <code>https://github.com/user/repo.git</code>, you're talking to a
+  <strong>bare repository</strong> on GitHub's storage — a <code>.git</code> object database with
+  no working directory, served over the same smart HTTP protocol described
+  in the previous module. Every push you make lands as ordinary Git
+  objects (blobs/trees/commits) in that bare repo — GitHub isn't storing
+  your code in some proprietary format underneath.</li>
+<li><strong>Forking</strong> is not a Git concept at all — <code>git fork</code> doesn't exist.
+  GitHub implements a fork by copying the repository's object database
+  server-side (efficiently, via shared storage/hard-links where the same
+  blobs would otherwise be duplicated) into a new repo under your account,
+  with metadata linking it back to the "parent" repo so GitHub can offer
+  the pull-request UI between them. Once forked, it's a perfectly ordinary
+  Git remote — Git itself doesn't know or care that it's a "fork."</li>
+<li><strong>Issues, pull requests, stars, and the web editor</strong> are entirely
+  GitHub's database, not Git's — a pull request is a database row (base
+  branch, head branch, comments, review state) that <em>references</em> two Git
+  refs; merging it just runs an ordinary <code>git merge</code> (or squash/rebase) on
+  GitHub's servers and updates the base branch's ref, exactly as <code>git
+  merge</code> would locally. This is why a repo's full commit history survives
+  intact if you ever migrate away from GitHub, but its issues, PR
+  discussions, and stars do not — they live in GitHub's database, not in
+  the <code>.git</code> history.</li>
+<li><strong>HTTPS vs. SSH</strong> differ only in <em>transport and auth</em>, not in what's
+  transferred — both negotiate the same object/packfile exchange; HTTPS
+  authenticates via a token exchanged in the request, SSH via a public-key
+  challenge during the SSH handshake, before either one even starts
+  talking Git's protocol.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Create a GitHub account if you don't have one (using the email from your
 <code>git config</code>). Find a well-known open-source repository (for example,

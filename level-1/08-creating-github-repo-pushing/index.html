@@ -991,6 +991,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2305,6 +2316,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2445,6 +2467,37 @@ on the repo page.</p>
 </code></pre></div>
 <p>If this is your first push ever from this machine, you'll be prompted to
 authenticate (token or <code>gh auth login</code>) at this step.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>The <code>-u</code> (<code>--set-upstream</code>) flag and the "branch not tracking" errors you'll
+occasionally see both come from one small piece of metadata:</p>
+<ul>
+<li><code>git push -u origin main</code> does two separate things: it pushes your
+  objects and updates <code>origin</code>'s <code>refs/heads/main</code>, <em>and</em> it writes two
+  lines into <code>.git/config</code> — <code>branch.main.remote = origin</code> and
+  <code>branch.main.merge = refs/heads/main</code>. That's the entire "tracking
+  relationship." Every bare <code>git push</code>/<code>git pull</code> afterward reads those two
+  lines to figure out which remote and which remote branch to talk to,
+  which is why you can drop <code>origin main</code> from every subsequent command.</li>
+<li>Your local commit objects are byte-for-byte the same objects that exist
+  on GitHub after a push — the SHA of a commit doesn't change when you push
+  it. This is why <code>git push</code> can be so fast the second time: Git compares
+  the SHAs it has against the SHAs the server reports having, and only
+  transmits objects the server is actually missing, packed and
+  delta-compressed together into one packfile for the connection.</li>
+<li>Repo <strong>visibility</strong> (public/private) and features like the web file
+  browser exist entirely in GitHub's application layer, sitting in front of
+  the same bare repository — flipping a repo from private to public
+  doesn't touch a single Git object; it only changes an access-control
+  check GitHub's servers apply before serving requests for that
+  repository's data.</li>
+<li>Creating an <em>empty</em> repo on GitHub (no README) matters mechanically: if
+  you'd let GitHub initialize the repo with a README, GitHub would have
+  created an initial commit server-side with no shared ancestor with your
+  local history, and your first <code>git push</code> would be rejected as
+  non-fast-forward (the same rejection mechanism from the previous
+  module) — you'd have had to <code>pull</code> and merge the unrelated histories
+  first.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Create a new, empty GitHub repository (no README) called <code>git-course-demo</code>.
 Locally, create a folder with the same name, <code>git init</code> it, add a file, and

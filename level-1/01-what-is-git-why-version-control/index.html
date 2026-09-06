@@ -762,6 +762,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2239,6 +2250,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2366,6 +2388,37 @@ people using Git:</p>
 </table>
 <p>You'll meet all of these hands-on in the next few modules — this one is
 purely conceptual so the rest of the level has solid footing.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>The "cheap, fast branching" and "data integrity" claims above aren't
+marketing — they fall directly out of one design decision: Git doesn't
+store <em>diffs</em> between versions of files. It stores <strong>snapshots</strong>, addressed
+by content.</p>
+<ul>
+<li>Every version of every file (a <strong>blob</strong>), every directory listing (a
+  <strong>tree</strong>), and every commit is run through SHA-1, producing a 40-character
+  hex digest. That digest <em>is</em> the object's name and its address in
+  storage — <code>.git/objects/&lt;first 2 chars&gt;/&lt;remaining 38 chars&gt;</code>.</li>
+<li>Because the hash is derived purely from content, two files with identical
+  bytes anywhere in the repo — even in different commits, different
+  branches, different directories — are stored <em>once</em>. This is why creating
+  a branch costs almost nothing: a branch is just a 41-byte text file
+  (<code>.git/refs/heads/&lt;name&gt;</code>) holding a commit's SHA. No files are copied.</li>
+<li>A commit object doesn't store a diff either — it points to one tree (the
+  full snapshot of the project at that moment) plus the SHA of its parent
+  commit(s), an author, a committer, and a message. Walking <code>parent</code> pointers
+  backward from any commit is what "history" <em>is</em> — there's no separate
+  history database, just a chain of hash pointers, which is why Git calls
+  this structure a <strong>DAG</strong> (directed acyclic graph) of commits.</li>
+<li>Content-addressing is also the integrity guarantee: if a single bit in a
+  blob changes, its SHA changes, which changes the tree that references it,
+  which changes every commit downstream. You cannot silently corrupt or
+  rewrite history without the hashes revealing it — this is the same
+  mechanism (a Merkle tree) used by systems like Bitcoin and IPFS.</li>
+</ul>
+<p>You'll see these objects directly with <code>git cat-file</code> and <code>git hash-object</code>
+in Level 3's "Git Internals" module — for now, just know that everything
+Git does fast (branch, checkout, diff, log) is fast <em>because</em> it's built on
+hash-addressed snapshots rather than a linear list of patches.</p>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Without touching a keyboard yet: write down, in your own words, one
 sentence each for what a <em>commit</em>, a <em>branch</em>, and a <em>remote</em> are. Then

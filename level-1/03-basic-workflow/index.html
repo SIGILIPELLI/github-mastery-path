@@ -862,6 +862,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2327,6 +2338,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2497,6 +2519,41 @@ blank line before any additional detail:</p>
 <a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="c1"># a1b2c3d Add app.py</span>
 <a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="c1"># 07246b8 Add README</span>
 </code></pre></div>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>Each of the five core commands maps to a concrete, inspectable operation on
+Git's object database (<code>.git/objects/</code>) and its staging file (<code>.git/index</code>):</p>
+<ul>
+<li><strong><code>git init</code></strong> creates the <code>.git/</code> skeleton: an empty <code>objects/</code> directory,
+  an empty <code>refs/heads/</code> directory, and a <code>HEAD</code> file containing
+  <code>ref: refs/heads/main</code> — a pointer to a branch that doesn't exist yet
+  (there's no commit for it to point to). <code>HEAD</code> pointing at a non-existent
+  ref is exactly why a brand-new repo has no commits but <em>does</em> have a
+  "current branch name."</li>
+<li><strong><code>git add</code></strong> takes the current content of a file, hashes it, writes it
+  into <code>.git/objects/</code> as a <strong>blob</strong> (if that exact content isn't already
+  stored), and records <code>&lt;mode&gt; &lt;blob SHA&gt; &lt;path&gt;</code> as a new entry in
+  <code>.git/index</code> — a flat binary file that <em>is</em> the staging area. Nothing
+  about a commit exists yet; <code>add</code> only ever touches the index and the
+  object store.</li>
+<li><strong><code>git commit</code></strong> does three things: (1) walks the index and builds one or
+  more <strong>tree</strong> objects (a tree is just a sorted list of
+  <code>mode/type/SHA/name</code> entries — one per file/subdirectory), (2) writes a
+  <strong>commit</strong> object containing the root tree's SHA, the current <code>HEAD</code>
+  commit's SHA as <code>parent</code>, your configured author/committer, and the
+  message, (3) updates the ref that <code>HEAD</code> points to (e.g.
+  <code>refs/heads/main</code>) to the new commit's SHA. That third step is the entire
+  mechanism of "advancing a branch."</li>
+<li><strong><code>git status</code></strong> and <strong><code>git diff</code></strong> don't touch the object database at
+  all for the common case — they compare three trees pairwise: the
+  <strong>working directory</strong> on disk, the <strong>index</strong> (staged snapshot), and the
+  tree of the <strong>HEAD commit</strong>. "Untracked" means present in the working
+  directory but absent from both index and HEAD's tree; "staged" means
+  present in the index but different from HEAD's tree; "modified, not
+  staged" means the working file differs from what's in the index.</li>
+<li><strong><code>git log</code></strong> simply starts at the commit <code>HEAD</code> resolves to and follows
+  <code>parent</code> pointers backward — there is no separate log file; the "log" is
+  the commit DAG itself, traversed on demand.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Create a new folder, run <code>git init -b main</code> inside it, and set your
 name/email locally if you haven't globally. Create a file called

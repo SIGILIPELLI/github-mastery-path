@@ -823,6 +823,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2305,6 +2316,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2458,6 +2480,35 @@ up correctly attributed to you on your GitHub profile.</p>
 <p>That's the entire one-time setup — from here on, every <code>git init</code> on this
 machine creates a <code>main</code> branch by default, and every commit is correctly
 attributed to Ada.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p><code>git config</code> isn't a special settings database — it's a tiny INI-format
+text file parser layered on plain files, and the "three levels" table above
+is really just three files Git reads in order and merges:</p>
+<ul>
+<li><code>git config --global user.name "..."</code> literally opens <code>~/.gitconfig</code>
+  (creating it if needed) and writes a <code>[user]</code> section with a <code>name = ...</code>
+  line. You can get the identical result by editing that file in any text
+  editor — the command just avoids formatting mistakes.</li>
+<li>When Git needs a setting (say, <code>user.email</code> at commit time), it reads
+  <code>/etc/gitconfig</code>, then <code>~/.gitconfig</code>, then <code>.git/config</code> <strong>in that
+  order</strong>, and the <em>last</em> value it sees for a key wins. That's the entire
+  mechanism behind "local overrides global" — there's no special-casing,
+  just last-value-wins across three files concatenated in a fixed order.
+  <code>git config --show-origin</code> works by remembering which of the three files
+  it read each value from as it went.</li>
+<li>Author identity matters mechanically, not just cosmetically: <code>user.name</code>
+  and <code>user.email</code> get baked as literal text into every commit object you
+  create (<code>author Ada Lovelace &lt;ada@example.com&gt; 1699999999 +0000</code>). Since
+  commits are content-addressed (see the previous module), changing your
+  configured identity does <em>not</em> retroactively change past commits' stored
+  author lines — it only affects commits made from that point forward.</li>
+<li><code>credential.helper</code> works by Git shelling out to a small helper program
+  (<code>git-credential-cache</code>, <code>git-credential-osxkeychain</code>, etc.) over a tiny
+  stdin/stdout protocol (<code>get</code>/<code>store</code>/<code>erase</code> with <code>key=value</code> pairs) each
+  time it needs credentials for a remote — Git itself never persists your
+  password; it delegates that entirely to the OS credential store or an
+  in-memory cache daemon.</li>
+</ul>
 <h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
 <p>Install Git if you haven't already, then set your global <code>user.name</code> and
 <code>user.email</code> to your own details (use the email you plan to sign up to
