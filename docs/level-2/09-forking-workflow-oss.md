@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 09 · Forking Workflow & Contributing to OSS
 
 _This module is coming soon._

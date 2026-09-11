@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 04 · Large Repo Performance (sparse checkout, partial clone)
 
 _This module is coming soon._

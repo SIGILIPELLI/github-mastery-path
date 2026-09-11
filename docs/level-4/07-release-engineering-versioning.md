@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 07 · Release Engineering & Versioning Strategy
 
 _This module is coming soon._

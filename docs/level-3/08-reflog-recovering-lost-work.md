@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 08 · Reflog & Recovering Lost Work
 
 _This module is coming soon._

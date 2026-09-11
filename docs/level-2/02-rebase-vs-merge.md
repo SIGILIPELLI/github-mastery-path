@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 02 · Rebase vs Merge
 
 _This module is coming soon._

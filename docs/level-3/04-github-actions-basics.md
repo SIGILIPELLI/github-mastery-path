@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 04 · GitHub Actions Basics (a simple CI workflow)
 
 _This module is coming soon._

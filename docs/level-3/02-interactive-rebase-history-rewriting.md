@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 02 · Interactive Rebase & History Rewriting
 
 _This module is coming soon._

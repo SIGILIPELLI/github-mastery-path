@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 01 · Advanced GitHub Actions (matrix, caching, reusable workflows)
 
 _This module is coming soon._

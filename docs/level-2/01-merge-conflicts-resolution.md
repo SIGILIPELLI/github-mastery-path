@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 01 · Merge Conflicts & Resolution
 
 _This module is coming soon._

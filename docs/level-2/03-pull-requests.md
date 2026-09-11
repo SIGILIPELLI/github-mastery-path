@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 03 · Pull Requests (create, review, merge)
 
 _This module is coming soon._

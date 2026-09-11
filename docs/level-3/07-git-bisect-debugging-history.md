@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 07 · Git Bisect & Debugging History
 
 _This module is coming soon._

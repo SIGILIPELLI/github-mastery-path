@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 09 · GitHub Secrets & Environments
 
 _This module is coming soon._

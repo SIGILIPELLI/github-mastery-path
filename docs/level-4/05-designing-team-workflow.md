@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 05 · Designing a Team Git/GitHub Workflow
 
 _This module is coming soon._

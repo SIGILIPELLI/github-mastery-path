@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 05 · Submodules
 
 _This module is coming soon._

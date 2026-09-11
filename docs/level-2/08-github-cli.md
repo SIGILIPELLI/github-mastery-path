@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 08 · GitHub CLI (gh)
 
 _This module is coming soon._

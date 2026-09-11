@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 06 · Git Hooks
 
 _This module is coming soon._

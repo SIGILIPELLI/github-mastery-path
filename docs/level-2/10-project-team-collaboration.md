@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 10 · Project — Team Collaboration Workflow
 
 _This module is coming soon._

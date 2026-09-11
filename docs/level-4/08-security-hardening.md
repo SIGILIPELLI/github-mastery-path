@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 08 · Security Hardening (CODEOWNERS, signed commits, SAST)
 
 _This module is coming soon._

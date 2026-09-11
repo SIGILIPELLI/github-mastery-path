@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 10 · Project — CI Pipeline for a Real Project
 
 _This module is coming soon._

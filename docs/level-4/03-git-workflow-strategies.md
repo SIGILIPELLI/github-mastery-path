@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 03 · Git Workflow Strategies (GitFlow, Trunk-Based)
 
 _This module is coming soon._

@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 06 · Tags & Releases
 
 _This module is coming soon._

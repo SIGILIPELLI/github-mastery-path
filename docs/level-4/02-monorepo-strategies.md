@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 02 · Monorepo Strategies
 
 _This module is coming soon._

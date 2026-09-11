@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 04 · GitHub Issues & Project Boards
 
 _This module is coming soon._

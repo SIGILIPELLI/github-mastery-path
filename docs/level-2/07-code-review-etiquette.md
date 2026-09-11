@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 07 · Code Review Etiquette & Workflow
 
 _This module is coming soon._

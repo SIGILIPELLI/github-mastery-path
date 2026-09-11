@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 01 · Git Internals (objects, refs, .git directory)
 
 _This module is coming soon._

@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 09 · Self-Hosted Runners & Enterprise GitHub
 
 _This module is coming soon._

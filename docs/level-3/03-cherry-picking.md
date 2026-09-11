@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 03 · Cherry-Picking
 
 _This module is coming soon._

@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 05 · Branch Protection Rules
 
 _This module is coming soon._

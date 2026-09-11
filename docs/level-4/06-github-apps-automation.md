@@ -1,3 +1,7 @@
+---
+robots: noindex, follow
+---
+
 # 06 · GitHub Apps & Automation
 
 _This module is coming soon._
