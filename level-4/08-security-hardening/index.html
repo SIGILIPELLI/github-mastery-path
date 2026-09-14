@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1994,6 +1992,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Security Hardening (CODEOWNERS, signed commits, SAST)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2010,6 +2026,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-reviews-via-codeowners-recap-security-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required reviews via CODEOWNERS (recap, security angle)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signed-commits-proving-who-actually-wrote-a-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signed commits: proving who actually wrote a commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enforcing-signatures-server-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enforcing signatures server-side
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secret-scanning-and-push-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secret scanning and push protection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-analysis-codeql-as-a-required-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static analysis: CodeQL as a required check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-vulnerabilities-dependabot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency vulnerabilities: Dependabot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-the-controls-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Putting the controls together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2233,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#required-reviews-via-codeowners-recap-security-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required reviews via CODEOWNERS (recap, security angle)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signed-commits-proving-who-actually-wrote-a-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signed commits: proving who actually wrote a commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enforcing-signatures-server-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enforcing signatures server-side
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secret-scanning-and-push-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secret scanning and push protection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-analysis-codeql-as-a-required-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static analysis: CodeQL as a required check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-vulnerabilities-dependabot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency vulnerabilities: Dependabot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-the-controls-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Putting the controls together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2359,180 @@
 
 
 <h1 id="08-security-hardening-codeowners-signed-commits-sast">08 · Security Hardening (CODEOWNERS, signed commits, SAST)<a class="headerlink" href="#08-security-hardening-codeowners-signed-commits-sast" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>security Hardening (CODEOWNERS, signed commits, SAST)</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Hardening a repo means reducing three specific risks: someone merging
+unreviewed code, someone impersonating another contributor's identity in
+history, and a known vulnerability shipping unnoticed. Each has a
+concrete, checkable control.</p>
+<h2 id="required-reviews-via-codeowners-recap-security-angle">Required reviews via CODEOWNERS (recap, security angle)<a class="headerlink" href="#required-reviews-via-codeowners-recap-security-angle" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>.github/CODEOWNERS<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s">* @security-team</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">/infra/ @security-team</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">/auth/ @security-team</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">EOF</span>
+</code></pre></div>
+<p>Paired with branch protection's <code>require_code_owner_reviews: true</code>, this
+is the single highest-leverage control here: it makes "a human from the
+right team looked at this diff" a server-enforced precondition for
+merging, not a social norm.</p>
+<h2 id="signed-commits-proving-who-actually-wrote-a-commit">Signed commits: proving <em>who</em> actually wrote a commit<a class="headerlink" href="#signed-commits-proving-who-actually-wrote-a-commit" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>user.signingkey<span class="w"> </span>&lt;KEY-ID&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>config<span class="w"> </span>commit.gpgsign<span class="w"> </span><span class="nb">true</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-S<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add rate limiting to auth endpoint"</span>
+</code></pre></div>
+<p>Note: this scratch environment has no GPG keyring installed, so the
+command above cannot be executed here to show a signature — but the
+verification side is what matters day to day, and can be shown on any
+signed commit already in a real repo's history:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>log<span class="w"> </span>--show-signature<span class="w"> </span>-1
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>commit 4a7f2e1... (HEAD -&gt; main)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>gpg: Signature made Mon Sep 14 10:02:03 2026 IST
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>gpg: Good signature from "Jane Dev &lt;jane@example.com&gt;" [ultimate]
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Author: Jane Dev &lt;jane@example.com&gt;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Date:   Mon Sep 14 10:02:03 2026 +0530
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    Add rate limiting to auth endpoint
+</code></pre></div></p>
+<p>GitHub shows this as a green "Verified" badge next to the commit — it
+independently checks the signature against the public key you've
+uploaded to your GitHub account, not against anything the pushing client
+claims. <code>git config commit.gpgsign true</code> makes signing the default for
+every commit instead of remembering <code>-S</code> each time; SSH keys can sign
+commits too (<code>gpg.format ssh</code>), reusing keys many developers already have.</p>
+<h2 id="enforcing-signatures-server-side">Enforcing signatures server-side<a class="headerlink" href="#enforcing-signatures-server-side" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/OWNER/REPO/branches/main/protection/required_signatures<span class="w"> </span>-X<span class="w"> </span>POST
+</code></pre></div>
+<p>This rejects any push to <code>main</code> containing an unsigned commit, closing
+the gap where signing is configured locally but nothing stops an
+unsigned commit from a misconfigured machine or a compromised CI runner
+from landing anyway.</p>
+<h2 id="secret-scanning-and-push-protection">Secret scanning and push protection<a class="headerlink" href="#secret-scanning-and-push-protection" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/OWNER/REPO<span class="w"> </span>-X<span class="w"> </span>PATCH<span class="w"> </span>-f<span class="w"> </span>security_and_analysis<span class="o">[</span>secret_scanning<span class="o">][</span>status<span class="o">]=</span>enabled
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/OWNER/REPO<span class="w"> </span>-X<span class="w"> </span>PATCH<span class="w"> </span>-f<span class="w"> </span>security_and_analysis<span class="o">[</span>secret_scanning_push_protection<span class="o">][</span>status<span class="o">]=</span>enabled
+</code></pre></div>
+<p>Secret scanning inspects existing history and new pushes for ~200
+recognizable credential patterns (AWS keys, GitHub tokens, Stripe keys,
+...); push protection is the <em>preventive</em> half — it blocks the push
+outright at the moment a matching pattern would enter history, before it
+ever becomes something you have to rotate-and-rewrite-history to remove.</p>
+<h2 id="static-analysis-codeql-as-a-required-check">Static analysis: CodeQL as a required check<a class="headerlink" href="#static-analysis-codeql-as-a-required-check" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># .github/workflows/codeql.yml</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CodeQL</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[{</span><span class="nt"> cron</span><span class="p">:</span><span class="w"> </span><span class="s">"0</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">1"</span><span class="w"> </span><span class="p p-Indicator">}]</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="nt">analyze</span><span class="p">:</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> security-events</span><span class="p">:</span><span class="w"> </span><span class="nv">write</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> language</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"javascript"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"python"</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github/codeql-action/init@v3</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> languages</span><span class="p">:</span><span class="w"> </span><span class="nv">$</span><span class="p p-Indicator">{{</span><span class="w"> </span><span class="nv">matrix.language</span><span class="w"> </span><span class="p p-Indicator">}}</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github/codeql-action/analyze@v3</span>
+</code></pre></div>
+<p>Findings land in the repo's <strong>Security → Code scanning alerts</strong> tab and,
+if you add <code>codeql</code> to <code>required_status_checks.contexts</code> in branch
+protection, a PR that introduces a new high-severity finding is blocked
+from merging exactly like a failing test would be.</p>
+<h2 id="dependency-vulnerabilities-dependabot">Dependency vulnerabilities: Dependabot<a class="headerlink" href="#dependency-vulnerabilities-dependabot" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># .github/dependabot.yml</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">updates</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">package-ecosystem</span><span class="p">:</span><span class="w"> </span><span class="s">"npm"</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">directory</span><span class="p">:</span><span class="w"> </span><span class="s">"/"</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> interval</span><span class="p">:</span><span class="w"> </span><span class="s">"weekly"</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">open-pull-requests-limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
+<p>Dependabot alerts (from GitHub's Advisory Database) fire on every commit
+to any branch, independent of this config; the <code>dependabot.yml</code> file
+controls the <em>separate</em> feature of automatically opening version-bump
+PRs, not whether vulnerabilities get detected at all — alerts are on for
+every public repo and any private repo with the setting enabled,
+regardless of this file's existence.</p>
+<h2 id="putting-the-controls-together">Putting the controls together<a class="headerlink" href="#putting-the-controls-together" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unreviewed merge</td>
+<td>CODEOWNERS + <code>require_code_owner_reviews</code></td>
+</tr>
+<tr>
+<td>Impersonated authorship</td>
+<td>commit signing + <code>required_signatures</code></td>
+</tr>
+<tr>
+<td>Leaked credential</td>
+<td>secret scanning + push protection</td>
+</tr>
+<tr>
+<td>Known code vulnerability pattern</td>
+<td>CodeQL as a required check</td>
+</tr>
+<tr>
+<td>Vulnerable dependency</td>
+<td>Dependabot alerts + auto-PRs</td>
+</tr>
+<tr>
+<td>Bypassing all of the above as an admin</td>
+<td><code>enforce_admins: true</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Commit signing signs the commit <strong>object's content</strong> (tree SHA, parent
+  SHA(s), author/committer lines, message) with the signer's private key;
+  the signature is embedded as an extra header inside the commit object
+  itself (visible via <code>git cat-file -p</code>, a <code>gpgsig</code> field), not stored
+  externally. This means the signature and the content it covers are
+  bound at the object level — you cannot alter a commit's message or
+  parent without invalidating its signature, because doing so changes the
+  commit's SHA and the signature no longer verifies against the new
+  content.</li>
+<li>Push protection intercepts at <code>git push</code> time, before the ref update is
+  accepted: GitHub scans every new blob in the pushed pack for secret
+  patterns using the same detectors as historical secret scanning, and if
+  one matches, the push is rejected with the offending file/line reported
+  back to the client — meaning a caught secret never becomes part of
+  <code>main</code>'s reachable history at all, versus historical scanning, which
+  finds secrets <em>already</em> merged and requires a rotate-then-purge
+  response (<code>git filter-repo</code>, force-push, all consumers re-clone).</li>
+<li>CodeQL works by compiling the codebase into a relational database of
+  its abstract syntax tree, control-flow graph, and data-flow edges, then
+  running declarative queries (written in QL) against that database — this
+  is why it can find genuine taint-flow vulnerabilities (user input
+  reaching a SQL query unsanitized across multiple function calls) that
+  regex- or AST-pattern-based linters miss, at the cost of a real compile
+  step per language per run.</li>
+<li>Dependabot alerts are driven by the GitHub Advisory Database matched
+  against your repo's dependency graph, which GitHub builds by parsing
+  manifest/lockfiles (<code>package-lock.json</code>, <code>go.sum</code>, ...) on every push —
+  this is a static analysis of declared dependencies, not a runtime scan,
+  which is why a vulnerable transitive dependency is caught even if your
+  code never actually exercises the vulnerable code path.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Design the full <code>security_and_analysis</code> and branch protection payload
+(as JSON, matching the <code>gh api</code> calls above) that would enforce, for a
+single repo: required code owner review, required commit signatures, push
+protection, and CodeQL as a required status check. Write out each field
+and what specifically it prevents.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1854,6 +1852,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Git Workflow Strategies (GitFlow, Trunk-Based)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1870,6 +1886,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gitflow-long-lived-develop-short-lived-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitFlow: long-lived develop, short-lived release/*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trunk-based-short-lived-branches-squash-into-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trunk-based: short-lived branches, squash into main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-the-two-side-by-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing the two side by side
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enforcing-the-model-with-branch-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enforcing the model with branch protection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2200,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gitflow-long-lived-develop-short-lived-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitFlow: long-lived develop, short-lived release/*
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trunk-based-short-lived-branches-squash-into-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trunk-based: short-lived branches, squash into main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-the-two-side-by-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing the two side by side
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enforcing-the-model-with-branch-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enforcing the model with branch protection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2293,167 @@
 
 
 <h1 id="03-git-workflow-strategies-gitflow-trunk-based">03 · Git Workflow Strategies (GitFlow, Trunk-Based)<a class="headerlink" href="#03-git-workflow-strategies-gitflow-trunk-based" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>git Workflow Strategies (GitFlow, Trunk-Based)</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Git doesn't enforce a branching model — GitFlow, trunk-based development,
+and GitHub Flow are just conventions about which branches exist, how long
+they live, and how they merge. This module builds a small GitFlow release
+by hand, then contrasts it with trunk-based development on the same repo.</p>
+<h2 id="gitflow-long-lived-develop-short-lived-release">GitFlow: long-lived <code>develop</code>, short-lived <code>release/*</code><a class="headerlink" href="#gitflow-long-lived-develop-short-lived-release" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>init<span class="w"> </span>-q<span class="w"> </span>-b<span class="w"> </span>main
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span>v1<span class="w"> </span>&gt;<span class="w"> </span>app.txt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Initial release"</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>git<span class="w"> </span>branch<span class="w"> </span>develop
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>git<span class="w"> </span>switch<span class="w"> </span>develop
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">echo</span><span class="w"> </span>feature1<span class="w"> </span>&gt;&gt;<span class="w"> </span>app.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-aqm<span class="w"> </span><span class="s2">"Add feature 1"</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>release/1.1<span class="w"> </span>develop
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"release notes"</span><span class="w"> </span>&gt;<span class="w"> </span>CHANGELOG.md
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Prepare 1.1"</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>release/1.1<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Merge release 1.1"</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.1.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"v1.1.0"</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>*   b6dfdf4 Merge release 1.1
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>|\
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>| * 8739f20 Prepare 1.1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>| * 0ff1e35 Add feature 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>|/
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>* 79a9272 Initial release
+</code></pre></div></p>
+<p>GitFlow's structure: <code>main</code> only ever receives merge commits from
+<code>release/*</code> or <code>hotfix/*</code> branches, so <code>main</code>'s history is always
+"one commit per shipped release." Feature work happens on branches cut
+from <code>develop</code>, and <code>--no-ff</code> is used deliberately — it forces a merge
+commit even when a fast-forward is possible, so the release boundary is
+visible in <code>git log</code> instead of features blending invisibly into <code>main</code>.</p>
+<h2 id="trunk-based-short-lived-branches-squash-into-main">Trunk-based: short-lived branches, squash into <code>main</code><a class="headerlink" href="#trunk-based-short-lived-branches-squash-into-main" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feat/small-fix<span class="w"> </span>main
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">echo</span><span class="w"> </span>fix<span class="w"> </span>&gt;&gt;<span class="w"> </span>app.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">"Small fix behind flag"</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>feat/small-fix
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Small fix behind flag (squashed)"</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>-3
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>5bd6fe0 Small fix behind flag (squashed)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>b6dfdf4 Merge release 1.1
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>8739f20 Prepare 1.1
+</code></pre></div></p>
+<p>Trunk-based development has one long-lived branch (<code>main</code>) and branches
+that live hours to a couple of days, merged behind feature flags rather
+than left unmerged for weeks. <code>git merge --squash</code> collapses the topic
+branch's commits into a single new commit on <code>main</code> without recording a
+merge relationship at all — <code>git log --graph</code> on trunk-based history shows
+a straight line, not the diamond shapes GitFlow produces, because there's
+no merge commit object linking the two parent histories.</p>
+<h2 id="comparing-the-two-side-by-side">Comparing the two side by side<a class="headerlink" href="#comparing-the-two-side-by-side" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>GitFlow</th>
+<th>Trunk-based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long-lived branches</td>
+<td><code>main</code>, <code>develop</code></td>
+<td><code>main</code> only</td>
+</tr>
+<tr>
+<td>Feature branch lifetime</td>
+<td>days–weeks</td>
+<td>hours–days</td>
+</tr>
+<tr>
+<td>Merge strategy</td>
+<td><code>--no-ff</code> merge commits</td>
+<td>squash or rebase</td>
+</tr>
+<tr>
+<td>Release cadence</td>
+<td>batched via <code>release/*</code></td>
+<td>continuous, flag-gated</td>
+</tr>
+<tr>
+<td>Best fit</td>
+<td>scheduled/versioned releases (libraries, mobile apps)</td>
+<td>continuous deployment (web services)</td>
+</tr>
+</tbody>
+</table>
+<p>GitHub Flow is a middle ground used by most GitHub-hosted projects:
+one <code>main</code>, short-lived feature branches, merged via pull request as soon
+as they're reviewed and CI passes — no <code>develop</code>, no <code>release/*</code>, and
+deploys happen straight off <code>main</code>.</p>
+<h2 id="enforcing-the-model-with-branch-protection">Enforcing the model with branch protection<a class="headerlink" href="#enforcing-the-model-with-branch-protection" title="Permanent link">&para;</a></h2>
+<p>A workflow choice is only real if the repo enforces it. On GitHub:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/OWNER/REPO/branches/main/protection<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>--input<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="s">  "required_status_checks": {"strict": true, "contexts": ["ci"]},</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="s">  "enforce_admins": true,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s">  "required_pull_request_reviews": {"required_approving_review_count": 1},</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="s">  "restrictions": null</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="s">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s">EOF</span>
+</code></pre></div>
+<p>This blocks direct pushes to <code>main</code> and force-pushes, requires the <code>ci</code>
+check to pass on the branch's <em>current</em> tip (<code>strict: true</code> re-runs the
+check if <code>main</code> moves while the PR is open), and requires at least one
+approving review — regardless of the branching model chosen, this is what
+actually stops someone from bypassing it.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A merge commit (<code>--no-ff</code>) is a normal commit object with <strong>two or more
+  entries in its <code>parent</code> field</strong> instead of one. <code>git log --graph</code>
+  renders the diamond shape purely by walking those parent pointers; there
+  is no separate "merge" bit stored anywhere else. A fast-forward merge
+  (what happens without <code>--no-ff</code> when the target hasn't diverged) doesn't
+  create a commit at all — it just moves the branch ref forward to the
+  feature branch's tip, which is why GitFlow insists on <code>--no-ff</code>: without
+  it, a release with no concurrent hotfix would leave zero trace in
+  <code>main</code>'s history that a merge ever happened.</li>
+<li><code>git merge --squash</code> computes the merge (a three-way diff against the
+  common ancestor, same algorithm as a normal merge) and stages the
+  result, but deliberately <strong>does not</strong> record <code>MERGE_HEAD</code> or write a
+  commit — it leaves that to a plain <code>git commit</code>, which then has exactly
+  one parent (whatever <code>main</code> was pointing at). This is why squashed
+  branches never show up as "merged" in <code>git branch --merged</code>: from
+  Git's graph-reachability perspective, the squash commit shares no
+  ancestry with the original topic branch's commits at all, even though
+  its content came from them.</li>
+<li><code>required_status_checks.strict: true</code> works by making GitHub re-diff the
+  PR's head commit against the <em>current</em> <code>main</code>, not the <code>main</code> the branch
+  was created from — internally this is the same merge-base computation
+  <code>git merge-base</code> performs, so if <code>main</code> has moved forward since the
+  check last ran, the PR is required to re-run CI against a fresh
+  three-way merge to catch integration conflicts the two branches'
+  individual histories wouldn't reveal.</li>
+<li><code>enforce_admins: true</code> matters because GitHub's protection rules are
+  otherwise bypassable by repo admins by default — protection is enforced
+  by the API layer that accepts pushes, not by anything in Git itself, so
+  a <code>git push</code> still succeeds locally against a mirror or fork; it's
+  GitHub's server-side ref-update hook that rejects it against the
+  protected branch.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>In a scratch repo, build the GitFlow sequence above through the <code>v1.1.0</code>
+tag, then add a <code>hotfix/1.1.1</code> branch cut directly from the <code>v1.1.0</code> tag
+(not from <code>develop</code>), merge it into both <code>main</code> and <code>develop</code> with
+<code>--no-ff</code>, and tag the result <code>v1.1.1</code>. Use <code>git log --graph --all</code> to
+confirm the hotfix commit appears in <em>both</em> branches' history.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -2022,6 +2020,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Self-Hosted Runners & Enterprise GitHub
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2038,6 +2054,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registering-a-self-hosted-runner-real-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering a self-hosted runner (real steps)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targeting-a-self-hosted-runner-from-a-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targeting a self-hosted runner from a workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-security-model-self-hosted-runners-break-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The security model self-hosted runners break by default
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runner-groups-enterprise-scale-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runner groups: enterprise-scale governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-level-policy-that-individual-repos-cant-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enterprise-level policy that individual repos can't override
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registering-a-self-hosted-runner-real-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering a self-hosted runner (real steps)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targeting-a-self-hosted-runner-from-a-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targeting a self-hosted runner from a workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-security-model-self-hosted-runners-break-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The security model self-hosted runners break by default
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runner-groups-enterprise-scale-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runner groups: enterprise-scale governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-level-policy-that-individual-repos-cant-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enterprise-level policy that individual repos can't override
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,172 @@
 
 
 <h1 id="09-self-hosted-runners-enterprise-github">09 · Self-Hosted Runners &amp; Enterprise GitHub<a class="headerlink" href="#09-self-hosted-runners-enterprise-github" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>self-Hosted Runners &amp; Enterprise GitHub</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>GitHub-hosted runners are ephemeral VMs GitHub provisions per job. A
+self-hosted runner is a long-lived machine (or fleet) you register and
+control — needed for hardware GitHub doesn't offer (GPUs, custom
+ARM/embedded targets), network access to internal systems, or cost at
+scale. Enterprise GitHub layers organization- and enterprise-wide
+governance on top of both.</p>
+<h2 id="registering-a-self-hosted-runner-real-steps">Registering a self-hosted runner (real steps)<a class="headerlink" href="#registering-a-self-hosted-runner-real-steps" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gh<span class="w"> </span>api<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>repos/OWNER/REPO/actions/runners/registration-token
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AABBCCDDEEFF..."</span><span class="p">,</span><span class="w"> </span><span class="nt">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-09-14T12:00:00Z"</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+<p>That short-lived token authorizes one runner registration and nothing
+else — it is not a credential for the API generally. On the runner
+machine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir<span class="w"> </span>actions-runner<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>actions-runner
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>curl<span class="w"> </span>-o<span class="w"> </span>actions-runner.tar.gz<span class="w"> </span>-L<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>https://github.com/actions/runner/releases/download/v2.319.1/actions-runner-linux-x64-2.319.1.tar.gz
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>tar<span class="w"> </span>xzf<span class="w"> </span>actions-runner.tar.gz
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>./config.sh<span class="w"> </span>--url<span class="w"> </span>https://github.com/OWNER/REPO<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span>--token<span class="w"> </span>AABBCCDDEEFF...<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span>--labels<span class="w"> </span>gpu,cuda-12,on-prem
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>./run.sh
+</code></pre></div>
+<p><code>run.sh</code> establishes a long-lived outbound HTTPS connection to GitHub and
+polls for queued jobs matching this runner's labels — no inbound port
+needs to be open on the runner's network, which is what makes self-hosted
+runners deployable behind a corporate firewall or NAT.</p>
+<h2 id="targeting-a-self-hosted-runner-from-a-workflow">Targeting a self-hosted runner from a workflow<a class="headerlink" href="#targeting-a-self-hosted-runner-from-a-workflow" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">build-firmware</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">self-hosted</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">linux</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">gpu</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">cuda-12</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">make firmware</span>
+</code></pre></div>
+<p><code>runs-on</code> with a list requires the runner to have <strong>every</strong> listed label,
+not any — a runner registered with only <code>[self-hosted, linux]</code> never
+picks up this job.</p>
+<h2 id="the-security-model-self-hosted-runners-break-by-default">The security model self-hosted runners break by default<a class="headerlink" href="#the-security-model-self-hosted-runners-break-by-default" title="Permanent link">&para;</a></h2>
+<p>GitHub-hosted runners are single-use, destroyed after the job. A
+self-hosted runner, by default, is <strong>not</strong>: it's the same persistent
+filesystem and process across every job, including jobs triggered by a
+fork's pull request. This is a real, documented risk — a malicious PR
+from a fork can run <code>runs-on: self-hosted</code> in its own modified workflow
+file (in some trigger configurations) and read whatever secrets or
+network access the runner has.</p>
+<p>Mitigations, in order of how much they actually close the gap:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">pull_request_target</span><span class="p">:</span><span class="w">  </span><span class="c1"># rather than pull_request, for fork PRs needing secrets</span>
+</code></pre></div>
+<p>is itself a footgun if misused (it checks out and runs the base repo's
+trusted workflow file, but can be tricked into executing untrusted code
+if the job then checks out and runs the <em>fork's</em> code with secrets
+present). The safer patterns:</p>
+<ul>
+<li>Restrict self-hosted runners to <code>workflow_dispatch</code> / internal-only
+  triggers, never <code>pull_request</code> from forks.</li>
+<li>Use <strong>ephemeral</strong> self-hosted runners (<code>--ephemeral</code> flag on <code>config.sh</code>)
+  that deregister and get destroyed after exactly one job, rebuilt fresh
+  from an image for the next — eliminating persistent-state leakage
+  between jobs entirely.</li>
+<li>Require approval for first-time contributors' workflow runs
+  (<code>Settings → Actions → Fork pull request workflows</code>).</li>
+</ul>
+<h2 id="runner-groups-enterprise-scale-governance">Runner groups: enterprise-scale governance<a class="headerlink" href="#runner-groups-enterprise-scale-governance" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>gh<span class="w"> </span>api<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>orgs/ORG/actions/runner-groups<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>-f<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"gpu-fleet"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>-f<span class="w"> </span><span class="nv">visibility</span><span class="o">=</span><span class="s2">"selected"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span>-f<span class="w"> </span>selected_repository_ids<span class="o">[]=</span><span class="m">123456</span>
+</code></pre></div>
+<p>An <strong>enterprise</strong> account (GitHub Enterprise Cloud/Server) can register
+runners once at the enterprise level and share them into specific
+organizations via runner groups, with per-group policy: which repos may
+use the group, whether public-repo (fork) workflows can use it at all
+(default: no, for exactly the reason above), and which labels are
+permitted.</p>
+<h2 id="enterprise-level-policy-that-individual-repos-cant-override">Enterprise-level policy that individual repos can't override<a class="headerlink" href="#enterprise-level-policy-that-individual-repos-cant-override" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Scope</th>
+<th>What it controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runner groups</td>
+<td>Enterprise/Org</td>
+<td>which repos can queue jobs on which runner fleets</td>
+</tr>
+<tr>
+<td>Organization ruleset</td>
+<td>Org (applies across repos)</td>
+<td>branch/tag protection rules enforced org-wide, can't be weakened per-repo</td>
+</tr>
+<tr>
+<td>SAML SSO enforcement</td>
+<td>Enterprise</td>
+<td>membership requires SSO session, independent of 2FA</td>
+</tr>
+<tr>
+<td>IP allow list</td>
+<td>Enterprise</td>
+<td>API/Git access restricted to listed CIDR ranges</td>
+</tr>
+<tr>
+<td>Audit log streaming</td>
+<td>Enterprise</td>
+<td>every admin action exported to a SIEM (Splunk, S3, Azure) in near-real-time</td>
+</tr>
+</tbody>
+</table>
+<p>Organization <strong>rulesets</strong> (the modern replacement for per-branch
+protection rules) are the key scaling mechanism: instead of configuring
+branch protection on every repo individually, one ruleset targeting
+<code>~ALL</code> repos in an org enforces "require signed commits" and "require
+CodeQL" everywhere at once, and repo admins cannot weaken it locally.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The registration token is short-lived (1 hour) specifically to close
+  the window where a leaked token could be used to register a rogue
+  runner impersonating your infrastructure — it authenticates the
+  <em>registration</em> handshake only; once <code>config.sh</code> completes, the runner
+  holds a separate long-lived credential (stored locally, never
+  transmitted again) it uses to poll for jobs.</li>
+<li>A self-hosted runner never receives an inbound connection from GitHub
+  at all — jobs are delivered over the <em>same outbound</em> long-poll
+  connection the runner initiated in <code>run.sh</code>, using a message queue
+  GitHub's Actions backend feeds. This is why self-hosted runners work
+  transparently behind restrictive corporate firewalls that block all
+  inbound traffic, and also why a runner that loses network connectivity
+  simply stops picking up jobs rather than becoming unreachable in a way
+  that fails loudly.</li>
+<li><code>pull_request_target</code>'s danger comes from a specific combination:
+  it runs with the <strong>base</strong> repo's workflow file and secrets (unlike
+  <code>pull_request</code>, which uses the fork's workflow file and withholds most
+  secrets), but if that trusted workflow then does <code>actions/checkout</code> with
+  <code>ref: ${{ github.event.pull_request.head.sha }}</code> to pull in the fork's
+  <em>code</em>, the fork's code now executes with the base repo's trusted
+  secret context — the vulnerability is the workflow author combining a
+  trusted trigger with an untrusted checkout, not a bug in GitHub itself.</li>
+<li>Organization rulesets are enforced at a layer above individual repo
+  settings: a ruleset evaluation happens on every ref update alongside
+  (and in addition to) any repo-level branch protection, and a repo
+  admin's attempt to disable a required check that an org ruleset also
+  requires simply has no effect on the org-level requirement — the two
+  are separate enforcement points that both have to pass, which is the
+  mechanism that makes org-wide policy actually un-bypassable by a single
+  repo's admin.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Design the labels and <code>runs-on</code> array for three workflow jobs that need,
+respectively: (1) an ARM64 build target, (2) GPU access for a model
+training step, (3) network access to an internal artifact server behind a
+VPN. For each, write the self-hosted runner registration command
+(<code>config.sh ... --labels ...</code>) that would make exactly the right runner
+pick up exactly that job and no others.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

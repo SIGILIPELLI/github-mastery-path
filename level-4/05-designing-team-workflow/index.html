@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1910,6 +1908,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Designing a Team Git/GitHub Workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1926,6 +1942,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-pick-and-document-the-branching-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: pick and document the branching model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-route-review-with-codeowners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: route review with CODEOWNERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-enforce-it-with-branch-protection-required-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: enforce it with branch protection + required checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-standardize-the-pr-itself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: standardize the PR itself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-put-it-in-ci-not-just-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: put it in CI, not just docs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-together-the-decision-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Putting it together: the decision table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-pick-and-document-the-branching-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: pick and document the branching model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-route-review-with-codeowners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: route review with CODEOWNERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-enforce-it-with-branch-protection-required-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: enforce it with branch protection + required checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-standardize-the-pr-itself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: standardize the PR itself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-put-it-in-ci-not-just-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: put it in CI, not just docs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-together-the-decision-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Putting it together: the decision table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2337,187 @@
 
 
 <h1 id="05-designing-a-team-gitgithub-workflow">05 · Designing a Team Git/GitHub Workflow<a class="headerlink" href="#05-designing-a-team-gitgithub-workflow" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>designing a Team Git/GitHub Workflow</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Everything in Levels 1–4 so far — branching models, PR review, CI,
+CODEOWNERS, protection rules — is a set of building blocks. This module
+puts them together into one coherent, written-down workflow for an actual
+team, and shows the config that enforces each decision.</p>
+<h2 id="step-1-pick-and-document-the-branching-model">Step 1: pick and document the branching model<a class="headerlink" href="#step-1-pick-and-document-the-branching-model" title="Permanent link">&para;</a></h2>
+<p>From module 03: GitHub Flow is the right default for a team shipping a
+web service continuously — one <code>main</code>, short-lived branches, PR-gated
+merges, deploy off <code>main</code>. Write it down where new contributors will
+actually see it, not just in a wiki:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># CONTRIBUTING.md</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## Branching</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">-</span><span class="w"> </span><span class="sb">`main`</span> is always deployable.
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">-</span><span class="w"> </span>Branch names: <span class="sb">`feat/&lt;slug&gt;`</span>, <span class="sb">`fix/&lt;slug&gt;`</span>, <span class="sb">`chore/&lt;slug&gt;`</span>.
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">-</span><span class="w"> </span>Branches live &lt; 3 days. If a feature needs longer, land it behind a
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  flag in small PRs instead of keeping one branch open.
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">-</span><span class="w"> </span>Squash-merge to <span class="sb">`main`</span>; the PR title becomes the commit message.
+</code></pre></div>
+<h2 id="step-2-route-review-with-codeowners">Step 2: route review with CODEOWNERS<a class="headerlink" href="#step-2-route-review-with-codeowners" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>.github
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>.github/CODEOWNERS<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s">* @platform-team</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">/packages/api/ @backend-team</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">/packages/web/ @frontend-team</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s">*.md @docs-team</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s">EOF</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>git<span class="w"> </span>add<span class="w"> </span>-A<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add CODEOWNERS"</span>
+</code></pre></div>
+<p>Rules are evaluated <strong>last match wins</strong>, same as <code>.gitignore</code> — a PR
+touching <code>/packages/api/handlers.go</code> matches both <code>*</code> and
+<code>/packages/api/</code>, and the more specific later rule (<code>@backend-team</code>) wins.
+Combined with branch protection's "require review from Code Owners," this
+means a PR touching only <code>packages/web/</code> never blocks on the backend
+team's availability, and vice versa.</p>
+<h2 id="step-3-enforce-it-with-branch-protection-required-checks">Step 3: enforce it with branch protection + required checks<a class="headerlink" href="#step-3-enforce-it-with-branch-protection-required-checks" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/OWNER/REPO/branches/main/protection<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>--input<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="s">  "required_status_checks": {"strict": true, "contexts": ["lint", "test", "build"]},</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s">  "required_pull_request_reviews": {</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s">    "required_approving_review_count": 1,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s">    "require_code_owner_reviews": true,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s">    "dismiss_stale_reviews": true</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="s">  },</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="s">  "enforce_admins": true,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="s">  "restrictions": null,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="s">  "required_linear_history": true</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="s">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="s">EOF</span>
+</code></pre></div>
+<p><code>required_linear_history: true</code> is the enforcement mechanism for "no merge
+commits on <code>main</code>" if the team chose squash-only — GitHub rejects any
+merge that would introduce a commit with more than one parent, so the
+policy from <code>CONTRIBUTING.md</code> is not just a suggestion.
+<code>dismiss_stale_reviews: true</code> invalidates an approval automatically the
+moment new commits land on the PR, closing the loop where someone
+approves, the author pushes an unrelated change, and it merges unreviewed.</p>
+<h2 id="step-4-standardize-the-pr-itself">Step 4: standardize the PR itself<a class="headerlink" href="#step-4-standardize-the-pr-itself" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh"># .github/pull_request_template.md</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gu">## What</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gu">## Why</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="gu">## How to test</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">- [ ]</span> Tests added/updated
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">- [ ]</span> Docs updated if behavior changed
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .github/ISSUE_TEMPLATE/bug_report.yml</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bug report</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">body</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repro</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Steps to reproduce</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">validations</span><span class="p">:</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>Templates aren't just formatting — the checklist items in the PR template
+are what a reviewer actually checks against, and structured issue forms
+(YAML, not free-text Markdown templates) let automation parse fields
+reliably instead of regex-scraping a description.</p>
+<h2 id="step-5-put-it-in-ci-not-just-docs">Step 5: put it in CI, not just docs<a class="headerlink" href="#step-5-put-it-in-ci-not-just-docs" title="Permanent link">&para;</a></h2>
+<p>A written policy that CI doesn't check will drift. Encode the mechanical
+parts as workflow jobs so a violation fails the PR instead of being caught
+in review:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Policy</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pull_request</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">commit-lint</span><span class="p">:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="nv">0</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wagoid/commitlint-github-action@v6</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="nt">no-direct-main-commits</span><span class="p">:</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">          </span><span class="no">if git log --oneline origin/main..HEAD --merges | grep -q .; then</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">            </span><span class="no">echo "::error::Merge commits are not allowed; rebase instead."; exit 1</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">          </span><span class="no">fi</span>
+</code></pre></div>
+<h2 id="putting-it-together-the-decision-table">Putting it together: the decision table<a class="headerlink" href="#putting-it-together-the-decision-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Config that enforces it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Branch model (GitHub Flow)</td>
+<td><code>CONTRIBUTING.md</code> + branch naming convention (documentation only — Git doesn't enforce naming)</td>
+</tr>
+<tr>
+<td>Review routing</td>
+<td><code>.github/CODEOWNERS</code></td>
+</tr>
+<tr>
+<td>Mandatory review + CI</td>
+<td>branch protection <code>required_pull_request_reviews</code>, <code>required_status_checks</code></td>
+</tr>
+<tr>
+<td>No accidental merge commits</td>
+<td><code>required_linear_history</code></td>
+</tr>
+<tr>
+<td>Stale approvals don't count</td>
+<td><code>dismiss_stale_reviews</code></td>
+</tr>
+<tr>
+<td>Consistent PR/issue quality</td>
+<td><code>pull_request_template.md</code>, <code>ISSUE_TEMPLATE/*.yml</code></td>
+</tr>
+<tr>
+<td>Commit message format</td>
+<td><code>commitlint</code> CI job</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CODEOWNERS matching reuses Git's own <code>.gitignore</code> pattern engine
+  (<code>fnmatch</code>-style globs), which is why the "last matching pattern wins"
+  rule feels familiar — it's the identical precedence rule <code>.gitignore</code>
+  uses for negated patterns. GitHub parses the file at the PR's <strong>base</strong>
+  branch, not the PR branch, specifically so a malicious PR can't
+  redirect its own required reviewers by editing CODEOWNERS in the same
+  PR.</li>
+<li><code>required_linear_history</code> is enforced at the ref-update hook on GitHub's
+  server, the same choke point that runs branch protection generally: when
+  a merge request comes in, GitHub inspects the resulting commit's parent
+  count before accepting the ref update, and rejects it if count &gt; 1. This
+  is a server-side check with no local Git equivalent — a local <code>git merge
+  --no-ff</code> command has no way to know the remote will reject it until the
+  push happens.</li>
+<li><code>dismiss_stale_reviews</code> is implemented by GitHub watching for new pushes
+  to the PR's head ref and comparing the new head SHA against the SHA an
+  approval was recorded against; it doesn't re-evaluate the <em>content</em> of
+  the diff (a whitespace-only fixup dismisses reviews exactly like a
+  substantive change would), which is a known limitation teams work around
+  with <code>paths-ignore</code> triggers or by squashing trivial fixups locally
+  before pushing.</li>
+<li>Structured issue forms (<code>ISSUE_TEMPLATE/*.yml</code>) get parsed into a JSON
+  payload GitHub attaches to the issue body as an HTML comment
+  (<code>&lt;!-- ... --&gt;</code>) containing the field IDs and values verbatim — this is
+  what lets a GitHub Action later parse <code>github.event.issue.body</code> for the
+  <code>repro</code> field's exact answer without fragile text scraping, unlike the
+  older Markdown-only issue templates.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Write a <code>CONTRIBUTING.md</code> and <code>.github/CODEOWNERS</code> for a hypothetical
+3-team repo (frontend, backend, infra), then design the exact branch
+protection JSON payload (<code>required_status_checks</code>, <code>required_pull_request_reviews</code>,
+<code>required_linear_history</code>) that would make every rule in your
+<code>CONTRIBUTING.md</code> actually enforced rather than just documented.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

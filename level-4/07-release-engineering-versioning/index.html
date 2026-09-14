@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1966,6 +1964,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Release Engineering & Versioning Strategy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1982,6 +1998,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conventional-commits-making-history-machine-readable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conventional Commits: making history machine-readable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semver-what-each-commit-type-maps-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SemVer: what each commit type maps to
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging-a-release-for-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tagging a release for real
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-changelog-straight-from-tagged-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating a changelog straight from tagged history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-a-github-release-from-a-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing a GitHub Release from a tag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-releases-and-version-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-releases and version channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conventional-commits-making-history-machine-readable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conventional Commits: making history machine-readable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semver-what-each-commit-type-maps-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SemVer: what each commit type maps to
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging-a-release-for-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tagging a release for real
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-changelog-straight-from-tagged-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating a changelog straight from tagged history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-a-github-release-from-a-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing a GitHub Release from a tag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-releases-and-version-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-releases and version channels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2337,165 @@
 
 
 <h1 id="07-release-engineering-versioning-strategy">07 · Release Engineering &amp; Versioning Strategy<a class="headerlink" href="#07-release-engineering-versioning-strategy" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>release Engineering &amp; Versioning Strategy</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>A version number is a promise to consumers about what kind of change to
+expect. This module builds that promise mechanically: Conventional
+Commits as the input, SemVer as the output, and Git tags plus GitHub
+Releases as the artifact — all derivable from <code>git log</code>, not from a
+human deciding "this feels like a minor bump."</p>
+<h2 id="conventional-commits-making-history-machine-readable">Conventional Commits: making history machine-readable<a class="headerlink" href="#conventional-commits-making-history-machine-readable" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>615405e Add CODEOWNERS
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>5bd6fe0 Small fix behind flag (squashed)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>b6dfdf4 Merge release 1.1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>8739f20 Prepare 1.1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>79a9272 Initial release
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>0ff1e35 Add feature 1
+</code></pre></div></p>
+<p>None of these messages are machine-parseable for version bumping. A
+Conventional Commits-disciplined history looks like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>feat(api): add pagination to /users endpoint
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>fix(web): correct off-by-one in date picker
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>feat!: drop support for Node 16
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>BREAKING CHANGE: minimum Node version is now 18
+</code></pre></div>
+<p>The <code>type</code> prefix (<code>feat</code>, <code>fix</code>, <code>chore</code>, <code>docs</code>, ...), optional <code>!</code> or a
+<code>BREAKING CHANGE:</code> footer, and optional <code>(scope)</code> are the entire input a
+release tool needs to compute the next version without a human deciding.</p>
+<h2 id="semver-what-each-commit-type-maps-to">SemVer: what each commit type maps to<a class="headerlink" href="#semver-what-each-commit-type-maps-to" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Commit type</th>
+<th>Version bump</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fix:</code></td>
+<td>patch (<code>1.2.0</code> → <code>1.2.1</code>)</td>
+<td>bug fix, no API change</td>
+</tr>
+<tr>
+<td><code>feat:</code></td>
+<td>minor (<code>1.2.0</code> → <code>1.3.0</code>)</td>
+<td>new backward-compatible capability</td>
+</tr>
+<tr>
+<td><code>feat!:</code> / <code>BREAKING CHANGE:</code> footer</td>
+<td>major (<code>1.2.0</code> → <code>2.0.0</code>)</td>
+<td>breaks existing consumers</td>
+</tr>
+<tr>
+<td><code>chore:</code>, <code>docs:</code>, <code>style:</code>, <code>refactor:</code>, <code>test:</code></td>
+<td>no bump</td>
+<td>no user-facing change</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tagging-a-release-for-real">Tagging a release for real<a class="headerlink" href="#tagging-a-release-for-real" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.1.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"v1.1.0"</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.2.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"v1.2.0"</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>tag<span class="w"> </span>-l<span class="w"> </span>-n1
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>v1.1.0          v1.1.0
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>v1.2.0          v1.2.0
+</code></pre></div></p>
+<p>An <strong>annotated</strong> tag (<code>-a</code>) is its own object in <code>.git/objects</code> — with a
+message, tagger identity, and timestamp, distinct from a lightweight tag
+(just a ref pointing straight at a commit). Releases should always use
+annotated tags: <code>git describe</code>, changelog generators, and GitHub Releases
+all expect the tag object's metadata to exist.</p>
+<h2 id="generating-a-changelog-straight-from-tagged-history">Generating a changelog straight from tagged history<a class="headerlink" href="#generating-a-changelog-straight-from-tagged-history" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">"%s"</span><span class="w"> </span>v1.1.0..HEAD
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Add CODEOWNERS
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Small fix behind flag (squashed)
+</code></pre></div></p>
+<p>With Conventional Commits, that same command's output is what a tool like
+<code>release-please</code> or <code>semantic-release</code> parses to (a) compute the next
+version, (b) group entries into <code>Features</code> / <code>Bug Fixes</code> / <code>BREAKING
+CHANGES</code> sections, and (c) write <code>CHANGELOG.md</code> and cut the tag — fully
+automated, triggered by every merge to <code>main</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># .github/workflows/release-please.yml</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">release-please</span><span class="p">:</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">googleapis/release-please-action@v4</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">          </span><span class="nt">release-type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node</span>
+</code></pre></div>
+<p>This workflow keeps a standing "Release PR" open with the accumulated
+changelog and version bump; merging <em>that</em> PR is what actually creates the
+tag and GitHub Release — a human still approves the release, but computes
+nothing.</p>
+<h2 id="publishing-a-github-release-from-a-tag">Publishing a GitHub Release from a tag<a class="headerlink" href="#publishing-a-github-release-from-a-tag" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>gh<span class="w"> </span>release<span class="w"> </span>create<span class="w"> </span>v1.2.0<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>--title<span class="w"> </span><span class="s2">"v1.2.0"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>--notes<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s1">'- %s'</span><span class="w"> </span>v1.1.0..v1.2.0<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span>dist/app-linux-x64.tar.gz<span class="w"> </span>dist/app-macos-arm64.tar.gz
+</code></pre></div>
+<p>A GitHub Release is a database record (title, notes, prerelease flag)
+plus optional binary assets, anchored to a tag — it is not itself a Git
+object; deleting a Release does not delete the underlying tag or its
+commits.</p>
+<h2 id="pre-releases-and-version-channels">Pre-releases and version channels<a class="headerlink" href="#pre-releases-and-version-channels" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v2.0.0-rc.1<span class="w"> </span>-m<span class="w"> </span><span class="s2">"v2.0.0-rc.1"</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>gh<span class="w"> </span>release<span class="w"> </span>create<span class="w"> </span>v2.0.0-rc.1<span class="w"> </span>--prerelease<span class="w"> </span>--notes<span class="w"> </span><span class="s2">"Release candidate for testing"</span>
+</code></pre></div>
+<p>SemVer's pre-release identifiers (<code>-rc.1</code>, <code>-beta.2</code>, <code>-alpha</code>) sort
+<strong>before</strong> the final version they precede (<code>2.0.0-rc.1 &lt; 2.0.0</code>) under
+strict SemVer ordering, and <code>--prerelease</code> tells GitHub (and package
+managers reading GitHub Releases) not to treat this as "latest stable."</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An annotated tag is a distinct object type (<code>tag</code>) in the object
+  database, alongside blob/tree/commit — <code>git cat-file -p v1.2.0</code> shows
+  <code>object &lt;commit-sha&gt;</code>, <code>type commit</code>, <code>tag v1.2.0</code>, tagger line, and the
+  message, all hashed together into the tag object's own SHA. A
+  lightweight tag has none of this; it's purely an entry in
+  <code>.git/refs/tags/</code> pointing directly at a commit SHA, which is why <code>git
+  describe</code> (which needs tagger date and message) silently ignores
+  lightweight tags unless you pass <code>--tags</code>.</li>
+<li><code>git describe</code> — what most release tooling uses under the hood to
+  compute "how far past the last tag" — walks back from <code>HEAD</code> through
+  first-parent history until it finds a commit reachable from an
+  annotated tag, then reports <code>&lt;tag&gt;-&lt;commits-since&gt;-g&lt;short-sha&gt;</code>. This
+  is exactly the format you see in <code>go version</code> output and many
+  <code>--version</code> flags, and it's why a repo with zero tags makes <code>git
+  describe</code> fail outright: there's nothing to count "distance since."</li>
+<li>SemVer precedence for pre-release versions is defined field-by-field,
+  ASCII/numeric comparison on dot-separated identifiers
+  (<code>rc.1 &lt; rc.2 &lt; rc.10</code> numerically, not lexically, when every identifier
+  is all-digits) — tooling that gets this wrong (naive string sort) will
+  incorrectly rank <code>1.0.0-rc.10</code> before <code>1.0.0-rc.2</code>, a real bug class in
+  hand-rolled version-comparison code.</li>
+<li><code>release-please</code>'s "standing PR" pattern works by having the bot
+  maintain one branch (<code>release-please--branches--main</code>) that it
+  force-pushes a rebased changelog/version-bump commit to on every run,
+  rather than opening a new PR per merge — this keeps exactly one release
+  candidate PR open at a time and is why merging it (a normal PR merge,
+  triggering the same workflow) is the signal that actually cuts the tag:
+  the workflow distinguishes "a release PR was just merged" from
+  "a regular commit landed" by checking the PR's head branch name.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Starting from a fresh scratch repo, make three commits with Conventional
+Commit messages: one <code>fix:</code>, one <code>feat:</code>, and one <code>feat!:</code> with a
+<code>BREAKING CHANGE:</code> footer. By hand, work out what the next version number
+would be starting from <code>v1.0.0</code>, tag it as an annotated tag, and generate
+the changelog text with <code>git log --pretty=format:"- %s" &lt;prev-tag&gt;..HEAD</code>.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1826,6 +1824,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Monorepo Strategies
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1842,6 +1858,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-a-monorepo-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up a monorepo layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-checkout-only-materialize-what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sparse-checkout: only materialize what you need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoping-ci-to-only-the-packages-that-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoping CI to only the packages that changed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-history-out-of-a-monorepo-or-into-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Splitting history out of a monorepo (or into one)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2200,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-a-monorepo-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up a monorepo layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparse-checkout-only-materialize-what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sparse-checkout: only materialize what you need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoping-ci-to-only-the-packages-that-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoping CI to only the packages that changed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-history-out-of-a-monorepo-or-into-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Splitting history out of a monorepo (or into one)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2293,134 @@
 
 
 <h1 id="02-monorepo-strategies">02 · Monorepo Strategies<a class="headerlink" href="#02-monorepo-strategies" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>monorepo Strategies</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>A monorepo puts multiple projects — services, libraries, frontends — in one
+Git repository instead of one repo each. Git itself has no concept of
+"packages"; everything below is built on ordinary trees, sparse-checkout,
+and path filters layered on top of a single history.</p>
+<h2 id="setting-up-a-monorepo-layout">Setting up a monorepo layout<a class="headerlink" href="#setting-up-a-monorepo-layout" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>init<span class="w"> </span>-q<span class="w"> </span>-b<span class="w"> </span>main
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>packages/api<span class="w"> </span>packages/web<span class="w"> </span>packages/shared
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'{"name":"api"}'</span><span class="w"> </span>&gt;<span class="w"> </span>packages/api/package.json
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'{"name":"web"}'</span><span class="w"> </span>&gt;<span class="w"> </span>packages/web/package.json
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'{"name":"shared"}'</span><span class="w"> </span>&gt;<span class="w"> </span>packages/shared/package.json
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>git<span class="w"> </span>add<span class="w"> </span>-A
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Initial monorepo layout"</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>a15c28e Initial monorepo layout
+</code></pre></div></p>
+<p>One commit, one tree, three subtrees (<code>packages/api</code>, <code>packages/web</code>,
+<code>packages/shared</code>). There is nothing structurally different from a
+single-project repo — a monorepo is a <em>convention</em> about what you put in
+the tree, not a different Git object model.</p>
+<h2 id="sparse-checkout-only-materialize-what-you-need">Sparse-checkout: only materialize what you need<a class="headerlink" href="#sparse-checkout-only-materialize-what-you-need" title="Permanent link">&para;</a></h2>
+<p>A large monorepo can have hundreds of packages. Nobody working on <code>api</code>
+needs <code>web</code>'s files on disk. <code>git sparse-checkout</code> tells Git to populate
+the working tree with only selected paths, while the full history is still
+fetched.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--no-checkout<span class="w"> </span>https://example.com/monorepo.git<span class="w"> </span>sparse-clone
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>sparse-clone
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>sparse-checkout<span class="w"> </span>init<span class="w"> </span>--cone
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>git<span class="w"> </span>sparse-checkout<span class="w"> </span><span class="nb">set</span><span class="w"> </span>packages/api<span class="w"> </span>packages/shared
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>find<span class="w"> </span>.<span class="w"> </span>-not<span class="w"> </span>-path<span class="w"> </span><span class="s1">'./.git*'</span><span class="w"> </span>-type<span class="w"> </span>f
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./packages/shared/package.json
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>./packages/api/package.json
+</code></pre></div></p>
+<p><code>packages/web</code> was never written to disk. <code>--cone</code> mode restricts patterns
+to whole directories (fast, index-friendly); non-cone mode accepts full
+gitignore-style patterns but is slower on very large trees. Add a package
+later with <code>git sparse-checkout add packages/web</code> — no re-clone needed.</p>
+<h2 id="scoping-ci-to-only-the-packages-that-changed">Scoping CI to only the packages that changed<a class="headerlink" href="#scoping-ci-to-only-the-packages-that-changed" title="Permanent link">&para;</a></h2>
+<p>The other half of monorepo tooling is <em>not running every package's tests
+on every commit</em>. GitHub Actions does this with <code>paths</code> filters and
+<code>git diff</code> in a job:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"packages/api/**"</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="nt">test-api</span><span class="p">:</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm --prefix packages/api ci</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm --prefix packages/api test</span>
+</code></pre></div>
+<p>For finer-grained control than the <code>paths:</code> trigger (which fires the
+<em>workflow</em>, not individual jobs), compute the changed packages yourself
+and fan out:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>origin/main...HEAD<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d/<span class="w"> </span>-f1-2<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>packages/api
+</code></pre></div></p>
+<p>Feed that list into a matrix (<code>strategy.matrix.package</code>) so only the
+packages actually touched in the PR get built and tested. Tools like Nx,
+Turborepo, and Bazel formalize this as a dependency graph so a change to
+<code>packages/shared</code> correctly re-triggers everything that <em>depends on</em> it,
+not just packages with literal file changes.</p>
+<h2 id="splitting-history-out-of-a-monorepo-or-into-one">Splitting history out of a monorepo (or into one)<a class="headerlink" href="#splitting-history-out-of-a-monorepo-or-into-one" title="Permanent link">&para;</a></h2>
+<p>Two commands exist for the reverse operations — pulling one package's
+history out as its own repo, or merging an existing repo in as a
+subdirectory while keeping its history:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>subtree<span class="w"> </span>split<span class="w"> </span>--prefix<span class="o">=</span>packages/api<span class="w"> </span>-b<span class="w"> </span>api-only
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>api-only
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>7f3c9a1 Initial monorepo layout
+</code></pre></div></p>
+<p><code>git subtree split</code> rewrites a synthetic history containing only commits
+that touched <code>packages/api</code>, rooted so it looks like <code>api</code> was always its
+own repo. The reverse — importing an existing standalone repo as a
+subdirectory of the monorepo while preserving its commit history — is
+<code>git subtree add --prefix=packages/new-lib ../new-lib-repo main</code>. Both
+operations rewrite trees, not blobs: no file content is duplicated: object
+sharing between the split repo and the source repo is preserved as long as
+blobs are byte-identical.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sparse-checkout works entirely through the <strong>index</strong> (<code>.git/index</code>),
+  which gains a <code>skip-worktree</code> bit per entry. Files matching sparse
+  patterns are checked out normally; everything else stays as an index
+  entry with <code>skip-worktree</code> set, so Git knows the object exists (and
+  tracks it for diffs against <code>HEAD</code>) but deliberately doesn't write it
+  to the working directory. This is why sparse repos still show accurate
+  <code>git status</code> and don't accidentally "lose" files — they're absent from
+  disk, not from Git's bookkeeping.</li>
+<li><code>--cone</code> mode matters because non-cone sparse-checkout falls back to
+  full <code>.gitignore</code>-style pattern matching against <em>every</em> path in the
+  index on every checkout, which is O(entries × patterns) and gets slow
+  past tens of thousands of files. Cone mode restricts patterns to
+  recursive directory prefixes, letting Git use a much faster tree-based
+  walk that only descends into included directories at all.</li>
+<li>A <code>paths:</code> filter on a GitHub Actions trigger is evaluated by GitHub's
+  backend <em>before</em> a workflow run is even created — it diffs the base and
+  head commit's trees restricted to the given prefixes using the same
+  tree-diff algorithm <code>git diff</code> uses locally, so an unrelated push
+  produces zero billed CI minutes, not a run that starts and then exits
+  early.</li>
+<li><code>git subtree split</code> walks the full commit graph and, for each commit,
+  extracts the sub-tree object at the given prefix, then synthesizes a new
+  commit object pointing at that sub-tree with rewritten parent pointers
+  (skipping commits where the sub-tree didn't change). Because tree/blob
+  objects are content-addressed, a sub-tree that's unchanged between two
+  monorepo commits produces the exact same tree SHA in the split history,
+  so <code>git log</code> on the split branch correctly shows only commits where
+  <code>packages/api</code> actually changed.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>In a scratch repo, build a 3-package monorepo like the one above, make one
+commit that touches only <code>packages/api</code> and another that touches only
+<code>packages/web</code>. Run <code>git subtree split --prefix=packages/api -b api-only</code>
+and confirm with <code>git log --oneline api-only</code> that only the API-touching
+commit appears in the split history.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1938,6 +1936,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · GitHub Apps & Automation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1954,6 +1970,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-github-apps-replaced-oauth-apps-for-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why GitHub Apps replaced OAuth Apps for automation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-a-github-app-what-actually-gets-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering a GitHub App (what actually gets created)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minting-an-installation-token-real-requestresponse-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minting an installation token (real request/response shape)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reacting-to-webhooks-the-actual-event-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reacting to webhooks (the actual event flow)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lightweight-alternative-github_token-inside-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The lightweight alternative: GITHUB_TOKEN inside Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-github-apps-replaced-oauth-apps-for-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why GitHub Apps replaced OAuth Apps for automation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-a-github-app-what-actually-gets-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering a GitHub App (what actually gets created)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minting-an-installation-token-real-requestresponse-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minting an installation token (real request/response shape)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reacting-to-webhooks-the-actual-event-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reacting to webhooks (the actual event flow)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lightweight-alternative-github_token-inside-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The lightweight alternative: GITHUB_TOKEN inside Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,177 @@
 
 
 <h1 id="06-github-apps-automation">06 · GitHub Apps &amp; Automation<a class="headerlink" href="#06-github-apps-automation" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>gitHub Apps &amp; Automation</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Automating GitHub beyond a workflow file — a bot that comments on PRs,
+labels issues, or reacts to webhooks in real time — means either an OAuth
+App (acts <em>as a user</em>) or a GitHub App (acts as its own first-class
+identity with fine-grained, installation-scoped permissions). Nearly all
+serious automation today (Dependabot, Renovate, CI systems) is built as a
+GitHub App, not an OAuth App.</p>
+<h2 id="why-github-apps-replaced-oauth-apps-for-automation">Why GitHub Apps replaced OAuth Apps for automation<a class="headerlink" href="#why-github-apps-replaced-oauth-apps-for-automation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>OAuth App</th>
+<th>GitHub App</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acts as</td>
+<td>the authorizing user</td>
+<td>itself, a distinct identity</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>whatever scopes the user grants (broad: <code>repo</code>, <code>admin:org</code>)</td>
+<td>fine-grained per-resource (<code>contents: read</code>, <code>issues: write</code>)</td>
+</tr>
+<tr>
+<td>Rate limit</td>
+<td>shared with the user's personal limit</td>
+<td>its own pool per installation</td>
+</tr>
+<tr>
+<td>Installable per-repo</td>
+<td>no (all-or-nothing on the account)</td>
+<td>yes — a repo owner picks exactly which repos it can see</td>
+</tr>
+<tr>
+<td>Auth token lifetime</td>
+<td>long-lived, revocable only by the user</td>
+<td>short-lived (1 hour), minted per-installation</td>
+</tr>
+</tbody>
+</table>
+<p>A bot built as an OAuth App shows up in commit/PR history as "acting on
+behalf of <code>some-user</code>" and dies the moment that user's token is revoked or
+they leave the org. A GitHub App shows up as its own bot identity
+(<code>my-bot[bot]</code>) and survives personnel changes entirely.</p>
+<h2 id="registering-a-github-app-what-actually-gets-created">Registering a GitHub App (what actually gets created)<a class="headerlink" href="#registering-a-github-app-what-actually-gets-created" title="Permanent link">&para;</a></h2>
+<p>Creating an app (via <code>Settings → Developer settings → GitHub Apps → New</code>)
+produces three artifacts you manage as secrets:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>App ID:            123456
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Private key:       -----BEGIN RSA PRIVATE KEY-----\n...
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Webhook secret:    (random string you set)
+</code></pre></div>
+<p>The private key signs a JWT the app uses to authenticate <em>as the app
+itself</em> (to list its installations, for instance); a separate,
+installation-scoped access token — minted by exchanging that JWT — is
+what it uses to actually call the REST/GraphQL API against one specific
+installation's repos.</p>
+<h2 id="minting-an-installation-token-real-requestresponse-shape">Minting an installation token (real request/response shape)<a class="headerlink" href="#minting-an-installation-token-real-requestresponse-shape" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 1. Build a JWT signed with the app's private key (iss=App ID, 10-min exp)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">JWT</span><span class="o">=</span><span class="k">$(</span>python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s">import jwt, time</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">payload = {"iat": int(time.time()) - 60, "exp": int(time.time()) + 600, "iss": "123456"}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">print(jwt.encode(payload, open("app-private-key.pem").read(), algorithm="RS256"))</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s">PY</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># 2. Exchange it for an installation token</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$JWT</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">"Accept: application/vnd.github+json"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span>https://api.github.com/app/installations/98765/access_tokens
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ghs_16C7e42F292c6912E7710c838347Ae178B4a"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-09-14T16:12:03Z"</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"contents"</span><span class="p">:</span><span class="w"> </span><span class="s2">"read"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pull_requests"</span><span class="p">:</span><span class="w"> </span><span class="s2">"write"</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div></p>
+<p>That <code>ghs_...</code> token is what goes in the <code>Authorization: token ghs_...</code>
+header for subsequent API calls, and it stops working after one hour —
+short-lived by design, so a leaked token has a tiny blast radius compared
+to a personal access token.</p>
+<h2 id="reacting-to-webhooks-the-actual-event-flow">Reacting to webhooks (the actual event flow)<a class="headerlink" href="#reacting-to-webhooks-the-actual-event-flow" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Flask-style sketch of a GitHub App webhook receiver</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">"/webhook"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">"POST"</span><span class="p">])</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">webhook</span><span class="p">():</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">signature</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">"X-Hub-Signature-256"</span><span class="p">]</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">expected</span> <span class="o">=</span> <span class="s2">"sha256="</span> <span class="o">+</span> <span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">WEBHOOK_SECRET</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">hmac</span><span class="o">.</span><span class="n">compare_digest</span><span class="p">(</span><span class="n">signature</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="n">abort</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">event</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">"X-GitHub-Event"</span><span class="p">]</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">payload</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">"pull_request"</span> <span class="ow">and</span> <span class="n">payload</span><span class="p">[</span><span class="s2">"action"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"opened"</span><span class="p">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="n">post_comment</span><span class="p">(</span><span class="n">payload</span><span class="p">[</span><span class="s2">"installation"</span><span class="p">][</span><span class="s2">"id"</span><span class="p">],</span> <span class="n">payload</span><span class="p">[</span><span class="s2">"pull_request"</span><span class="p">][</span><span class="s2">"number"</span><span class="p">],</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>                     <span class="s2">"Thanks for the PR! Running checks now."</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="k">return</span> <span class="s2">""</span><span class="p">,</span> <span class="mi">200</span>
+</code></pre></div>
+<p>The <code>X-Hub-Signature-256</code> check is not optional in production — without
+it, anyone who guesses your webhook URL can forge events. GitHub signs
+every webhook body with HMAC-SHA256 using the webhook secret you set at
+registration; verifying it is the app's only proof the payload really
+came from GitHub.</p>
+<h2 id="the-lightweight-alternative-github_token-inside-actions">The lightweight alternative: <code>GITHUB_TOKEN</code> inside Actions<a class="headerlink" href="#the-lightweight-alternative-github_token-inside-actions" title="Permanent link">&para;</a></h2>
+<p>For automation scoped to <em>your own</em> repo's workflows, you rarely need a
+full GitHub App — the automatic <code>GITHUB_TOKEN</code> already acts with an
+installation-scoped identity for the duration of a single job:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">permissions</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">label</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/github-script@v7</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">          </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">            </span><span class="no">github.rest.issues.addLabels({</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">              </span><span class="no">owner: context.repo.owner, repo: context.repo.repo,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">              </span><span class="no">issue_number: context.issue.number, labels: ["needs-review"]</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="no">});</span>
+</code></pre></div>
+<p>Reach for a real GitHub App only when automation needs to run <em>outside</em>
+a workflow trigger (a long-lived server reacting to webhooks in real
+time) or across many installations at once (a SaaS product other repos
+install).</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The JWT the app signs with its private key uses <strong>asymmetric</strong> signing
+  (RS256) specifically so GitHub can verify the app's identity using only
+  the <em>public</em> key it already has on file from registration — the app
+  never transmits its private key over the network at any point, unlike
+  a shared-secret scheme where the verifier would need the same secret
+  the signer has.</li>
+<li>Installation tokens are minted per-installation and automatically
+  scoped to exactly the repos and permissions the installer approved —
+  this scoping is enforced by GitHub's authorization layer checking the
+  installation ID embedded in the token against its stored
+  repo/permission grant on every API call, not by anything client-side;
+  a token minted for installation A simply returns 404 (not 403, to avoid
+  leaking repo existence) for a repo under installation B.</li>
+<li>Webhook signature verification must use a constant-time comparison
+  (<code>hmac.compare_digest</code>, not <code>==</code>) because a naive string comparison
+  short-circuits on the first mismatched byte, and the tiny timing
+  difference between failing at byte 1 versus byte 63 is measurable
+  enough over many requests to let an attacker recover the correct
+  signature byte-by-byte — the same timing-attack class that motivates
+  constant-time comparison in cryptographic code generally.</li>
+<li>The Actions-provided <code>GITHUB_TOKEN</code> is itself minted from a hidden
+  first-party GitHub App installed on every repo — this is why its
+  permissions are configured with the same <code>permissions:</code> block syntax
+  Apps use, why it can't trigger further workflow runs by design (events
+  it creates carry <code>github-actions[bot]</code> as actor and are filtered from
+  re-triggering <code>on: push</code>/<code>on: pull_request</code> to prevent infinite
+  workflow loops), and why it automatically expires when the job ends
+  rather than needing explicit revocation.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Sketch the webhook handler logic (pseudocode is fine) for a bot that:
+listens for <code>issues.opened</code>, checks whether the issue body matches a
+"missing required fields" pattern, and if so posts a comment and adds a
+<code>needs-info</code> label using an installation token. Write out the exact
+<code>X-GitHub-Event</code> value and JSON path (<code>payload["issue"]["body"]</code>, etc.)
+your handler would read for each step.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

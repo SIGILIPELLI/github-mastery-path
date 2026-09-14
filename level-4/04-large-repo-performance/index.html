@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1882,6 +1880,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Large Repo Performance (sparse checkout, partial clone)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1898,6 +1914,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#baseline-a-repo-with-real-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline: a repo with real history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shallow-clone-truncate-history-you-dont-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shallow clone: truncate history you don't need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partial-clone-defer-blob-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partial clone: defer blob downloads
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#committing-history-in-a-way-that-stays-fast-git-commit-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Committing history in a way that stays fast: git commit-graph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cutting-checkout-cost-with-sparse-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutting checkout cost with sparse-checkout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#baseline-a-repo-with-real-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline: a repo with real history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shallow-clone-truncate-history-you-dont-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shallow clone: truncate history you don't need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partial-clone-defer-blob-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partial clone: defer blob downloads
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#committing-history-in-a-way-that-stays-fast-git-commit-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Committing history in a way that stays fast: git commit-graph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cutting-checkout-cost-with-sparse-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutting checkout cost with sparse-checkout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,124 @@
 
 
 <h1 id="04-large-repo-performance-sparse-checkout-partial-clone">04 · Large Repo Performance (sparse checkout, partial clone)<a class="headerlink" href="#04-large-repo-performance-sparse-checkout-partial-clone" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>large Repo Performance (sparse checkout, partial clone)</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>A repo with years of history and a large working tree is slow in three
+independent ways: cloning (transferring history), checkout (writing files
+to disk), and everyday commands like <code>git log</code> and <code>git status</code> (walking
+objects). Each has its own fix.</p>
+<h2 id="baseline-a-repo-with-real-history">Baseline: a repo with real history<a class="headerlink" href="#baseline-a-repo-with-real-history" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>init<span class="w"> </span>-q<span class="w"> </span>-b<span class="w"> </span>main
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">30</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"line </span><span class="nv">$i</span><span class="s2">"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>file.txt
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>git<span class="w"> </span>add<span class="w"> </span>-A
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"commit </span><span class="nv">$i</span><span class="s2">"</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">done</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>du<span class="w"> </span>-sh<span class="w"> </span>.git
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>468K    .git
+</code></pre></div></p>
+<p>Thirty tiny commits already cost nearly half a megabyte of object data —
+every commit's tree and the blob's full new snapshot are all separate
+objects before Git ever repacks them.</p>
+<h2 id="shallow-clone-truncate-history-you-dont-need">Shallow clone: truncate history you don't need<a class="headerlink" href="#shallow-clone-truncate-history-you-dont-need" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>file:///path/to/big<span class="w"> </span>shallow-clone
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>shallow-clone
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>du<span class="w"> </span>-sh<span class="w"> </span>.git
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>3b850c5 commit 30
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>124K    .git
+</code></pre></div></p>
+<p><code>--depth 1</code> fetches only the tip commit and its tree/blobs — not the 29
+commits before it. <code>.git</code> drops from 468K to 124K. The tradeoff: <code>git log</code>
+only shows one commit, <code>git blame</code> can't walk further back, and pushing
+from a shallow clone is restricted. Shallow clones are ideal for CI
+checkout jobs that only build the current tip and throw the clone away
+after.</p>
+<h2 id="partial-clone-defer-blob-downloads">Partial clone: defer blob downloads<a class="headerlink" href="#partial-clone-defer-blob-downloads" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--filter<span class="o">=</span>blob:none<span class="w"> </span>file:///path/to/big<span class="w"> </span>partial-clone
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>partial-clone
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>du<span class="w"> </span>-sh<span class="w"> </span>.git
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>warning: filtering not recognized by server, ignoring
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>128K    .git
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>      30
+</code></pre></div></p>
+<p>This is a real, common failure mode worth seeing once: <code>--filter</code> requires
+the <strong>server</strong> to advertise <code>uploadpack.allowFilter</code> over Git's protocol
+v2 (GitHub.com supports this; a bare local repo served over the <code>file://</code>
+transport with default settings does not). When the server doesn't
+support it, Git falls back to a normal clone and warns rather than
+failing outright. Against a server that does support it (<code>git config
+uploadpack.allowFilter true</code> on the remote, or GitHub itself),
+<code>blob:none</code> fetches all commits and trees up front but defers blob
+content until a <code>checkout</code> or <code>diff</code> actually needs it — full history for
+<code>git log</code>, without downloading every historical blob.</p>
+<h2 id="committing-history-in-a-way-that-stays-fast-git-commit-graph">Committing history in a way that stays fast: <code>git commit-graph</code><a class="headerlink" href="#committing-history-in-a-way-that-stays-fast-git-commit-graph" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>commit-graph<span class="w"> </span>write<span class="w"> </span>--reachable
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ls<span class="w"> </span>.git/objects/info/
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>commit-graph
+</code></pre></div></p>
+<p>The commit-graph file precomputes commit metadata (parents, generation
+number, changed-path Bloom filters) in a format <code>git log</code>, <code>git merge-base</code>,
+and <code>git status</code> can memory-map and binary-search instead of opening and
+zlib-inflating every commit object individually. <code>git maintenance start</code>
+schedules this (and repacking, and <code>gc</code>) to run automatically in the
+background instead of as a single slow <code>git gc</code> that blocks you.</p>
+<h2 id="cutting-checkout-cost-with-sparse-checkout">Cutting checkout cost with sparse-checkout<a class="headerlink" href="#cutting-checkout-cost-with-sparse-checkout" title="Permanent link">&para;</a></h2>
+<p>Covered in depth in the monorepo module — for large-repo performance
+specifically, the relevant number is checkout time: writing 500,000 files
+to disk dominates clone time far more than transferring the pack does on
+a fast connection. <code>git sparse-checkout set &lt;dirs&gt;</code> after a <code>--filter=tree:0</code>
+clone (which also defers tree objects outside the sparse cone) combines
+both fixes: minimal history transferred, minimal files ever written.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>--depth N</code> works by having the server perform a graph traversal from
+  the requested ref and stop including commits once <code>N</code> generations back,
+  then send "shallow" boundary markers (stored in <code>.git/shallow</code>) instead
+  of parent objects for the cut commits. Git treats those parents as
+  simply absent — commands that need to walk further (<code>log</code>, <code>blame</code>,
+  <code>bisect</code>) hit the boundary and stop, which is why <code>git fetch
+  --unshallow</code> exists to backfill the missing history later without a
+  full re-clone.</li>
+<li>Partial clone (<code>--filter=blob:none</code> / <code>--filter=tree:0</code> / <code>--filter=blob:limit=&lt;n&gt;</code>)
+  is a protocol v2 capability: the client tells the server which object
+  <em>types</em> to omit from the initial packfile, and the server-side
+  <code>upload-pack</code> process filters them out while still sending every commit
+  needed to reconstruct history. Omitted objects aren't gone — they're
+  recorded as "promised" (a promisor pack), and any Git command that
+  later needs one transparently fetches it over the same remote via a
+  lazy <code>fetch</code> — this is why a partial clone still "just works" for
+  <code>checkout</code>, <code>diff</code>, and <code>blame</code>, just slower the first time a given
+  blob is touched.</li>
+<li>The commit-graph's generation numbers give every commit a topological
+  "distance from the roots" value, precomputed once. <code>git merge-base</code>
+  between two commits can then prune huge parts of the graph immediately —
+  if commit A's generation number is lower than commit B's, A cannot be
+  an ancestor of any commit reachable only through paths higher than B —
+  instead of doing a full breadth-first walk of parent pointers every
+  time, which is what made <code>merge-base</code> and <code>log --graph</code> slow on repos
+  with tens of thousands of commits before this file existed (Git 2.18+).</li>
+<li>Bloom filters in the commit-graph record, per commit, a probabilistic
+  "did this commit touch path X" answer computable without opening the
+  commit's tree. <code>git log -- &lt;path&gt;</code> uses them to skip inflating trees for
+  commits the filter says definitely didn't touch that path, falling back
+  to an exact tree-diff only for commits the filter can't rule out (a
+  Bloom filter can false-positive but never false-negative).</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>In a fresh repo with 20+ commits, run <code>git clone --depth 5</code> from it and
+confirm with <code>git log --oneline</code> that exactly 5 commits are present. Then
+run <code>git fetch --unshallow</code> in the clone and confirm <code>git log --oneline</code>
+now shows the full history, checking <code>.git/shallow</code> disappears afterward.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
