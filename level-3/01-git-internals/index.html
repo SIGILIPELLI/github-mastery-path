@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1422,6 +1420,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Git Internals (objects, refs, .git directory)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1438,6 +1454,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-one-commit-and-looking-inside-gitobjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making one commit and looking inside .git/objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-blob-your-files-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The blob: your file's content
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tree-a-directory-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The tree: a directory snapshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-commit-a-pointer-plus-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The commit: a pointer plus metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fourth-type-refs-and-why-theyre-just-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The fourth type: refs, and why they're just files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detached-head-when-the-indirection-breaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detached HEAD: when the indirection breaks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#walking-the-graph-with-git-log-formatraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Walking the graph with git log --format=raw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2233,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-one-commit-and-looking-inside-gitobjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making one commit and looking inside .git/objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-blob-your-files-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The blob: your file's content
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tree-a-directory-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The tree: a directory snapshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-commit-a-pointer-plus-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The commit: a pointer plus metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fourth-type-refs-and-why-theyre-just-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The fourth type: refs, and why they're just files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detached-head-when-the-indirection-breaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detached HEAD: when the indirection breaks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#walking-the-graph-with-git-log-formatraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Walking the graph with git log --format=raw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2359,143 @@
 
 
 <h1 id="01-git-internals-objects-refs-git-directory">01 · Git Internals (objects, refs, .git directory)<a class="headerlink" href="#01-git-internals-objects-refs-git-directory" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>git Internals (objects, refs, .git directory)</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Everything Git does — commits, branches, merges, diffs — is built from
+four object types stored as content-addressed files. This module opens up
+<code>.git/</code> directly and shows the real objects behind one commit.</p>
+<h2 id="making-one-commit-and-looking-inside-gitobjects">Making one commit and looking inside <code>.git/objects</code><a class="headerlink" href="#making-one-commit-and-looking-inside-gitobjects" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>init<span class="w"> </span>-q<span class="w"> </span>-b<span class="w"> </span>main
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"hello"</span><span class="w"> </span>&gt;<span class="w"> </span>a.txt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>add<span class="w"> </span>a.txt
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add a.txt"</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>find<span class="w"> </span>.git/objects<span class="w"> </span>-type<span class="w"> </span>f
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.git/objects/ce/013625030ba8dba906f756967f9e9ca394464a
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>.git/objects/1e/de661402a0456758d54fcea650d9abdd82ee81
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>.git/objects/2e/81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+</code></pre></div></p>
+<p>One commit produced <strong>three objects</strong>, not one. Every object lives at
+<code>.git/objects/&lt;first 2 hex chars&gt;/&lt;remaining 38 chars&gt;</code> — the split into a
+subdirectory is purely a filesystem optimization so no single directory
+ends up with millions of entries.</p>
+<h2 id="the-blob-your-files-content">The blob: your file's content<a class="headerlink" href="#the-blob-your-files-content" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>hash-object<span class="w"> </span>a.txt
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ce013625030ba8dba906f756967f9e9ca394464a
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-p<span class="w"> </span>ce013625030ba8dba906f756967f9e9ca394464a
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>hello
+</code></pre></div></p>
+<p>A <strong>blob</strong> stores file content only — no filename, no permissions,
+nothing but bytes. <code>hash-object</code> computed this SHA before the file was
+even added; the object at that path in <code>.git/objects</code> is the exact same
+content, compressed with zlib.</p>
+<h2 id="the-tree-a-directory-snapshot">The tree: a directory snapshot<a class="headerlink" href="#the-tree-a-directory-snapshot" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-p<span class="w"> </span>2e81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>100644 blob ce013625030ba8dba906f756967f9e9ca394464a    a.txt
+</code></pre></div></p>
+<p>A <strong>tree</strong> maps names to blobs (files) or other trees (subdirectories),
+each with a file mode (<code>100644</code> = regular file, <code>100755</code> = executable,
+<code>040000</code> = subdirectory). A repo with nested folders has one tree object
+per directory level, each nested tree referencing its parent's entry by
+SHA.</p>
+<h2 id="the-commit-a-pointer-plus-metadata">The commit: a pointer plus metadata<a class="headerlink" href="#the-commit-a-pointer-plus-metadata" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>rev-parse<span class="w"> </span>HEAD<span class="k">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>tree 2e81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>author You &lt;you@example.com&gt; 1789102801 +0530
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>committer You &lt;you@example.com&gt; 1789102801 +0530
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Add a.txt
+</code></pre></div></p>
+<p>A <strong>commit</strong> object points at exactly one tree (the whole project's
+snapshot at that moment), zero or more parent commits (none here — it's
+the first commit), and carries author/committer identity, timestamps, and
+the message. Notice: no diff is stored anywhere. Git computes diffs on
+demand by comparing two trees; it never stores a delta as the primary
+representation.</p>
+<h2 id="the-fourth-type-refs-and-why-theyre-just-files">The fourth type: refs, and why they're just files<a class="headerlink" href="#the-fourth-type-refs-and-why-theyre-just-files" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cat<span class="w"> </span>.git/refs/heads/main
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>cat<span class="w"> </span>.git/HEAD
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&lt;the commit's full SHA&gt;
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>ref: refs/heads/main
+</code></pre></div></p>
+<p>A branch is nothing more than a 41-byte text file containing a SHA.
+<code>HEAD</code> is one level of indirection further: it usually holds
+<code>ref: refs/heads/main</code> (you're "on" a branch), so moving to a new commit
+via <code>git commit</code> just means Git updates <code>refs/heads/main</code> to the new
+commit's SHA and leaves <code>HEAD</code> pointing at the same ref name.</p>
+<h2 id="detached-head-when-the-indirection-breaks">Detached HEAD: when the indirection breaks<a class="headerlink" href="#detached-head-when-the-indirection-breaks" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>rev-parse<span class="w"> </span>HEAD<span class="k">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>cat<span class="w"> </span>.git/HEAD
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;the commit's full SHA&gt;
+</code></pre></div></p>
+<p>Now <code>HEAD</code> holds a raw SHA instead of <code>ref: refs/heads/main</code> — you're in
+"detached HEAD" state. Any new commit here still gets created normally,
+but no branch ref moves to point at it, so it becomes unreachable (and
+eventually garbage-collected) the moment you switch away, unless you
+create a branch to keep pointing at it first (<code>git switch -c rescue</code>).</p>
+<h2 id="walking-the-graph-with-git-log-formatraw">Walking the graph with <code>git log --format=raw</code><a class="headerlink" href="#walking-the-graph-with-git-log-formatraw" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>main
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>raw
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>commit 4b1c...
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>tree 2e81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>author You &lt;you@example.com&gt; 1789102801 +0530
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>committer You &lt;you@example.com&gt; 1789102801 +0530
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    Add a.txt
+</code></pre></div></p>
+<p>This is the same content <code>cat-file -p</code> showed, confirming <code>git log</code> is
+just walking the parent chain of commit objects and printing each one —
+there's no separate "history" data structure beyond the commits'
+<code>parent</code> pointers themselves.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Every object's identity <strong>is</strong> the SHA-1 (or SHA-256, on repos
+  initialized with the newer hash algorithm) hash of its own
+  zlib-compressed content, prefixed with a small header
+  (<code>"blob &lt;size&gt;\0"</code>, <code>"tree &lt;size&gt;\0"</code>, <code>"commit &lt;size&gt;\0"</code>). This is why
+  Git is called "content-addressed storage": you cannot change an
+  object's content without changing its address (SHA), which is the
+  entire basis of Git's integrity guarantees — a corrupted or tampered
+  object simply won't hash to the name it's stored under, and <code>git
+  fsck</code> catches this immediately.</li>
+<li>Because objects are addressed by content, <strong>identical content is
+  automatically deduplicated</strong>: two files with byte-identical content in
+  the same or different commits share exactly one blob object; two
+  identical directory listings share exactly one tree object. This is why
+  committing a file that reverts to a previous exact state costs no new
+  storage.</li>
+<li>A commit's tree is a <em>complete</em> snapshot, not a diff, but Git makes this
+  cheap via trees sharing unchanged subtrees between commits — if you
+  change one file in a deep directory, only that file's blob, that
+  directory's tree, and every parent directory's tree up to the root need
+  new objects; every sibling directory's tree object is reused unchanged.</li>
+<li>Refs are deliberately "dumb": a loose ref is just a file whose entire
+  content is a 40/64-character hex SHA (or another ref name, for symbolic
+  refs like <code>HEAD</code>). This simplicity is why so much of Git's higher-level
+  behavior (branches, tags, remote-tracking branches) is really just
+  "which file in <code>.git/refs/...</code> points where," and why tools can
+  manipulate Git repos correctly without needing a full Git implementation
+  — reading/writing these files by hand (carefully) works.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>In a fresh scratch repo, make two commits touching the same file. Use
+<code>git cat-file -p HEAD</code> and <code>git cat-file -p HEAD^</code> to inspect both commit
+objects, note that they reference two <em>different</em> tree SHAs, and use
+<code>git cat-file -p</code> on each tree to see exactly which blob SHA changed
+between the two snapshots.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

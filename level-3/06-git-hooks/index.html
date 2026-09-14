@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1562,6 +1560,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Git Hooks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1578,6 +1594,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-hooks-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where hooks live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-real-pre-commit-hook-that-blocks-bad-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A real pre-commit hook that blocks bad commits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hooks-that-matter-most" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The hooks that matter most
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-with-local-only-hooks-and-the-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The problem with local-only hooks — and the fix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bypassing-a-hook-when-you-genuinely-need-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bypassing a hook when you genuinely need to
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-hooks-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where hooks live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-real-pre-commit-hook-that-blocks-bad-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A real pre-commit hook that blocks bad commits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hooks-that-matter-most" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The hooks that matter most
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-with-local-only-hooks-and-the-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The problem with local-only hooks — and the fix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bypassing-a-hook-when-you-genuinely-need-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bypassing a hook when you genuinely need to
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,161 @@
 
 
 <h1 id="06-git-hooks">06 · Git Hooks<a class="headerlink" href="#06-git-hooks" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>git Hooks</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Hooks are scripts Git runs automatically at specific points in its
+workflow (before a commit, before a push, after a checkout). They live in
+every repo's <code>.git/hooks/</code> directory and are entirely local — nothing
+about them is transmitted by <code>clone</code>, <code>push</code>, or <code>pull</code>.</p>
+<h2 id="where-hooks-live">Where hooks live<a class="headerlink" href="#where-hooks-live" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ls<span class="w"> </span>.git/hooks/
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>applypatch-msg.sample
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>commit-msg.sample
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pre-commit.sample
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>pre-push.sample
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>... (all installed with a .sample extension, disabled by default)
+</code></pre></div></p>
+<p>Git ships every hook as a <code>.sample</code> file with example shell code — rename
+(remove <code>.sample</code>) and make it executable to activate it.</p>
+<h2 id="a-real-pre-commit-hook-that-blocks-bad-commits">A real pre-commit hook that blocks bad commits<a class="headerlink" href="#a-real-pre-commit-hook-that-blocks-bad-commits" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>.git/hooks/pre-commit<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s">#!/bin/sh</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="s">if git diff --cached | grep -qi "TODO"; then</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s">  echo "Commit rejected: found a TODO in staged changes."</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s">  exit 1</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s">fi</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s">EOF</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"code with TODO: fix later"</span><span class="w"> </span>&gt;<span class="w"> </span>f.txt
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>add<span class="w"> </span>f.txt
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"add file with todo"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Commit rejected: found a TODO in staged changes.
+</code></pre></div></p>
+<p>The commit never happened — <code>git log</code> shows nothing new. Fixing the
+content and retrying:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"clean code"</span><span class="w"> </span>&gt;<span class="w"> </span>f.txt
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>add<span class="w"> </span>f.txt
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"add clean file"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[main (root-commit) 944c3bd] add clean file
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> 1 file changed, 1 insertion(+)
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> create mode 100644 f.txt
+</code></pre></div></p>
+<p>This time the hook's <code>grep</code> found nothing, exited 0, and Git proceeded
+normally.</p>
+<h2 id="the-hooks-that-matter-most">The hooks that matter most<a class="headerlink" href="#the-hooks-that-matter-most" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Hook</th>
+<th>Runs</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pre-commit</code></td>
+<td>before a commit is created, after staging</td>
+<td>linting, formatting checks, blocking secrets</td>
+</tr>
+<tr>
+<td><code>commit-msg</code></td>
+<td>after the message is written, before commit finalizes</td>
+<td>enforcing a message format (e.g. Conventional Commits)</td>
+</tr>
+<tr>
+<td><code>pre-push</code></td>
+<td>before <code>git push</code> sends anything</td>
+<td>running the full test suite, blocking force-pushes to protected local branches</td>
+</tr>
+<tr>
+<td><code>post-checkout</code></td>
+<td>after <code>git checkout</code>/<code>switch</code></td>
+<td>reinstalling dependencies if <code>package-lock.json</code> changed</td>
+</tr>
+<tr>
+<td><code>post-merge</code></td>
+<td>after a successful merge/pull</td>
+<td>same, for merges</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>commit-msg</code> hook receives the message file path as its one argument
+and can reject the commit by exiting non-zero:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>.git/hooks/commit-msg<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="s">#!/bin/sh</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="s">if ! grep -qE '^(feat|fix|docs|chore|refactor|test)(\(.+\))?: ' "$1"; then</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="s">  echo "Commit message must start with feat:, fix:, docs:, etc."</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="s">  exit 1</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="s">fi</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="s">EOF</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/commit-msg
+</code></pre></div>
+<h2 id="the-problem-with-local-only-hooks-and-the-fix">The problem with local-only hooks — and the fix<a class="headerlink" href="#the-problem-with-local-only-hooks-and-the-fix" title="Permanent link">&para;</a></h2>
+<p>Hooks in <code>.git/hooks/</code> are <strong>never committed or cloned</strong> — every
+teammate would have to manually install the same script, which doesn't
+scale. Two real solutions:</p>
+<ol>
+<li><strong>Husky</strong> (Node ecosystem) or similar tools store hook scripts in a
+   tracked directory (e.g. <code>.husky/</code>) and wire them up via an npm
+   <code>postinstall</code> step, so <code>npm install</code> sets up hooks for everyone
+   automatically.</li>
+<li><strong><code>core.hooksPath</code></strong> — point Git at a tracked directory instead of
+   <code>.git/hooks/</code> directly:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>config<span class="w"> </span>core.hooksPath<span class="w"> </span>.githooks
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>mkdir<span class="w"> </span>.githooks
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>cp<span class="w"> </span>.git/hooks/pre-commit<span class="w"> </span>.githooks/pre-commit
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>git<span class="w"> </span>add<span class="w"> </span>.githooks/pre-commit
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add shared pre-commit hook"</span>
+</code></pre></div>
+<p>Each teammate still has to run the <code>git config</code> line once (it's a
+   local setting), but the hook's actual content is now versioned and
+   reviewed like any other file.</p>
+<h2 id="bypassing-a-hook-when-you-genuinely-need-to">Bypassing a hook when you genuinely need to<a class="headerlink" href="#bypassing-a-hook-when-you-genuinely-need-to" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-verify<span class="w"> </span>-m<span class="w"> </span><span class="s2">"emergency fix, bypassing lint hook"</span>
+</code></pre></div>
+<p>Use sparingly and deliberately — a hook exists to catch something, and
+routinely bypassing it defeats the purpose.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A hook is just an executable file at a fixed path Git checks at a fixed
+  moment in its own command implementation — there's no registry, no
+  config toggling them on generically; Git literally does "if
+  <code>.git/hooks/pre-commit</code> exists and is executable, run it and check its
+  exit code" as a hardcoded step inside <code>git commit</code>'s C source. This is
+  why renaming away the <code>.sample</code> suffix (and <code>chmod +x</code>) is the entire
+  activation mechanism.</li>
+<li>Hooks run with the <strong>current working directory set to the repo root</strong>
+  and receive context either via arguments (<code>commit-msg</code> gets the message
+  file path) or environment variables (<code>pre-push</code> gets remote name/URL on
+  stdin, one line per ref being pushed) — this is why a <code>pre-push</code> hook
+  can inspect exactly which commits are about to leave the machine before
+  they do.</li>
+<li>A non-zero exit code from the hook is the <em>entire</em> signal Git checks —
+  stdout/stderr are just shown to the user for context; Git doesn't parse
+  hook output at all, which is why "print an error and <code>exit 1</code>" is the
+  complete contract any hook author needs to honor.</li>
+<li><code>core.hooksPath</code> works because Git resolves the hooks directory through
+  this one config value (defaulting to <code>$GIT_DIR/hooks</code>) rather than
+  hardcoding <code>.git/hooks</code> — pointing it elsewhere is a one-line config
+  change with no different mechanism underneath; Git still just looks for
+  an executable file with the right name in whatever directory that
+  config resolves to.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Write a <code>pre-commit</code> hook that rejects any staged file over 1MB (hint:
+<code>git diff --cached --name-only</code> plus <code>wc -c</code> per file), verify it blocks a
+deliberately large staged file, then move the working script into a
+tracked <code>.githooks/</code> directory and configure <code>core.hooksPath</code> so it would
+work for a fresh clone too.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

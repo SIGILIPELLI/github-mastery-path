@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1450,6 +1448,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Interactive Rebase & History Rewriting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1466,6 +1482,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-messy-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a messy history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-interactive-rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening the interactive rebase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rewording-a-commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rewording a commit message
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reordering-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reordering commits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-a-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Splitting a commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-absolute-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The absolute rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-messy-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a messy history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-interactive-rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening the interactive rebase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rewording-a-commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rewording a commit message
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reordering-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reordering commits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-a-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Splitting a commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-absolute-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The absolute rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2337,157 @@
 
 
 <h1 id="02-interactive-rebase-history-rewriting">02 · Interactive Rebase &amp; History Rewriting<a class="headerlink" href="#02-interactive-rebase-history-rewriting" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>interactive Rebase &amp; History Rewriting</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Interactive rebase (<code>git rebase -i</code>) lets you edit, reorder, squash, or
+drop commits before they're shared — the standard tool for turning messy
+"wip", "fix typo" commits into a clean, reviewable history.</p>
+<h2 id="building-a-messy-history">Building a messy history<a class="headerlink" href="#building-a-messy-history" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"line </span><span class="nv">$i</span><span class="s2">"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>f.txt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>git<span class="w"> </span>add<span class="w"> </span>f.txt
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"commit </span><span class="nv">$i</span><span class="s2">: WIP fixup typo"</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">done</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">echo</span><span class="w"> </span>base0<span class="w"> </span>&gt;<span class="w"> </span>base.txt
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>git<span class="w"> </span>add<span class="w"> </span>base.txt
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"base commit 0"</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>27ad367 base commit 0
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>b48f5a0 commit 4: WIP fixup typo
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ead09df commit 3: WIP fixup typo
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>3f2b264 commit 2: WIP fixup typo
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>f4026d3 commit 1: WIP fixup typo
+</code></pre></div></p>
+<p>Five sloppy commits that should really be one or two meaningful ones.</p>
+<h2 id="opening-the-interactive-rebase">Opening the interactive rebase<a class="headerlink" href="#opening-the-interactive-rebase" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~4
+</code></pre></div>
+<p>This opens your editor with a <strong>todo list</strong>, oldest commit first:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pick 3f2b264 commit 2: WIP fixup typo
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>pick ead09df commit 3: WIP fixup typo
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>pick b48f5a0 commit 4: WIP fixup typo
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>pick 27ad367 base commit 0
+</code></pre></div>
+<p>Each line is a command plus a commit; editing this list <em>and saving</em> is
+what performs the rewrite. The common commands:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pick</code></td>
+<td>keep the commit as-is</td>
+</tr>
+<tr>
+<td><code>reword</code></td>
+<td>keep the commit, but stop to edit its message</td>
+</tr>
+<tr>
+<td><code>edit</code></td>
+<td>stop right after applying this commit, so you can amend it</td>
+</tr>
+<tr>
+<td><code>squash</code></td>
+<td>combine into the <em>previous</em> commit, keep both messages</td>
+</tr>
+<tr>
+<td><code>fixup</code></td>
+<td>combine into the previous commit, discard this message</td>
+</tr>
+<tr>
+<td><code>drop</code></td>
+<td>remove the commit entirely</td>
+</tr>
+</tbody>
+</table>
+<p>Changing lines 2-4 from <code>pick</code> to <code>squash</code> (scriptable non-interactively
+via <code>GIT_SEQUENCE_EDITOR</code> for automation/testing) combines those three
+commits into the one above them:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">GIT_SEQUENCE_EDITOR</span><span class="o">=</span><span class="s2">"sed -i '' '2,4s/^pick/squash/'"</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~4
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Rebasing (2/4)Rebasing (3/4)Rebasing (4/4)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Successfully rebased and updated refs/heads/main.
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>e7a99bd commit 2: WIP fixup typo
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>f4026d3 commit 1: WIP fixup typo
+</code></pre></div></p>
+<p>Five commits became two. <code>git show HEAD</code> on the squashed commit shows both
+original messages concatenated, ready for you to edit down to one clean
+summary in your actual editor session (non-scripted use stops here for
+exactly that).</p>
+<h2 id="rewording-a-commit-message">Rewording a commit message<a class="headerlink" href="#rewording-a-commit-message" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~1
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># change "pick" to "reword" on the target line, save,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Git reopens your editor just for the message text</span>
+</code></pre></div>
+<p>Or, for just the very last commit, the shortcut:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">"New message"</span>
+</code></pre></div>
+<h2 id="reordering-commits">Reordering commits<a class="headerlink" href="#reordering-commits" title="Permanent link">&para;</a></h2>
+<p>Interactive rebase applies commits in the order they appear in the todo
+list, top to bottom — simply moving lines around reorders history. This
+only works cleanly when the reordered commits don't textually conflict
+with each other's changes.</p>
+<h2 id="splitting-a-commit">Splitting a commit<a class="headerlink" href="#splitting-a-commit" title="Permanent link">&para;</a></h2>
+<p>Mark a commit <code>edit</code>, let the rebase stop there, then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>reset<span class="w"> </span>HEAD^<span class="w">          </span><span class="c1"># uncommit, keep changes staged... actually unstaged</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>add<span class="w"> </span>-p<span class="w">               </span><span class="c1"># stage part of the changes</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"First half"</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>git<span class="w"> </span>add<span class="w"> </span>-A
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Second half"</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>git<span class="w"> </span>rebase<span class="w"> </span>--continue
+</code></pre></div>
+<h2 id="the-absolute-rule">The absolute rule<a class="headerlink" href="#the-absolute-rule" title="Permanent link">&para;</a></h2>
+<p><strong>Never rewrite commits that have already been pushed and might be in
+someone else's local history.</strong> Every rewritten commit gets a new SHA
+(same mechanism as plain rebase, Level 2), so pushing rewritten history
+requires force-pushing, and anyone who already pulled the old commits now
+has diverging, duplicated history that's painful to reconcile. Interactive
+rebase is for your own <strong>local, unpushed</strong> commits, or a solo branch only
+you touch.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>git rebase -i</code> works exactly like a plain rebase (Level 2) — it
+  replays each commit's diff on a new base and creates new commit
+  objects — except it lets you inject extra operations (reorder, combine,
+  edit, drop) into that replay sequence instead of always doing a
+  straight 1:1 pick.</li>
+<li>The todo list is a real temporary file
+  (<code>.git/rebase-merge/git-rebase-todo</code>), which is exactly what
+  <code>GIT_SEQUENCE_EDITOR</code> lets you script against non-interactively — it's
+  the same file your normal <code>$EDITOR</code> opens, just automated for
+  reproducible demonstrations or CI-driven history cleanup.</li>
+<li><code>squash</code>/<code>fixup</code> work by <em>not</em> creating a separate commit for that line
+  at all: Git applies that commit's diff on top of the working tree left
+  by the previous pick, then amends the previous commit (new tree, same
+  parent, new SHA) to include the combined changes — which is why the
+  squashed commit above shows the accumulated diff of three original
+  commits but only one new commit object exists at the end.</li>
+<li><code>drop</code>ping a commit or squashing multiple into one doesn't touch the
+  <em>original</em> commit objects at all — they still exist in the object
+  database, simply unreferenced by any branch after the rebase completes.
+  This is exactly why <code>git reflog</code> (a later module) can recover from an
+  interactive rebase gone wrong: the old commits are still sitting in
+  <code>.git/objects</code> until garbage collection eventually sweeps them.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Create five commits with deliberately bad messages ("wip", "fix", "fix2",
+"actually fix", "done"). Use <code>git rebase -i HEAD~5</code> to squash them into
+one commit with a single clear message describing the net change, and
+confirm with <code>git log --oneline</code> and <code>git show --stat</code> that only one
+commit and the correct final diff remain.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

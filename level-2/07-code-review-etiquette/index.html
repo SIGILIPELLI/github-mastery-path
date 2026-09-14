@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1214,6 +1212,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Code Review Etiquette & Workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1230,6 +1246,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#as-the-author-making-a-pr-easy-to-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As the author: making a PR easy to review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-the-reviewer-what-to-actually-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As the reviewer: what to actually check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leaving-comments-that-help-instead-of-stalling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaving comments that help instead of stalling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-review-as-the-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responding to review as the author
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-conversations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving conversations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#as-the-author-making-a-pr-easy-to-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As the author: making a PR easy to review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-the-reviewer-what-to-actually-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As the reviewer: what to actually check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leaving-comments-that-help-instead-of-stalling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaving comments that help instead of stalling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-review-as-the-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responding to review as the author
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-conversations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving conversations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,123 @@
 
 
 <h1 id="07-code-review-etiquette-workflow">07 · Code Review Etiquette &amp; Workflow<a class="headerlink" href="#07-code-review-etiquette-workflow" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>code Review Etiquette &amp; Workflow</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Code review is a social process wrapped around the Git/GitHub mechanics
+you've already learned. The tools (<code>gh pr review</code>, inline comments) are
+simple; doing it well is the actual skill.</p>
+<h2 id="as-the-author-making-a-pr-easy-to-review">As the author: making a PR easy to review<a class="headerlink" href="#as-the-author-making-a-pr-easy-to-review" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gh<span class="w"> </span>pr<span class="w"> </span>create<span class="w"> </span>--title<span class="w"> </span><span class="s2">"Add email validation to signup form"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--body<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>cat<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">## What</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">Adds regex-based email validation on the signup form's client side.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">## Why</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">Fixes #17 — users were submitting malformed emails that failed silently</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s">server-side with no feedback.</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s">## How to test</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s">1. Go to /signup</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s">2. Enter `not-an-email` and submit</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s">3. Should see inline error instead of a blank redirect</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s">EOF</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+<p>Good PR descriptions answer three questions the diff alone can't: <strong>what</strong>
+changed, <strong>why</strong> (link the issue), and <strong>how to verify it</strong>. A 400-line
+diff with no description is one of the most common causes of slow, sloppy
+reviews.</p>
+<p>Keep PRs small and single-purpose. A PR that mixes a refactor with a
+feature with a formatting pass is nearly impossible to review carefully —
+reviewers either rubber-stamp it or spend hours untangling which change
+is which.</p>
+<h2 id="as-the-reviewer-what-to-actually-check">As the reviewer: what to actually check<a class="headerlink" href="#as-the-reviewer-what-to-actually-check" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Correctness first</strong> — does the logic do what it claims? Trace at
+  least one non-trivial path by hand.</li>
+<li><strong>Tests</strong> — does new behavior have new tests? Do existing tests still
+  make sense given the change?</li>
+<li><strong>Scope creep</strong> — does the diff match the stated purpose, or did
+  unrelated files sneak in?</li>
+<li><strong>Readability for the next person</strong>, not just "does it work" — naming,
+  comments where logic isn't obvious, no leftover debug prints.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gh<span class="w"> </span>pr<span class="w"> </span>diff<span class="w"> </span><span class="m">42</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>gh<span class="w"> </span>pr<span class="w"> </span>checkout<span class="w"> </span><span class="m">42</span><span class="w">        </span><span class="c1"># pull the PR branch locally to actually run it</span>
+</code></pre></div>
+<p>Pulling a PR down and running it locally (<code>gh pr checkout</code>) catches things
+a diff view never will — actually exercising the changed code path.</p>
+<h2 id="leaving-comments-that-help-instead-of-stalling">Leaving comments that help instead of stalling<a class="headerlink" href="#leaving-comments-that-help-instead-of-stalling" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prefix nitpicks so authors can triage instantly: <code>nit: rename this to
+  match the existing convention</code> vs a blocking concern stated plainly.</li>
+<li>Suggest, don't just criticize — use GitHub's suggested-change blocks so
+  the author can apply your exact fix with one click:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>if (user == null) {
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    return Optional.empty();
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>}
+</code></pre></div>
+- Ask questions instead of asserting when you're unsure: "Is there a
+  reason this doesn't use the existing <code>validateEmail()</code> helper?" reads
+  very differently from "this should use the existing helper."
+- Distinguish <strong>blocking</strong> feedback ("this will break in production
+  because...") from <strong>optional</strong> feedback ("could simplify, up to you") —
+  don't make an author guess which comments gate the merge.</p>
+<h2 id="responding-to-review-as-the-author">Responding to review as the author<a class="headerlink" href="#responding-to-review-as-the-author" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Don't take "Request changes" personally — it's a workflow state, not a
+  verdict on you.</li>
+<li>Reply to each thread explicitly (even just "done" or "good point, fixed
+  in a1b2c3d") rather than silently pushing a fix and leaving the reviewer
+  to guess what changed.</li>
+<li>If you disagree, say so with reasoning, not by ignoring the comment or
+  quietly overriding it.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gh<span class="w"> </span>pr<span class="w"> </span>comment<span class="w"> </span><span class="m">42</span><span class="w"> </span>--body<span class="w"> </span><span class="s2">"Fixed the null check in a1b2c3d, thanks for catching that"</span>
+</code></pre></div>
+<h2 id="resolving-conversations">Resolving conversations<a class="headerlink" href="#resolving-conversations" title="Permanent link">&para;</a></h2>
+<p>Once a thread's concern is addressed, mark it resolved so the PR's open
+threads reflect only what's still outstanding:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/:owner/:repo/pulls/42/reviews<span class="w">  </span><span class="c1"># inspect review state via API</span>
+</code></pre></div>
+<p>(Marking individual review threads resolved is a GitHub UI/GraphQL action
+— there's no dedicated <code>gh pr</code> subcommand for it as of this CLI version.)</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Every review comment is stored against a <strong>diff hunk position</strong>, not a
+  line number in the file's current state — GitHub records <code>(commit SHA,
+  file path, diff position)</code>. This is why a comment can appear "outdated"
+  after a force-push or rebase changes the diff shape: the position it was
+  anchored to no longer exists in the new diff, even if the surrounding
+  code is unchanged.</li>
+<li>"Dismiss stale reviews on new commits" (branch protection, previous
+  module) exists because an approval is recorded against a specific head
+  SHA; GitHub has no way to know a new commit didn't undo what was
+  approved, so treating any new SHA as unreviewed by default is the safe
+  assumption.</li>
+<li>Suggested-change blocks work by encoding a literal replacement for the
+  commented line range; clicking "Commit suggestion" makes GitHub itself
+  author a new commit (as the acting user, via the API) that applies that
+  diff directly to the PR branch — functionally identical to the author
+  making that exact edit and pushing, just performed server-side.</li>
+<li><code>gh pr checkout 42</code> works by fetching GitHub's server-maintained
+  <code>refs/pull/42/head</code> ref (and <code>refs/pull/42/merge</code>, a synthetic
+  test-merge commit GitHub keeps up to date) into a local branch — it
+  doesn't need the head repository configured as a remote, which is how
+  you can check out someone else's fork's PR without ever adding their
+  fork as a remote yourself.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Open a PR with a deliberately introduced bug and a missing test. Have a
+teammate (or review it yourself the next day with fresh eyes) leave one
+blocking comment with a suggested-change block and one non-blocking nit.
+Apply the suggestion, push a fix commit, and reply to both threads before
+merging.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

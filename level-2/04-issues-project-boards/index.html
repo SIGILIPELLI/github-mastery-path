@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1130,6 +1128,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · GitHub Issues & Project Boards
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1146,6 +1162,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-managing-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating and managing issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-issues-to-commits-and-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linking issues to commits and PRs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labels-milestones-assignees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labels, milestones, assignees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue templates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-boards-projects-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project boards (Projects v2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-managing-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating and managing issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-issues-to-commits-and-prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linking issues to commits and PRs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labels-milestones-assignees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Labels, milestones, assignees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue templates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-boards-projects-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project boards (Projects v2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,125 @@
 
 
 <h1 id="04-github-issues-project-boards">04 · GitHub Issues &amp; Project Boards<a class="headerlink" href="#04-github-issues-project-boards" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>gitHub Issues &amp; Project Boards</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Issues and Project boards are GitHub's planning layer — tracking bugs,
+feature requests, and work items, and organizing them visually. These are
+GitHub-hosted features with no local Git equivalent (nothing lives in
+<code>.git/</code>), so this module documents the CLI/API surface precisely rather
+than simulating output offline.</p>
+<h2 id="creating-and-managing-issues">Creating and managing issues<a class="headerlink" href="#creating-and-managing-issues" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gh<span class="w"> </span>issue<span class="w"> </span>create<span class="w"> </span>--title<span class="w"> </span><span class="s2">"Login form does not validate email"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--body<span class="w"> </span><span class="s2">"Steps to reproduce: ..."</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--label<span class="w"> </span>bug<span class="w"> </span>--assignee<span class="w"> </span>@me
+</code></pre></div>
+<p>Confirmed from <code>gh issue create --help</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Create an issue on GitHub.
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Adding an issue to projects requires authorization with the `project` scope.
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>To authorize, run `gh auth refresh -s project`.
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>The `--assignee` flag supports the following special values:
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>- `@me`: assign yourself
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>- `@copilot`: assign Copilot (not supported on GitHub Enterprise Server)
+</code></pre></div>
+<p>Other common operations:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gh<span class="w"> </span>issue<span class="w"> </span>list<span class="w"> </span>--label<span class="w"> </span>bug<span class="w"> </span>--state<span class="w"> </span>open
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>gh<span class="w"> </span>issue<span class="w"> </span>view<span class="w"> </span><span class="m">17</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>gh<span class="w"> </span>issue<span class="w"> </span>comment<span class="w"> </span><span class="m">17</span><span class="w"> </span>--body<span class="w"> </span><span class="s2">"Confirmed on Chrome 128 too"</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>gh<span class="w"> </span>issue<span class="w"> </span>close<span class="w"> </span><span class="m">17</span><span class="w"> </span>--comment<span class="w"> </span><span class="s2">"Fixed in #42"</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>gh<span class="w"> </span>issue<span class="w"> </span>edit<span class="w"> </span><span class="m">17</span><span class="w"> </span>--add-label<span class="w"> </span><span class="s2">"priority:high"</span><span class="w"> </span>--milestone<span class="w"> </span><span class="s2">"v1.1"</span>
+</code></pre></div>
+<h2 id="linking-issues-to-commits-and-prs">Linking issues to commits and PRs<a class="headerlink" href="#linking-issues-to-commits-and-prs" title="Permanent link">&para;</a></h2>
+<p>A commit message or PR description containing a closing keyword
+(<code>Fixes #17</code>, <code>Closes #17</code>, <code>Resolves #17</code>) auto-closes that issue the
+moment the PR merges into the repo's default branch:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add email regex validation</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s2">Fixes #17"</span>
+</code></pre></div>
+<p>This is purely a GitHub-side text scan of commit messages and PR bodies —
+Git itself has no concept of an "issue," it's just a commit message
+string.</p>
+<h2 id="labels-milestones-assignees">Labels, milestones, assignees<a class="headerlink" href="#labels-milestones-assignees" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Labels</strong> — free-text tags (<code>bug</code>, <code>enhancement</code>, <code>good first issue</code>)
+  used for filtering and triage; a repo can define custom labels with
+  colors and descriptions under Settings → Labels.</li>
+<li><strong>Milestones</strong> — a due-date/version container (<code>v1.1</code>) grouping issues
+  and PRs toward a release; progress shows as a completion percentage.</li>
+<li><strong>Assignees</strong> — up to 10 users/teams responsible for the issue; distinct
+  from "reviewers" on a PR (assignees implement, reviewers review).</li>
+</ul>
+<h2 id="issue-templates">Issue templates<a class="headerlink" href="#issue-templates" title="Permanent link">&para;</a></h2>
+<p>Templates standardize what information gets collected, stored as Markdown
+or YAML forms under <code>.github/ISSUE_TEMPLATE/</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .github/ISSUE_TEMPLATE/bug_report.yml</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bug report</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File a bug report</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nt">body</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Version</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What version are you running?</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">validations</span><span class="p">:</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">textarea</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repro</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nt">attributes</span><span class="p">:</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Steps to reproduce</span>
+</code></pre></div>
+<p>Once this file exists in the default branch, "New issue" on GitHub shows
+it as a structured form option instead of a blank text box.</p>
+<h2 id="project-boards-projects-v2">Project boards (Projects v2)<a class="headerlink" href="#project-boards-projects-v2" title="Permanent link">&para;</a></h2>
+<p>A Project is a configurable table/board/roadmap view over issues and PRs
+across one or more repos. Boards are column-based (<code>Todo</code>, <code>In Progress</code>,
+<code>Done</code>); moving a card between columns updates a custom field on the
+underlying issue, it doesn't move the issue itself anywhere.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>gh<span class="w"> </span>project<span class="w"> </span>create<span class="w"> </span>--owner<span class="w"> </span>myorg<span class="w"> </span>--title<span class="w"> </span><span class="s2">"Q3 Roadmap"</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>gh<span class="w"> </span>project<span class="w"> </span>item-add<span class="w"> </span><span class="m">3</span><span class="w"> </span>--owner<span class="w"> </span>myorg<span class="w"> </span>--url<span class="w"> </span>https://github.com/myorg/repo/issues/17
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>gh<span class="w"> </span>project<span class="w"> </span>field-list<span class="w"> </span><span class="m">3</span><span class="w"> </span>--owner<span class="w"> </span>myorg
+</code></pre></div>
+<p>Automations are configurable per project (e.g. "when an issue is closed,
+move it to Done") — these live entirely in GitHub's UI/API, there's no
+local file representing them.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Issues and Projects are stored in GitHub's own database, addressed by a
+  repo-scoped sequential number (<code>#17</code>) that is shared between issues and
+  PRs in the same repo — that's why PR numbers and issue numbers never
+  collide within one repository (a PR is internally "an issue with a
+  branch attached").</li>
+<li>The closing-keyword auto-close behavior is implemented as a webhook-like
+  server-side scan: when a PR merges, GitHub parses the PR body and every
+  squashed/merged commit message for the keyword pattern
+  (<code>close(s|d)?|fix(es|ed)?|resolve(s|d)?</code> followed by <code>#N</code> or a full
+  issue URL) and, if found, calls the same API that a human clicking
+  "Close issue" would call. It is timing-dependent on the merge event, not
+  on the commit being pushed — pushing to an open PR does not close
+  anything yet.</li>
+<li>Project v2 "items" are a layer of indirection: an item wraps a
+  reference to an issue/PR <em>plus</em> a set of project-scoped custom field
+  values (status, priority, iteration). The same underlying issue can be
+  an item on multiple different projects simultaneously, each with its
+  own independent status — moving a card on Project A's board never
+  affects Project B's board even if both track the same issue.</li>
+<li>None of this is fetched by <code>git clone</code> — a fresh clone of a repository
+  contains zero information about its issues or projects, which is a
+  common surprise for people expecting <code>git log</code> to somehow reflect issue
+  history.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>In a repo you control (or a scratch one), create an issue template under
+<code>.github/ISSUE_TEMPLATE/</code>, open a new issue through it, then create a
+commit whose message contains <code>Fixes #&lt;that issue number&gt;</code> and merge it
+via a PR. Confirm the issue auto-closed and that the closing commit is
+linked in the issue's timeline.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

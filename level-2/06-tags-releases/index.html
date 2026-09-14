@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1186,6 +1184,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Tags & Releases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1202,6 +1218,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lightweight-vs-annotated-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lightweight vs annotated tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushing-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pushing tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic versioning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-github-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a GitHub Release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-generated-release-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-generated release notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lightweight-vs-annotated-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lightweight vs annotated tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushing-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pushing tags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic versioning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-github-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a GitHub Release
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-generated-release-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-generated release notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,124 @@
 
 
 <h1 id="06-tags-releases">06 · Tags &amp; Releases<a class="headerlink" href="#06-tags-releases" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>tags &amp; Releases</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Tags mark a specific commit permanently — most often "this is version
+1.0.0." GitHub Releases build on top of tags to add release notes,
+binaries, and a page users can find.</p>
+<h2 id="lightweight-vs-annotated-tags">Lightweight vs annotated tags<a class="headerlink" href="#lightweight-vs-annotated-tags" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>tag<span class="w"> </span>lightweight-v1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"First release"</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>tag<span class="w"> </span>-l
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>lightweight-v1
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>v1.0.0
+</code></pre></div></p>
+<p>They look the same in <code>git tag -l</code>, but they're different object types:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-t<span class="w"> </span>v1.0.0
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-t<span class="w"> </span>lightweight-v1
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>tag
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>commit
+</code></pre></div></p>
+<p><code>v1.0.0</code> is its own object (type <code>tag</code>) with a message and tagger
+identity; <code>lightweight-v1</code> is nothing but a ref pointing directly at a
+commit — no separate object at all.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>show<span class="w"> </span>v1.0.0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tag v1.0.0
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Tagger: You &lt;you@example.com&gt;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Date:   Fri Sep 11 10:26:03 2026 +0530
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>First release
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>commit 4284e2119776d33fa9fd59891fab801f0d72991c
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Author: You &lt;you@example.com&gt;
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>...
+</code></pre></div></p>
+<p><code>git show</code> on an annotated tag prints the tag's own metadata <em>and then</em>
+the commit it points to — proof there are two objects involved, not one.</p>
+<p><strong>Use annotated tags for releases.</strong> They carry a real identity (tagger,
+date, message) and are what <code>git describe</code> and GitHub Releases expect;
+reserve lightweight tags for quick personal bookmarks.</p>
+<h2 id="pushing-tags">Pushing tags<a class="headerlink" href="#pushing-tags" title="Permanent link">&para;</a></h2>
+<p>Tags are not pushed automatically with <code>git push</code> — they need to be
+pushed explicitly:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0<span class="w">          </span><span class="c1"># one tag</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--tags<span class="w">          </span><span class="c1"># all tags</span>
+</code></pre></div>
+<h2 id="semantic-versioning">Semantic versioning<a class="headerlink" href="#semantic-versioning" title="Permanent link">&para;</a></h2>
+<p>The near-universal convention is <code>MAJOR.MINOR.PATCH</code>:</p>
+<ul>
+<li><strong>MAJOR</strong> — breaking/incompatible changes</li>
+<li><strong>MINOR</strong> — new backward-compatible functionality</li>
+<li><strong>PATCH</strong> — backward-compatible bug fixes</li>
+</ul>
+<p><code>v1.0.0 → v1.1.0</code> adds a feature with no breakage; <code>v1.1.0 → v2.0.0</code> may
+break existing users' code; <code>v1.1.0 → v1.1.1</code> is a bugfix only.</p>
+<h2 id="creating-a-github-release">Creating a GitHub Release<a class="headerlink" href="#creating-a-github-release" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>gh<span class="w"> </span>release<span class="w"> </span>create<span class="w"> </span>v1.0.0<span class="w"> </span>--title<span class="w"> </span><span class="s2">"v1.0.0"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>--notes<span class="w"> </span><span class="s2">"Initial public release."</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>dist/app.tar.gz
+</code></pre></div>
+<p>From <code>gh release create --help</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>If a matching git tag does not yet exist, one will automatically get created
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>from the latest state of the default branch.
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Use `--target` to point to a different branch or commit for the automatic tag creation.
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Use `--verify-tag` to abort the release if the tag doesn't already exist.
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>To fetch the new tag locally after the release, do `git fetch --tags origin`.
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>To create a release from an annotated git tag, first create one locally with
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>git, push the tag to GitHub, then run this command.
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Use `--notes-from-tag` to get the release notes from the annotated git tag.
+</code></pre></div>
+<p>Two workflows exist: let <code>gh release create</code> auto-create the tag on
+whatever branch/commit you point it at, or (recommended for real
+projects) create and push the annotated tag yourself first, then run
+<code>gh release create v1.0.0 --notes-from-tag</code> to pull the tag message in as
+the release notes automatically.</p>
+<h2 id="auto-generated-release-notes">Auto-generated release notes<a class="headerlink" href="#auto-generated-release-notes" title="Permanent link">&para;</a></h2>
+<p>GitHub can build notes from merged PRs since the last tag:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>gh<span class="w"> </span>release<span class="w"> </span>create<span class="w"> </span>v1.1.0<span class="w"> </span>--generate-notes
+</code></pre></div>
+<p>This groups merged PRs by label (bugs, features, etc.) into a changelog —
+configurable via a <code>.github/release.yml</code> categorization file.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A lightweight tag is literally a file (or a packed-refs line) at
+  <code>refs/tags/&lt;name&gt;</code> containing nothing but a commit SHA — functionally
+  identical to a branch ref, except Git/GitHub treat <code>refs/tags/*</code> as
+  immutable by convention (nothing moves a tag forward the way commits
+  move a branch forward).</li>
+<li>An annotated tag is a real object in the object database, of type
+  <code>tag</code>, containing: the SHA it points to, the "tagged object" type, the
+  tagger's name/email/date, and a message — with its <strong>own SHA</strong>, computed
+  over that content the same way commit/blob/tree SHAs are computed. The
+  ref at <code>refs/tags/v1.0.0</code> points to the <em>tag object's</em> SHA, not directly
+  to the commit; the tag object then points to the commit. That extra
+  layer of indirection is exactly what <code>git cat-file -t</code> and the two-part
+  <code>git show</code> output revealed above.</li>
+<li><code>git push</code> excludes tags by default specifically because tags are often
+  local/experimental bookmarks; GitHub Releases build on the <em>pushed</em> tag,
+  so a release always corresponds to a specific, permanent, shareable
+  commit — which is the whole point of tagging a release in the first
+  place rather than just pointing people at a branch that keeps moving.</li>
+<li>A GitHub Release is a database record (title, notes, assets, "latest"
+  flag) associated with a tag name; deleting a release does not delete
+  the underlying git tag, and deleting the tag does not delete the
+  release record — they're linked but independently managed, which is
+  why GitHub's UI has separate delete actions for each.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Create an annotated tag <code>v0.1.0</code> on your scratch repo's latest commit,
+push it, and use <code>gh release create v0.1.0 --notes-from-tag</code> to publish a
+release whose notes come from the tag's own annotation message. Confirm
+with <code>gh release view v0.1.0</code> that the notes match what you wrote in
+<code>git tag -a</code>.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

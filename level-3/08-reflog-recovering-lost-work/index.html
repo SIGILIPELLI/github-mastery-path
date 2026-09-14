@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1618,6 +1616,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Reflog & Recovering Lost Work
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1634,6 +1650,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#losing-work-on-purpose-to-prove-its-recoverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Losing work on purpose, to prove it's recoverable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reflog-still-remembers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The reflog still remembers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-reflog-saves-you-the-common-real-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When reflog saves you (the common real scenarios)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-reflog-show-branch-for-a-specific-branchs-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        git reflog show &lt;branch&gt; for a specific branch's history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflog-has-a-time-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflog has a time limit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#losing-work-on-purpose-to-prove-its-recoverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Losing work on purpose, to prove it's recoverable
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reflog-still-remembers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The reflog still remembers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-reflog-saves-you-the-common-real-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When reflog saves you (the common real scenarios)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-reflog-show-branch-for-a-specific-branchs-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        git reflog show &lt;branch&gt; for a specific branch's history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflog-has-a-time-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflog has a time limit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2337,116 @@
 
 
 <h1 id="08-reflog-recovering-lost-work">08 · Reflog &amp; Recovering Lost Work<a class="headerlink" href="#08-reflog-recovering-lost-work" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>reflog &amp; Recovering Lost Work</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p><code>git reflog</code> is Git's private, local safety net: a log of every place
+<code>HEAD</code> (and each branch) has pointed, kept independently of your visible
+commit history. It's how you recover from an "I just destroyed my work"
+moment.</p>
+<h2 id="losing-work-on-purpose-to-prove-its-recoverable">Losing work on purpose, to prove it's recoverable<a class="headerlink" href="#losing-work-on-purpose-to-prove-its-recoverable" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">echo</span><span class="w"> </span>a<span class="w"> </span>&gt;<span class="w"> </span>a.txt<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"commit A"</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span>b<span class="w"> </span>&gt;<span class="w"> </span>b.txt<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"commit B"</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span>c<span class="w"> </span>&gt;<span class="w"> </span>c.txt<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"commit C"</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>9eac5f3 commit C
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>84d8c5d commit B
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>18784ec commit A
+</code></pre></div></p>
+<p>Now the "oops":</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~2
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>HEAD is now at 18784ec commit A
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>18784ec commit A
+</code></pre></div></p>
+<p>Commits B and C are gone from <code>git log</code> — they're unreachable from any
+branch. Panic is the normal reaction here, but nothing is actually
+deleted yet.</p>
+<h2 id="the-reflog-still-remembers">The reflog still remembers<a class="headerlink" href="#the-reflog-still-remembers" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>reflog
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>18784ec HEAD@{0}: reset: moving to HEAD~2
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>9eac5f3 HEAD@{1}: commit: commit C
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>84d8c5d HEAD@{2}: commit: commit B
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>18784ec HEAD@{3}: commit (initial): commit A
+</code></pre></div></p>
+<p>Every single place <code>HEAD</code> has been — every commit, checkout, reset,
+rebase, merge — is listed, newest first, each with a <code>HEAD@{N}</code> handle you
+can use like any other ref.</p>
+<h2 id="recovering">Recovering<a class="headerlink" href="#recovering" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>HEAD is now at 9eac5f3 commit C
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>9eac5f3 commit C
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>84d8c5d commit B
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>18784ec commit A
+</code></pre></div></p>
+<p>Fully recovered — same three commits, same SHAs, because they were never
+actually deleted; <code>reset --hard</code> had only moved the branch pointer, not
+touched the object database.</p>
+<h2 id="when-reflog-saves-you-the-common-real-scenarios">When reflog saves you (the common real scenarios)<a class="headerlink" href="#when-reflog-saves-you-the-common-real-scenarios" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An accidental <code>git reset --hard</code> that discarded commits.</li>
+<li>A rebase or <code>commit --amend</code> you regret — the pre-rebase tip is still in
+  the reflog as <code>HEAD@{n}</code> for however many operations ago it was.</li>
+<li>A branch you deleted by mistake (<code>git branch -D feature/x</code>) — the
+  reflog for <code>HEAD</code> still has an entry from when you were last on that
+  branch; check out that SHA and recreate the branch name with
+  <code>git branch feature/x &lt;sha&gt;</code>.</li>
+<li>Force-pushed over your own local branch by accident — reflog is
+  per-repository and local, so this recovers your local state even though
+  the remote branch already changed.</li>
+</ul>
+<h2 id="git-reflog-show-branch-for-a-specific-branchs-history"><code>git reflog show &lt;branch&gt;</code> for a specific branch's history<a class="headerlink" href="#git-reflog-show-branch-for-a-specific-branchs-history" title="Permanent link">&para;</a></h2>
+<p><code>git reflog</code> alone shows <code>HEAD</code>'s reflog; every branch has its own too:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>reflog<span class="w"> </span>show<span class="w"> </span>main
+</code></pre></div>
+<h2 id="reflog-has-a-time-limit">Reflog has a time limit<a class="headerlink" href="#reflog-has-a-time-limit" title="Permanent link">&para;</a></h2>
+<p>Entries expire eventually (<code>git gc</code> prunes reflog entries older than 90
+days by default for reachable commits, 30 days for unreachable ones) —
+reflog is a safety net for "recent mistake," not permanent archival. Once
+an entry is pruned and the object it referenced becomes truly
+unreferenced everywhere, <code>git gc</code> can delete the object itself.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The reflog is stored as plain append-only log files at
+  <code>.git/logs/HEAD</code> and <code>.git/logs/refs/heads/&lt;branch&gt;</code> — one line per ref
+  update, recording the old SHA, new SHA, who did it, and a short
+  description of the command that caused it. This is a completely
+  separate mechanism from the commit graph itself; commits don't know
+  they're "in" a reflog, the reflog just records the sequence of pointer
+  movements.</li>
+<li><code>git reset --hard</code> (even to an earlier commit) doesn't delete any
+  objects — it only rewrites the branch ref (and moves the working
+  tree/index to match). The "lost" commits remain fully intact in
+  <code>.git/objects</code>, simply unreachable from any current branch or tag — the
+  exact same state interactive-rebase's discarded originals end up in.
+  <code>HEAD@{1}</code> is just a friendly alias Git resolves by reading that reflog
+  file and picking the SHA from one entry back.</li>
+<li>This is also precisely why the reflog is <strong>local-only and never
+  transferred</strong> by push/fetch/clone — it's a record of <em>your</em> machine's
+  history of ref movements, not part of the shareable object graph, so a
+  teammate cloning your repo gets your commits but never your reflog.</li>
+<li>Eventually, <code>git gc</code>'s unreachable-object pruning is what actually frees
+  the storage — until that runs (and the reflog entries referencing those
+  objects have also expired), the data is fully intact and recoverable by
+  SHA even without the reflog, via <code>git fsck --lost-found</code>.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Make three commits, then run <code>git reset --hard HEAD~2</code> to "lose" the last
+two. Use <code>git reflog</code> to find the SHA of the commit right before the
+reset, recover with <code>git reset --hard &lt;that sha&gt;</code>, and confirm <code>git log</code>
+shows all three commits again with their original hashes unchanged.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

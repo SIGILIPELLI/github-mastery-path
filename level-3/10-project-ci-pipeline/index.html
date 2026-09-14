@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1674,6 +1672,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — CI Pipeline for a Real Project
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1690,6 +1706,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-a-tiny-project-with-a-real-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — a tiny project with a real test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-the-ci-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — the CI workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-push-and-protect-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — push and protect main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-the-actual-dev-loop-using-everything-from-this-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — the actual dev loop, using everything from this level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-fix-get-it-merged-and-confirm-the-check-ties-to-the-sha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — fix, get it merged, and confirm the check ties to the SHA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-tag-the-release-once-ci-is-green-on-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — tag the release once CI is green on main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-a-bug-slips-through-bisect-finds-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7 — a bug slips through: bisect finds it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2233,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-a-tiny-project-with-a-real-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — a tiny project with a real test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-the-ci-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — the CI workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-push-and-protect-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — push and protect main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-the-actual-dev-loop-using-everything-from-this-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — the actual dev loop, using everything from this level
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-fix-get-it-merged-and-confirm-the-check-ties-to-the-sha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — fix, get it merged, and confirm the check ties to the SHA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-tag-the-release-once-ci-is-green-on-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — tag the release once CI is green on main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-a-bug-slips-through-bisect-finds-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7 — a bug slips through: bisect finds it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2359,138 @@
 
 
 <h1 id="10-project-ci-pipeline-for-a-real-project">10 · Project — CI Pipeline for a Real Project<a class="headerlink" href="#10-project-ci-pipeline-for-a-real-project" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>project — CI Pipeline for a Real Project</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>This capstone wires a small real project up with tests, a CI workflow,
+branch protection, and a tagged release — everything from Level 3 working
+together the way it actually would on a real repo.</p>
+<h2 id="step-1-a-tiny-project-with-a-real-test">Step 1 — a tiny project with a real test<a class="headerlink" href="#step-1-a-tiny-project-with-a-real-test" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>src<span class="w"> </span>tests<span class="w"> </span>.github/workflows
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>src/add.js<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">function add(a, b) { return a + b; }</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">module.exports = add;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">EOF</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>tests/add.test.js<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">const add = require('../src/add');</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s">if (add(2,3) !== 5) { console.error("FAIL"); process.exit(1); }</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s">console.log("PASS");</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s">EOF</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>node<span class="w"> </span>tests/add.test.js
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PASS
+</code></pre></div></p>
+<p>The test genuinely runs and genuinely passes locally before anything
+touches GitHub — CI should never be your first signal that a test even
+executes correctly.</p>
+<h2 id="step-2-the-ci-workflow">Step 2 — the CI workflow<a class="headerlink" href="#step-2-the-ci-workflow" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># .github/workflows/ci.yml</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">test</span><span class="p">:</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-node@v4</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">          </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node tests/add.test.js</span>
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>add<span class="w"> </span>-A
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add project with local test + CI workflow"</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bb88ad4 Add project with local test + CI workflow
+</code></pre></div></p>
+<h2 id="step-3-push-and-protect-main">Step 3 — push and protect <code>main</code><a class="headerlink" href="#step-3-push-and-protect-main" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>On GitHub: Settings → Branches → protect <code>main</code> with "Require a pull
+request," "Require status checks to pass" (select the <code>test</code> job by
+name, which only appears in the list after the workflow has run at least
+once), and "Require branches to be up to date."</p>
+<h2 id="step-4-the-actual-dev-loop-using-everything-from-this-level">Step 4 — the actual dev loop, using everything from this level<a class="headerlink" href="#step-4-the-actual-dev-loop-using-everything-from-this-level" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature/subtract
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>src/subtract.js<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="s">function subtract(a, b) { return a - b; }</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="s">module.exports = subtract;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="s">EOF</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>git<span class="w"> </span>add<span class="w"> </span>src/subtract.js
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add subtract function (missing test — intentional)"</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/subtract
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>gh<span class="w"> </span>pr<span class="w"> </span>create<span class="w"> </span>--title<span class="w"> </span><span class="s2">"Add subtract function"</span><span class="w"> </span>--fill
+</code></pre></div>
+<p>CI runs automatically on the PR. Since there's no test for <code>subtract</code>,
+review should catch that a merge-blocking gap exists even though the <code>test</code>
+job technically passes — this is exactly why "CI is green" and "this PR is
+ready" are not the same claim, and why code review (Level 2, module 07)
+still matters even with strong automation.</p>
+<h2 id="step-5-fix-get-it-merged-and-confirm-the-check-ties-to-the-sha">Step 5 — fix, get it merged, and confirm the check ties to the SHA<a class="headerlink" href="#step-5-fix-get-it-merged-and-confirm-the-check-ties-to-the-sha" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>tests/subtract.test.js<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="s">const subtract = require('../src/subtract');</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="s">if (subtract(5,3) !== 2) { console.error("FAIL"); process.exit(1); }</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="s">console.log("PASS");</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="s">EOF</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>git<span class="w"> </span>add<span class="w"> </span>tests/subtract.test.js
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add missing test for subtract"</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>Update the workflow to run both test files, or use a runner (<code>node
+tests/*.test.js</code> via a small loop) so new test files are picked up
+without editing CI each time:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">for f in tests/*.test.js; do node "$f" || exit 1; done</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>gh<span class="w"> </span>pr<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>--delete-branch
+</code></pre></div>
+<h2 id="step-6-tag-the-release-once-ci-is-green-on-main">Step 6 — tag the release once CI is green on <code>main</code><a class="headerlink" href="#step-6-tag-the-release-once-ci-is-green-on-main" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>main<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>pull
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v0.1.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Initial release with CI"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>tag
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>v0.1.0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v0.1.0
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>gh<span class="w"> </span>release<span class="w"> </span>create<span class="w"> </span>v0.1.0<span class="w"> </span>--notes-from-tag
+</code></pre></div></p>
+<h2 id="step-7-a-bug-slips-through-bisect-finds-it">Step 7 — a bug slips through: bisect finds it<a class="headerlink" href="#step-7-a-bug-slips-through-bisect-finds-it" title="Permanent link">&para;</a></h2>
+<p>Weeks later, <code>add(2,3)</code> mysteriously returns <code>23</code> instead of <code>5</code>. Rather
+than guessing, use <code>git bisect run node tests/add.test.js</code> between the
+last known-good tag and <code>HEAD</code> (module 07) — the same test file that CI
+already runs is exactly what you feed bisect, since it already encodes
+"is this commit correct" as an exit code.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>This project is a synthesis, not a new mechanism, but the causal chain is
+worth stating explicitly:</p>
+<ul>
+<li>The workflow only appears as a selectable required status check
+  (Step 3) because GitHub populates that dropdown from <strong>checks that have
+  actually reported at least once</strong> for this repo — branch protection
+  can't require a check name it has never seen (module 04 + 05 tie
+  together here).</li>
+<li>Every push to the PR branch reruns CI against a <strong>new head SHA</strong>
+  (module 03/07 of Level 2), which is why "Require branches to be up to
+  date" plus required status checks together guarantee the exact code
+  combination that gets merged was the exact combination CI verified —
+  not an older version of <code>main</code> plus untested new commits.</li>
+<li>The tag created in Step 6 is deliberately the <em>last</em> step, after merge
+  and after CI confirms green on <code>main</code> itself — tagging a commit CI
+  hasn't verified defeats the entire point of having CI.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Build this exact pipeline in a real (or throwaway) GitHub repo: a small
+project, a CI workflow, branch protection requiring that workflow, one PR
+with an intentionally incomplete test that a reviewer would (or should)
+catch, a merge, and a tagged release. Then introduce a deliberate
+regression a few commits later and use <code>git bisect run</code> against your own
+test file to find it.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

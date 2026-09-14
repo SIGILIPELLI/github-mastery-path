@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1074,6 +1072,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Rebase vs Merge
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1090,6 +1106,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-divergent-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up divergent branches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-a-merge-preserves-history-exactly-as-it-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: merge (preserves history exactly as it happened)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-b-rebase-replays-your-commits-on-a-new-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: rebase (replays your commits on a new base)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rule-that-matters-most-never-rebase-shared-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rule that matters most: never rebase shared history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-between-them-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing between them in practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebase-conflicts-feel-different-from-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rebase conflicts feel different from merge conflicts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2222,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-divergent-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up divergent branches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-a-merge-preserves-history-exactly-as-it-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: merge (preserves history exactly as it happened)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-b-rebase-replays-your-commits-on-a-new-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: rebase (replays your commits on a new base)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rule-that-matters-most-never-rebase-shared-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rule that matters most: never rebase shared history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-between-them-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing between them in practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebase-conflicts-feel-different-from-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rebase conflicts feel different from merge conflicts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2337,153 @@
 
 
 <h1 id="02-rebase-vs-merge">02 · Rebase vs Merge<a class="headerlink" href="#02-rebase-vs-merge" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>rebase vs Merge</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Both <code>git merge</code> and <code>git rebase</code> bring one branch's work into another, but
+they produce different history shapes. Knowing when to use which — and
+never mixing them the wrong way — is a core Git skill.</p>
+<h2 id="setting-up-divergent-branches">Setting up divergent branches<a class="headerlink" href="#setting-up-divergent-branches" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span>f1<span class="w"> </span>&gt;&gt;<span class="w"> </span>f.txt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-aqm<span class="w"> </span><span class="s2">"feature commit 1"</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">echo</span><span class="w"> </span>f2<span class="w"> </span>&gt;&gt;<span class="w"> </span>f.txt
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-aqm<span class="w"> </span><span class="s2">"feature commit 2"</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">echo</span><span class="w"> </span>m1<span class="w"> </span>&gt;&gt;<span class="w"> </span>g.txt
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>git<span class="w"> </span>add<span class="w"> </span>g.txt
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span><span class="s2">"main commit 1"</span>
+</code></pre></div>
+<p>At this point <code>main</code> and <code>feature</code> have diverged: <code>main</code> has one commit
+<code>feature</code> doesn't, and <code>feature</code> has two commits <code>main</code> doesn't.</p>
+<h2 id="option-a-merge-preserves-history-exactly-as-it-happened">Option A: merge (preserves history exactly as it happened)<a class="headerlink" href="#option-a-merge-preserves-history-exactly-as-it-happened" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>switch<span class="w"> </span>feature
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>merge<span class="w"> </span>main
+</code></pre></div>
+<p>This creates a merge commit with two parents on <code>feature</code>, joining both
+lines of development. The commits <code>feature commit 1</code> and <code>feature commit
+2</code> keep their original hashes; nothing is rewritten. This is the safe
+default for shared/public branches because it never changes history other
+people may have already pulled.</p>
+<h2 id="option-b-rebase-replays-your-commits-on-a-new-base">Option B: rebase (replays your commits on a new base)<a class="headerlink" href="#option-b-rebase-replays-your-commits-on-a-new-base" title="Permanent link">&para;</a></h2>
+<p>Instead, from <code>feature</code>:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Rebasing (1/2)Rebasing (2/2)Successfully rebased and updated refs/heads/feature.
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>* 4284e21 feature commit 2
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>* 9ba91cc feature commit 1
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>* 1802e2e main commit 1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>* 0eeac53 base
+</code></pre></div></p>
+<p>History is now perfectly linear — <code>feature</code>'s two commits sit right on top
+of <code>main</code>'s latest commit, as if you'd branched off <em>after</em> that commit
+existed. Notice: this rewrote <code>feature</code>'s commits. <code>feature commit 1</code> and
+<code>feature commit 2</code> above have <strong>new hashes</strong> compared to before the
+rebase, even though their content and messages are unchanged.</p>
+<p>Merging <code>feature</code> back into <code>main</code> afterward is now a trivial
+fast-forward — there's nothing to reconcile:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>merge<span class="w"> </span>feature<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Merge feature into main"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Updating 1802e2e..4284e21
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Fast-forward (no commit created; -m option ignored)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> f.txt | 2 ++
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a> 1 file changed, 2 insertions(+)
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>* 4284e21 feature commit 2
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>* 9ba91cc feature commit 1
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>* 1802e2e main commit 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>* 0eeac53 base
+</code></pre></div></p>
+<p>No merge commit at all — because after the rebase, <code>feature</code> already
+contained everything <code>main</code> had plus more, so <code>main</code>'s pointer just moves.</p>
+<h2 id="the-rule-that-matters-most-never-rebase-shared-history">The rule that matters most: never rebase shared history<a class="headerlink" href="#the-rule-that-matters-most-never-rebase-shared-history" title="Permanent link">&para;</a></h2>
+<p>Because rebase <strong>rewrites commit hashes</strong>, rebasing a branch that other
+people have already pulled and built on top of creates duplicate,
+diverging history for them when they next pull — a genuinely painful mess
+to untangle. The safe rule:</p>
+<ul>
+<li>Rebase freely on <strong>your own local, not-yet-pushed</strong> branches to clean up
+  history before opening a PR.</li>
+<li>Once a branch is pushed and others may have it, prefer merging (or, if
+  you must rebase a shared branch, coordinate with everyone and use
+  <code>git push --force-with-lease</code>, covered in Level 3).</li>
+</ul>
+<h2 id="choosing-between-them-in-practice">Choosing between them in practice<a class="headerlink" href="#choosing-between-them-in-practice" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Prefer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cleaning up your own messy WIP commits before a PR</td>
+<td>rebase (interactive, Level 3)</td>
+</tr>
+<tr>
+<td>Updating your feature branch with the latest <code>main</code> before opening/continuing a PR</td>
+<td>rebase (if branch is still yours alone) or merge (if others share it)</td>
+</tr>
+<tr>
+<td>Bringing a finished PR into <code>main</code></td>
+<td>merge (usually via GitHub's merge button)</td>
+</tr>
+<tr>
+<td>Any branch already shared with teammates</td>
+<td>merge</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rebase-conflicts-feel-different-from-merge-conflicts">Rebase conflicts feel different from merge conflicts<a class="headerlink" href="#rebase-conflicts-feel-different-from-merge-conflicts" title="Permanent link">&para;</a></h2>
+<p>A rebase conflict happens <strong>per replayed commit</strong>, not once for the whole
+branch. If commit 2 of 5 conflicts, you resolve it, <code>git add</code> the files,
+then <code>git rebase --continue</code> — and Git may stop again at commit 3. Abort
+the whole thing at any point with <code>git rebase --abort</code>, which restores
+<code>feature</code> to exactly where it was before you started.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Merge</strong> never touches existing commits. It computes a three-way diff
+  from the merge base and writes <strong>one new commit object</strong> with two
+  <code>parent</code> lines. Every commit that existed before still exists, unchanged,
+  reachable from both branch tips.</li>
+<li><strong>Rebase</strong> works commit by commit: for each commit on your branch (in
+  order, oldest first), Git computes that commit's diff relative to <em>its
+  own parent</em>, then re-applies that diff on top of the new base commit,
+  and writes a <strong>brand-new commit object</strong> — new tree, new parent, and
+  therefore a new SHA-1/SHA-256 hash, even though the author, message, and
+  resulting file content are identical. The old commits aren't deleted
+  immediately; they become unreferenced (no branch points at them) and
+  are picked up by <code>git gc</code> later, but you can still find them for a
+  while via <code>git reflog</code> if a rebase goes wrong.</li>
+<li>This is exactly why rebase is dangerous on shared branches: the commits
+  your collaborators fetched still exist under their old hashes on their
+  machines, while yours now has entirely different hash objects
+  representing "the same" work — from Git's perspective these are
+  unrelated commits that happen to have similar trees, not the same
+  commits moved around.</li>
+<li>A fast-forward after rebase is possible because rebase's whole point is
+  to make your branch's history look like it always descended linearly
+  from the new base — so merging it back needs no three-way reconciliation
+  at all, just a ref pointer update.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Recreate two diverging branches. Merge them one way and note the merge
+commit's two parents with <code>git log --graph</code>. Reset that merge with
+<code>git reset --hard</code> back to the pre-merge state, then instead rebase the
+feature branch onto main and fast-forward merge it. Compare the two
+resulting <code>git log --oneline --graph --all</code> outputs and describe, in your
+own words, the structural difference.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

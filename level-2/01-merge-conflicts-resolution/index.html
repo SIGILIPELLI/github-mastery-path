@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1046,6 +1044,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Merge Conflicts & Resolution
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1062,6 +1078,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reproducing-a-real-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducing a real conflict
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-one-side-wholesale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing one side wholesale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflict-markers-on-more-than-two-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflict markers on more than two lines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diff3-style-seeing-the-common-ancestor-too" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diff3 style: seeing the common ancestor too
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aborting-instead-of-resolving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aborting instead of resolving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflicts-during-rebase-vs-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflicts during rebase vs merge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2233,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reproducing-a-real-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducing a real conflict
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-one-side-wholesale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing one side wholesale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflict-markers-on-more-than-two-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflict markers on more than two lines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diff3-style-seeing-the-common-ancestor-too" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diff3 style: seeing the common ancestor too
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aborting-instead-of-resolving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aborting instead of resolving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflicts-during-rebase-vs-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflicts during rebase vs merge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2359,192 @@
 
 
 <h1 id="01-merge-conflicts-resolution">01 · Merge Conflicts &amp; Resolution<a class="headerlink" href="#01-merge-conflicts-resolution" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>merge Conflicts &amp; Resolution</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Level 1 introduced conflicts briefly. Here's the full workflow: how a
+conflict happens, how to read the markers, how to resolve with tools, and
+how to bail out safely.</p>
+<h2 id="reproducing-a-real-conflict">Reproducing a real conflict<a class="headerlink" href="#reproducing-a-real-conflict" title="Permanent link">&para;</a></h2>
+<p>Starting from a shared <code>notes.txt</code> on <code>main</code>, create a branch and edit the
+same line on both sides:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature/x
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"feature line"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>notes.txt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-aqm<span class="w"> </span><span class="s2">"Feature edit line 1"</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">''</span><span class="w"> </span><span class="s1">'1s/.*/line one (main edit)/'</span><span class="w"> </span>notes.txt
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>git<span class="w"> </span>commit<span class="w"> </span>-aqm<span class="w"> </span><span class="s2">"Main edit line 1"</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>git<span class="w"> </span>merge<span class="w"> </span>feature/x
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Auto-merging notes.txt
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>CONFLICT (content): Merge conflict in notes.txt
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Automatic merge failed; fix conflicts and then commit the result.
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>On branch main
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>You have unmerged paths.
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  (fix conflicts and run "git commit")
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  (use "git merge --abort" to abort the merge)
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Unmerged paths:
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  (use "git add &lt;file&gt;..." to mark resolution)
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    both modified:   notes.txt
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre></div></p>
+<p><code>notes.txt</code> now contains both versions with conflict markers:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>line one (main edit)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>=======
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>line one
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>feature line
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/x
+</code></pre></div>
+<p>Reading this: everything between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> is <strong>your
+current branch's version</strong>; everything between <code>=======</code> and
+<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/x</code> is the <strong>incoming branch's version</strong>. Git couldn't
+decide which line 1 was "correct" because both sides touched it.</p>
+<h2 id="resolving-it">Resolving it<a class="headerlink" href="#resolving-it" title="Permanent link">&para;</a></h2>
+<p>Edit the file to the content you actually want and remove every marker
+line — Git does not remove them for you:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'line one (main edit)\nfeature line\n'</span><span class="w"> </span>&gt;<span class="w"> </span>notes.txt
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cat<span class="w"> </span>notes.txt
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>line one (main edit)
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>feature line
+</code></pre></div></p>
+<p>Then stage and finish the merge commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>add<span class="w"> </span>notes.txt
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Merge feature/x, resolve notes.txt conflict"</span>
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>*   b7effe1 Merge feature/x, resolve notes.txt conflict
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>|\
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>| * 42200fa Feature edit line 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>* | e3bb258 Main edit line 1
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>|/
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>* 7a7d91c Add notes.txt
+</code></pre></div></p>
+<p>Staging a previously-conflicted file is exactly how Git knows resolution
+is complete for that file — <code>git commit</code> refuses to finish a merge while
+any path still shows as unmerged in <code>git status</code>.</p>
+<h2 id="choosing-one-side-wholesale">Choosing one side wholesale<a class="headerlink" href="#choosing-one-side-wholesale" title="Permanent link">&para;</a></h2>
+<p>If you know the whole file should just be "theirs" or "ours" (not a
+line-by-line merge), skip manual editing:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>--ours<span class="w"> </span>notes.txt<span class="w">    </span><span class="c1"># keep current branch's version entirely</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>--theirs<span class="w"> </span>notes.txt<span class="w">  </span><span class="c1"># keep incoming branch's version entirely</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>add<span class="w"> </span>notes.txt
+</code></pre></div>
+<p>Use this carefully — it discards the other side's changes to that file
+completely, not just the conflicting lines.</p>
+<h2 id="conflict-markers-on-more-than-two-lines">Conflict markers on more than two lines<a class="headerlink" href="#conflict-markers-on-more-than-two-lines" title="Permanent link">&para;</a></h2>
+<p>Real conflicts often span whole blocks, not single lines, and a file can
+have several conflict regions at once. Search for them systematically
+rather than trusting your editor's diff view alone:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">"^&lt;&lt;&lt;&lt;&lt;&lt;&lt;\|^=======\|^&gt;&gt;&gt;&gt;&gt;&gt;&gt;"</span><span class="w"> </span>notes.txt
+</code></pre></div>
+<p>Don't consider a file resolved until this returns nothing.</p>
+<h2 id="diff3-style-seeing-the-common-ancestor-too">Diff3 style: seeing the common ancestor too<a class="headerlink" href="#diff3-style-seeing-the-common-ancestor-too" title="Permanent link">&para;</a></h2>
+<p>By default conflict markers show only "ours" vs "theirs." Turning on the
+<code>diff3</code> conflict style adds the original (merge-base) content in the
+middle, which often makes it obvious what each side actually <em>changed</em>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>config<span class="w"> </span>merge.conflictstyle<span class="w"> </span>diff3
+</code></pre></div>
+<p>A conflict then looks like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>line one (main edit)
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>||||||| 7a7d91c
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>line one
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>=======
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>line one
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>feature line
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/x
+</code></pre></div>
+<p>Now you can see the original line was <code>line one</code>, main changed it in
+place, and feature/x left it alone but added a second line — so the
+correct resolution (keep the edit, keep the addition) is clear.</p>
+<h2 id="aborting-instead-of-resolving">Aborting instead of resolving<a class="headerlink" href="#aborting-instead-of-resolving" title="Permanent link">&para;</a></h2>
+<p>If you started a merge and want to back out entirely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>merge<span class="w"> </span>--abort
+</code></pre></div>
+<p>This is safe any time before you run <code>git commit</code> to finish the merge — it
+resets the index and working tree to match <code>HEAD</code> exactly and clears
+<code>.git/MERGE_HEAD</code>.</p>
+<h2 id="conflicts-during-rebase-vs-merge">Conflicts during rebase vs merge<a class="headerlink" href="#conflicts-during-rebase-vs-merge" title="Permanent link">&para;</a></h2>
+<p>The markers look identical, but the recovery command differs:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Abort command</th>
+<th>Continue command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git merge</code></td>
+<td><code>git merge --abort</code></td>
+<td><code>git commit</code></td>
+</tr>
+<tr>
+<td><code>git rebase</code></td>
+<td><code>git rebase --abort</code></td>
+<td><code>git rebase --continue</code></td>
+</tr>
+<tr>
+<td><code>git cherry-pick</code></td>
+<td><code>git cherry-pick --abort</code></td>
+<td><code>git cherry-pick --continue</code></td>
+</tr>
+</tbody>
+</table>
+<p>Using the wrong pair (e.g. <code>git commit</code> mid-rebase) leaves things in a
+confusing state, so always check <code>git status</code> — it prints the exact next
+command to run at the bottom of its output.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<p>A merge conflict is what happens when Git's three-way diff can't pick a
+winner automatically, and the conflict markers are literally what gets
+written into the working-tree file and the index.</p>
+<ul>
+<li>Git computes the merge base (the common ancestor), then diffs
+  <code>merge-base → ours</code> and <code>merge-base → theirs</code> for every file, line by
+  line (technically hunk by hunk, using the same diff algorithm as
+  <code>git diff</code>).</li>
+<li>If only one side changed a given hunk, Git applies that side's change
+  automatically — no conflict, no markers, nothing to review.</li>
+<li>If <strong>both</strong> sides changed the <em>same</em> hunk (overlapping line ranges),
+  Git can't merge them textually. It writes a synthetic combined version
+  into the file — <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> / your content / <code>=======</code> / their
+  content / <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> — and leaves the file <strong>unmerged</strong> in the index.</li>
+<li>"Unmerged" is a real index state, not just a working-tree annotation:
+  each conflicted path gets three index entries simultaneously (stage 1 =
+  common ancestor, stage 2 = ours, stage 3 = theirs), which is why
+  <code>git checkout --ours &lt;file&gt;</code> and <code>--theirs &lt;file&gt;</code> work — they just pull
+  stage 2 or stage 3 back into the working tree and collapse it to a
+  single normal index entry.</li>
+<li>Running <code>git add &lt;file&gt;</code> on a conflicted path removes stages 2/3 and
+  writes a single new blob for the resolved content at stage 0 (normal).
+  <code>git commit</code> checks that no path still has stage-1/2/3 entries before it
+  will let the merge commit be created — that's the actual mechanism
+  behind "you have unmerged paths."</li>
+<li><code>diff3</code> style works because Git already has the merge-base blob in the
+  object database (it needed it to compute the diff in the first place);
+  turning the setting on just tells Git to also print that blob's content
+  between <code>||||||| &lt;base&gt;</code> and <code>=======</code> instead of discarding it.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Recreate the scenario above in a scratch repo: two branches editing the
+same line of the same file. Trigger the conflict, enable
+<code>git config merge.conflictstyle diff3</code>, redo the merge, and use the extra
+ancestor context to resolve it. Confirm with <code>git log --graph --oneline
+--all</code> that the result is a single merge commit with two parents.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

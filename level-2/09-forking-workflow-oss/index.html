@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1270,6 +1268,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Forking Workflow & Contributing to OSS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1286,6 +1302,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forking-on-github-cloning-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forking on GitHub, cloning locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-remote-setup-demonstrated-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two-remote setup, demonstrated locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doing-the-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Doing the work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keeping-your-fork-in-sync-with-upstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keeping your fork in sync with upstream
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-etiquette-specific-to-oss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contribution etiquette specific to OSS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forking-on-github-cloning-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forking on GitHub, cloning locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-remote-setup-demonstrated-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two-remote setup, demonstrated locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doing-the-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Doing the work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keeping-your-fork-in-sync-with-upstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keeping your fork in sync with upstream
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-etiquette-specific-to-oss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contribution etiquette specific to OSS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,123 @@
 
 
 <h1 id="09-forking-workflow-contributing-to-oss">09 · Forking Workflow &amp; Contributing to OSS<a class="headerlink" href="#09-forking-workflow-contributing-to-oss" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>forking Workflow &amp; Contributing to OSS</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>A <strong>fork</strong> is your own full copy of someone else's repository on GitHub.
+The forking workflow is how most open-source contributions happen: you
+can't push directly to a project you don't own, so you fork it, work in
+your copy, and open a PR asking the original maintainers to pull your
+changes in.</p>
+<h2 id="forking-on-github-cloning-locally">Forking on GitHub, cloning locally<a class="headerlink" href="#forking-on-github-cloning-locally" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gh<span class="w"> </span>repo<span class="w"> </span>fork<span class="w"> </span>owner/project<span class="w"> </span>--clone
+</code></pre></div>
+<p>This creates <code>your-username/project</code> on GitHub (a server-side copy) and
+clones it locally in one step, automatically wiring up two remotes.</p>
+<h2 id="the-two-remote-setup-demonstrated-locally">The two-remote setup, demonstrated locally<a class="headerlink" href="#the-two-remote-setup-demonstrated-locally" title="Permanent link">&para;</a></h2>
+<p>Simulating the same shape with two local bare-ish repos (<code>upstream-demo</code>
+standing in for the original project, <code>fork-demo</code> standing in for your
+fork):</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>/tmp/upstream-demo<span class="w"> </span>/tmp/fork-demo
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>/tmp/fork-demo
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>remote<span class="w"> </span>rename<span class="w"> </span>origin<span class="w"> </span>upstream
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>/tmp/fork-demo-mine
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>origin  /tmp/fork-demo-mine (fetch)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>origin  /tmp/fork-demo-mine (push)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>upstream    /tmp/upstream-demo (fetch)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>upstream    /tmp/upstream-demo (push)
+</code></pre></div></p>
+<p>The convention: <code>origin</code> = your fork (where you push your branches),
+<code>upstream</code> = the original project (where you only ever pull/fetch from).</p>
+<h2 id="doing-the-work">Doing the work<a class="headerlink" href="#doing-the-work" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature/readme-tweak
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"fork addition"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">"Add fork addition"</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/readme-tweak
+</code></pre></div>
+<p>Then open a PR <strong>from your fork's branch to the original repo's default
+branch</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gh<span class="w"> </span>pr<span class="w"> </span>create<span class="w"> </span>--repo<span class="w"> </span>owner/project<span class="w"> </span>--head<span class="w"> </span>yourname:feature/readme-tweak<span class="w"> </span>--base<span class="w"> </span>main
+</code></pre></div>
+<h2 id="keeping-your-fork-in-sync-with-upstream">Keeping your fork in sync with upstream<a class="headerlink" href="#keeping-your-fork-in-sync-with-upstream" title="Permanent link">&para;</a></h2>
+<p>Meanwhile the real project keeps moving. Pull its new commits into your
+local <code>main</code> (not your feature branch) regularly:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>merge<span class="w"> </span>upstream/main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Updating 528019a..2874cdc
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Fast-forward
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> README.md | 1 +
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> 1 file changed, 1 insertion(+)
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>--all
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>* fa5197d Add fork addition
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>| * 2874cdc Upstream new commit
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>|/
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>* 528019a Initial upstream commit
+</code></pre></div></p>
+<p>This shows the real shape of forked OSS work: your feature branch
+(<code>fa5197d</code>) and upstream's new work (<code>2874cdc</code>) diverged from the same
+commit and haven't been reconciled yet — exactly what you'd rebase your
+feature branch onto before finishing your PR, so it applies cleanly
+against the project's current <code>main</code>.</p>
+<p>Push the synced <code>main</code> back to your fork too, so your fork's <code>main</code> stays
+a mirror of upstream's:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<h2 id="contribution-etiquette-specific-to-oss">Contribution etiquette specific to OSS<a class="headerlink" href="#contribution-etiquette-specific-to-oss" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Read <code>CONTRIBUTING.md</code> before opening anything — many projects require
+  a specific commit format, a signed CLA, or a discussion/issue first for
+  non-trivial changes.</li>
+<li>Keep your first PR small. A 10-line typo fix or a well-scoped bug fix is
+  far more likely to get merged (and teaches you the maintainers'
+  standards) than an ambitious rewrite.</li>
+<li>Reference an existing issue if one exists (<code>Fixes #123</code>), or open one
+  first to confirm the maintainers want the change before investing time.</li>
+<li>Expect review latency — OSS maintainers are often volunteers; a PR
+  sitting for days or weeks is normal, not a rejection.</li>
+</ul>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A GitHub "fork" is server-side: GitHub creates a new repository record
+  that shares underlying Git object storage with the parent repo (via
+  GitHub's internal repository network), which is why forking a huge repo
+  is near-instant — it isn't actually copying gigabytes of objects
+  immediately, it's creating a new ref namespace pointing into shared
+  storage, with copy-on-write for genuinely new objects you push. This
+  internal sharing is also what lets GitHub show "compare across forks"
+  and serve <code>refs/pull/N/head</code> efficiently.</li>
+<li>Locally, a fork is nothing special — it's a Git repository just like
+  any other; the <code>origin</code>/<code>upstream</code> naming is pure convention, not a
+  distinct remote type. Git treats every remote identically; what makes a
+  "forking workflow" work is entirely how <em>you</em> choose to push/pull
+  against each one.</li>
+<li><code>git fetch upstream</code> followed by <code>git merge upstream/main</code> is exactly
+  the fast-forward mechanism from the merging-basics module — it works
+  cleanly here because your local <code>main</code> had no independent commits of
+  its own; all your actual work lived on <code>feature/readme-tweak</code>, which is
+  precisely why the convention is "never commit directly to your fork's
+  <code>main</code>."</li>
+<li>When the PR you opened eventually merges into the real upstream, your
+  fork's <code>main</code> still needs an explicit <code>git fetch upstream &amp;&amp; git merge
+  upstream/main</code> afterward — merging your PR on GitHub does not
+  automatically update anything in your fork; forks only sync when you
+  tell them to.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>Recreate the two-repo setup locally (<code>upstream-demo</code> and a clone renamed
+to use <code>origin</code>/<code>upstream</code>). Make a commit on each side independently,
+then fetch and merge upstream into your fork's <code>main</code>, and rebase your
+feature branch onto the updated <code>main</code> so it's ready to submit as a clean
+PR.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

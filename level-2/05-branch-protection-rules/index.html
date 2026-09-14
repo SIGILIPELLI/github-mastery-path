@@ -94,8 +94,6 @@
   }
   </script>
   
-  <meta name="robots" content="noindex, follow">
-  
 
   </head>
   
@@ -1158,6 +1156,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Branch Protection Rules
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1174,6 +1190,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-they-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where they live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rules-that-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rules that matter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-you-try-to-bypass-one-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when you try to bypass one locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-push-protection-specifically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force-push protection specifically
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-rules-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying rules via CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2099,6 +2211,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-they-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where they live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rules-that-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rules that matter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-you-try-to-bypass-one-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when you try to bypass one locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-push-protection-specifically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force-push protection specifically
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-rules-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifying rules via CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-actually-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Actually Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2118,20 +2315,115 @@
 
 
 <h1 id="05-branch-protection-rules">05 · Branch Protection Rules<a class="headerlink" href="#05-branch-protection-rules" title="Permanent link">&para;</a></h1>
-<p><em>This module is coming soon.</em></p>
-<p>This lesson will cover <strong>branch Protection Rules</strong> as part of the GitHub &amp; Git Mastery
-Path curriculum. Check back soon for the full lesson, complete with
-walkthroughs, worked examples, and a hands-on exercise.</p>
-<p>In the meantime, head back to the <a href="../">level overview</a>.</p>
+<p>Branch protection rules are repository settings that restrict what can
+happen to a branch directly on GitHub's servers — they can't be simulated
+by local Git commands (a local clone has no concept of "protected"), so
+this module documents exact settings and their enforced effect.</p>
+<h2 id="where-they-live">Where they live<a class="headerlink" href="#where-they-live" title="Permanent link">&para;</a></h2>
+<p>Settings → Branches → Add branch protection rule (classic), or the newer
+Settings → Rules → Rulesets, which apply to branch name patterns
+(<code>main</code>, <code>release/*</code>) across one or many branches at once. A ruleset
+example, as a repo-stored config via the API:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/:owner/:repo/rulesets<span class="w"> </span>--method<span class="w"> </span>POST<span class="w"> </span>-f<span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="s2">"main-protection"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-f<span class="w"> </span><span class="nv">target</span><span class="o">=</span>branch<span class="w"> </span>-f<span class="w"> </span><span class="nv">enforcement</span><span class="o">=</span>active<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-f<span class="w"> </span><span class="s1">'conditions[ref_name][include][]=refs/heads/main'</span>
+</code></pre></div>
+<h2 id="the-rules-that-matter">The rules that matter<a class="headerlink" href="#the-rules-that-matter" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Require a pull request before merging</strong> — disables direct pushes to
+  the branch entirely; every change must go through a PR, even for repo
+  admins if "Do not allow bypassing" is also checked.</li>
+<li><strong>Require approvals</strong> (e.g. 1 or 2) — a PR's merge button stays disabled
+  until that many approving reviews exist and none are stale/dismissed.</li>
+<li><strong>Dismiss stale reviews on new commits</strong> — any new push to the PR head
+  invalidates prior approvals, forcing re-review of the latest code.</li>
+<li><strong>Require status checks to pass</strong> — names specific CI job(s) (e.g.
+  <code>build</code>, <code>test</code>) that must report success on the exact head commit SHA
+  before merge is allowed.</li>
+<li><strong>Require branches to be up to date before merging</strong> — blocks merging a
+  PR whose base has moved on since the PR's branch last incorporated it,
+  forcing a rebase/merge-in-latest-main first.</li>
+<li><strong>Require signed commits</strong> — rejects any commit in the PR that isn't
+  GPG/SSH-signed (Level 4 covers signing setup).</li>
+<li><strong>Require linear history</strong> — blocks merge commits on this branch
+  entirely; only squash or rebase merges are permitted.</li>
+<li><strong>Restrict who can push</strong> — an allowlist of users/teams/apps permitted
+  to push directly, useful for release branches only a bot should touch.</li>
+<li><strong>Require conversation resolution before merging</strong> — every open review
+  comment thread must be marked resolved.</li>
+</ul>
+<h2 id="what-happens-when-you-try-to-bypass-one-locally">What happens when you try to bypass one locally<a class="headerlink" href="#what-happens-when-you-try-to-bypass-one-locally" title="Permanent link">&para;</a></h2>
+<p>Trying to push directly to a protected branch that requires PRs:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>remote: error: GH006: Protected branch update failed for refs/heads/main.
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>remote: error: Changes must be made through a pull request.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>To github.com:org/repo.git
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> ! [remote rejected] main -&gt; main (protected branch hook declined)
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>error: failed to push some refs to 'github.com:org/repo.git'
+</code></pre></div></p>
+<p>This message is real GitHub server output (<code>GH006</code>) — the push reaches
+GitHub, GitHub's pre-receive hook evaluates the ruleset, and rejects the
+ref update before it ever touches the branch. Your local repository still
+has the commit; only the remote update failed, so <code>git log</code> locally shows
+it fine.</p>
+<h2 id="force-push-protection-specifically">Force-push protection specifically<a class="headerlink" href="#force-push-protection-specifically" title="Permanent link">&para;</a></h2>
+<p>Even without full "require PR" protection, a branch can independently
+block force pushes and deletion:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>push<span class="w"> </span>--force<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>remote: error: GH003: Sorry, force-pushing to main is not allowed.
+</code></pre></div></p>
+<p>This is the single most common protection to enable on <code>main</code> even on
+small/solo repos, since a stray <code>git push --force</code> from an old local
+branch can otherwise silently discard teammates' commits on the remote.</p>
+<h2 id="verifying-rules-via-cli">Verifying rules via CLI<a class="headerlink" href="#verifying-rules-via-cli" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>gh<span class="w"> </span>api<span class="w"> </span>repos/:owner/:repo/branches/main/protection<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.
+</code></pre></div>
+<p>Returns the exact JSON of enforced settings — required checks, review
+count, and admin enforcement — useful for auditing multiple repos with a
+script instead of clicking through Settings pages one by one.</p>
+<h2 id="how-it-actually-works">How It Actually Works<a class="headerlink" href="#how-it-actually-works" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Branch protection is enforced as a <strong>pre-receive check on GitHub's
+  server</strong>, not a Git feature at all — vanilla Git has no concept of a
+  protected ref. When you <code>git push</code>, the ref update request reaches
+  GitHub's Git server, which runs its protection evaluation (PR-only?
+  signed? checks passing? approvals met?) <em>before</em> accepting the new ref
+  value, and returns a rejection over the Git wire protocol if any rule
+  fails — that's the <code>[remote rejected]</code> line, which is Git faithfully
+  reporting what the server refused, not something your local Git
+  invented.</li>
+<li>"Require status checks" ties to a <strong>commit SHA</strong>, not a branch name or
+  PR number: GitHub records <code>{sha, check_name, status}</code> tuples via the
+  Checks API (used by GitHub Actions and third-party CI). Merge is gated
+  on the PR's current head SHA having a passing record for every required
+  check name — push a new commit and the SHA changes, so all prior
+  passing records become irrelevant and checks must rerun.</li>
+<li>"Require branches to be up to date" is enforced by comparing the PR
+  head's merge-base against the base branch's current tip; if they differ,
+  merging could theoretically combine code that was never actually tested
+  together by CI (since CI ran against an older base), so GitHub blocks it
+  until you update the branch (merge or rebase main into it) and CI
+  reruns against the new combination.</li>
+<li>None of this data is ever transferred by <code>git clone</code> or <code>git fetch</code> —
+  it's queried live from GitHub's API/UI each time, which is why cloning a
+  protected repo doesn't tell you anything about its protection rules;
+  you'd need <code>gh api repos/:owner/:repo/branches/main/protection</code>
+  specifically.</li>
+</ul>
+<h2 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
+<p>On a repo you own, enable "Require a pull request before merging" and
+"Require approvals: 1" on <code>main</code>. Try pushing a commit directly to <code>main</code>
+and capture the rejection message. Then open a PR for the same change,
+have (or simulate) an approval, and confirm the merge button only becomes
+enabled once the approval requirement is satisfied.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
