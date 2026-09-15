@@ -1,3 +1,7 @@
+---
+description: "Git Hooks — Hooks are scripts Git runs automatically at specific points in its workflow (before a commit, before a push, after a checkout). They live in…"
+---
+
 # 06 · Git Hooks
 
 Hooks are scripts Git runs automatically at specific points in its

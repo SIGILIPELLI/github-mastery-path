@@ -1,3 +1,7 @@
+---
+description: "GitHub Actions Basics (a simple CI workflow) — GitHub Actions runs workflows on GitHub's own hosted (or self-hosted) runners in response to repo events …"
+---
+
 # 04 · GitHub Actions Basics (a simple CI workflow)
 
 GitHub Actions runs workflows on GitHub's own hosted (or self-hosted)

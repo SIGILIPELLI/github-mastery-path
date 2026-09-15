@@ -1,3 +1,7 @@
+---
+description: "Interactive Rebase & History Rewriting — Interactive rebase (git rebase -i) lets you edit, reorder, squash, or drop commits before they're shared — the…"
+---
+
 # 02 · Interactive Rebase & History Rewriting
 
 Interactive rebase (`git rebase -i`) lets you edit, reorder, squash, or

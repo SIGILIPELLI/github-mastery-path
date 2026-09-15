@@ -1,3 +1,7 @@
+---
+description: "The Basic Workflow (init/add/commit/status/log) — Every Git repository, no matter how complex it eventually becomes, is built from the same five commands.…"
+---
+
 # 03 · The Basic Workflow (init/add/commit/status/log)
 
 Every Git repository, no matter how complex it eventually becomes, is built

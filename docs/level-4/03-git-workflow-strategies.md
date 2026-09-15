@@ -1,3 +1,7 @@
+---
+description: "Git Workflow Strategies (GitFlow, Trunk-Based) — Git doesn't enforce a branching model — GitFlow, trunk-based development, and GitHub Flow are just…"
+---
+
 # 03 · Git Workflow Strategies (GitFlow, Trunk-Based)
 
 Git doesn't enforce a branching model — GitFlow, trunk-based development,

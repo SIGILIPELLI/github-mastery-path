@@ -1,3 +1,7 @@
+---
+description: "Installing Git & Configuration — Any recent version (2.3x+) works fine for this course."
+---
+
 # 02 · Installing Git & Configuration
 
 ## Installing Git

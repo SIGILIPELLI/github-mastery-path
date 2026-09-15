@@ -1,3 +1,7 @@
+---
+description: "Capstone Project — This module assembles a complete, small-but-real repo setup using every piece from Level 4: a sane branch model, a monorepo-aware CI…"
+---
+
 # 10 · Capstone Project
 
 This module assembles a complete, small-but-real repo setup using every

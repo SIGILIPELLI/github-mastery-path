@@ -1,3 +1,7 @@
+---
+description: "Project — Clone, Fork & Ship a Repo — This capstone pulls together every Level 1 module: local commits, a branch merged in, remotes, a real GitHub…"
+---
+
 # 10 · Project — Clone, Fork & Ship a Repo
 
 This capstone pulls together every Level 1 module: local commits, a branch

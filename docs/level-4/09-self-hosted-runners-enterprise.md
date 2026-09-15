@@ -1,3 +1,7 @@
+---
+description: "Self-Hosted Runners & Enterprise GitHub — GitHub-hosted runners are ephemeral VMs GitHub provisions per job. A self-hosted runner is a long-lived machine…"
+---
+
 # 09 · Self-Hosted Runners & Enterprise GitHub
 
 GitHub-hosted runners are ephemeral VMs GitHub provisions per job. A

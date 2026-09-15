@@ -1,3 +1,7 @@
+---
+description: "GitHub CLI (gh) — gh is GitHub's official command-line tool — it wraps GitHub's REST/GraphQL API so you never have to leave the terminal for PRs, issues…"
+---
+
 # 08 · GitHub CLI (gh)
 
 `gh` is GitHub's official command-line tool — it wraps GitHub's REST/GraphQL

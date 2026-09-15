@@ -1,3 +1,7 @@
+---
+description: "Merging Basics — Once work on a branch is ready, you bring it back into another branch (usually main) with git merge. There are two outcomes depending on…"
+---
+
 # 05 · Merging Basics
 
 Once work on a branch is ready, you bring it back into another branch

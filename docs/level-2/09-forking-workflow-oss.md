@@ -1,3 +1,7 @@
+---
+description: "Forking Workflow & Contributing to OSS — A fork is your own full copy of someone else's repository on GitHub. The forking workflow is how most open-source…"
+---
+
 # 09 · Forking Workflow & Contributing to OSS
 
 A **fork** is your own full copy of someone else's repository on GitHub.

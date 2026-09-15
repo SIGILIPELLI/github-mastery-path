@@ -1,3 +1,7 @@
+---
+description: "Creating a GitHub Repo & Pushing — There are two ways to connect a project to GitHub: create the GitHub repo first and clone it, or start locally and…"
+---
+
 # 08 · Creating a GitHub Repo & Pushing
 
 There are two ways to connect a project to GitHub: create the GitHub repo

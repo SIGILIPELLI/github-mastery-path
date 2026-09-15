@@ -1,3 +1,7 @@
+---
+description: ".gitignore Basics — Not everything in a project folder belongs in version control: compiled binaries, dependency folders, IDE settings, secrets, and…"
+---
+
 # 09 · .gitignore Basics
 
 Not everything in a project folder belongs in version control: compiled

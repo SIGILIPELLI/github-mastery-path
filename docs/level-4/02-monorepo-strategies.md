@@ -1,3 +1,7 @@
+---
+description: "Monorepo Strategies — A monorepo puts multiple projects — services, libraries, frontends — in one Git repository instead of one repo each. Git itself has…"
+---
+
 # 02 · Monorepo Strategies
 
 A monorepo puts multiple projects — services, libraries, frontends — in one

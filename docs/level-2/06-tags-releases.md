@@ -1,3 +1,7 @@
+---
+description: "Tags & Releases — Tags mark a specific commit permanently — most often 'this is version 1.0.0.' GitHub Releases build on top of tags to add release notes…"
+---
+
 # 06 · Tags & Releases
 
 Tags mark a specific commit permanently — most often "this is version

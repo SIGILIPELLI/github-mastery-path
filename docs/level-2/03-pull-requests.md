@@ -1,3 +1,7 @@
+---
+description: "Pull Requests (create, review, merge) — A pull request (PR) is GitHub's wrapper around a merge: it packages a branch's commits into a reviewable…"
+---
+
 # 03 · Pull Requests (create, review, merge)
 
 A pull request (PR) is GitHub's wrapper around a merge: it packages a

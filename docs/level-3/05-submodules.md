@@ -1,3 +1,7 @@
+---
+description: "Submodules — A submodule embeds one Git repository inside another — a way to depend on a separate project's source (a shared library, say) while keeping…"
+---
+
 # 05 · Submodules
 
 A submodule embeds one Git repository inside another — a way to depend on

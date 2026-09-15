@@ -1,3 +1,7 @@
+---
+description: "GitHub Apps & Automation — Automating GitHub beyond a workflow file — a bot that comments on PRs, labels issues, or reacts to webhooks in real time …"
+---
+
 # 06 · GitHub Apps & Automation
 
 Automating GitHub beyond a workflow file — a bot that comments on PRs,

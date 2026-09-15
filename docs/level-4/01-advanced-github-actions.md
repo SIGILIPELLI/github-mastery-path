@@ -1,3 +1,7 @@
+---
+description: "Advanced GitHub Actions (matrix, caching, reusable workflows) — Level 3 covered a single job running once. Real pipelines need to test across multiple…"
+---
+
 # 01 · Advanced GitHub Actions (matrix, caching, reusable workflows)
 
 Level 3 covered a single job running once. Real pipelines need to test

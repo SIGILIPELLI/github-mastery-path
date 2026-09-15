@@ -1,3 +1,7 @@
+---
+description: "What Is GitHub? (repos, issues, web UI) — An issue is a single tracked item — a bug report, a feature idea, a question — with a title, a description…"
+---
+
 # 07 · What Is GitHub? (repos, issues, web UI)
 
 **GitHub** is a website (and platform) that hosts Git repositories and adds

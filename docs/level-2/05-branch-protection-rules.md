@@ -1,3 +1,7 @@
+---
+description: "Branch Protection Rules — Branch protection rules are repository settings that restrict what can happen to a branch directly on GitHub's servers — they…"
+---
+
 # 05 · Branch Protection Rules
 
 Branch protection rules are repository settings that restrict what can

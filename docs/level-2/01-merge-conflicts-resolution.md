@@ -1,3 +1,7 @@
+---
+description: "Merge Conflicts & Resolution — Level 1 introduced conflicts briefly. Here's the full workflow: how a conflict happens, how to read the markers, how to…"
+---
+
 # 01 · Merge Conflicts & Resolution
 
 Level 1 introduced conflicts briefly. Here's the full workflow: how a

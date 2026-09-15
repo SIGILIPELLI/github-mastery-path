@@ -1,3 +1,7 @@
+---
+description: "Designing a Team Git/GitHub Workflow — Everything in Levels 1–4 so far — branching models, PR review, CI, CODEOWNERS, protection rules — is a set of…"
+---
+
 # 05 · Designing a Team Git/GitHub Workflow
 
 Everything in Levels 1–4 so far — branching models, PR review, CI,

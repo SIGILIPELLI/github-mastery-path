@@ -1,3 +1,7 @@
+---
+description: "Remotes (clone/push/pull/fetch) — Everything so far has happened on one machine. A remote is a version of your repository hosted somewhere else — most…"
+---
+
 # 06 · Remotes (clone/push/pull/fetch)
 
 Everything so far has happened on one machine. A **remote** is a version of

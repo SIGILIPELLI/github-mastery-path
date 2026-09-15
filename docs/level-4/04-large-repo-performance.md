@@ -1,3 +1,7 @@
+---
+description: "Large Repo Performance (sparse checkout, partial clone) — A repo with years of history and a large working tree is slow in three independent ways: cloning…"
+---
+
 # 04 · Large Repo Performance (sparse checkout, partial clone)
 
 A repo with years of history and a large working tree is slow in three

@@ -1,3 +1,7 @@
+---
+description: "Branching Basics — A branch in Git is just a movable pointer to a commit. That's it — no separate copy of the files, no expensive operation. This is why…"
+---
+
 # 04 · Branching Basics
 
 A **branch** in Git is just a movable pointer to a commit. That's it — no

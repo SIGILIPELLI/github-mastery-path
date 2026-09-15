@@ -1,3 +1,7 @@
+---
+description: "Rebase vs Merge — Both git merge and git rebase bring one branch's work into another, but they produce different history shapes. Knowing when to use which…"
+---
+
 # 02 · Rebase vs Merge
 
 Both `git merge` and `git rebase` bring one branch's work into another, but

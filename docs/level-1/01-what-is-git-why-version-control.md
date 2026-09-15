@@ -1,3 +1,7 @@
+---
+description: "What Is Git & Why Version Control? — Git is not GitHub. Git is the version control tool that runs on your computer. GitHub (also GitLab, Bitbucket, etc.)…"
+---
+
 # 01 · What Is Git & Why Version Control?
 
 **Version control** is a system that records changes to a set of files over

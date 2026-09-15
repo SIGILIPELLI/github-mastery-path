@@ -1,3 +1,7 @@
+---
+description: "GitHub Secrets & Environments — Secrets and Environments are GitHub-server-side features for giving Actions workflows access to credentials safely …"
+---
+
 # 09 · GitHub Secrets & Environments
 
 Secrets and Environments are GitHub-server-side features for giving

@@ -1,3 +1,7 @@
+---
+description: "Security Hardening (CODEOWNERS, signed commits, SAST) — Hardening a repo means reducing three specific risks: someone merging unreviewed code, someone…"
+---
+
 # 08 · Security Hardening (CODEOWNERS, signed commits, SAST)
 
 Hardening a repo means reducing three specific risks: someone merging

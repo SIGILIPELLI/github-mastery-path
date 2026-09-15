@@ -1,3 +1,7 @@
+---
+description: "Git Internals (objects, refs, .git directory) — Everything Git does — commits, branches, merges, diffs — is built from four object types stored as…"
+---
+
 # 01 · Git Internals (objects, refs, .git directory)
 
 Everything Git does — commits, branches, merges, diffs — is built from

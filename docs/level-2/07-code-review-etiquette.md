@@ -1,3 +1,7 @@
+---
+description: "Code Review Etiquette & Workflow — Code review is a social process wrapped around the Git/GitHub mechanics you've already learned. The tools (gh pr…"
+---
+
 # 07 · Code Review Etiquette & Workflow
 
 Code review is a social process wrapped around the Git/GitHub mechanics

@@ -1,3 +1,7 @@
+---
+description: "Cherry-Picking — git cherry-pick applies one specific commit from anywhere in the repo onto your current branch — useful for grabbing a single fix without…"
+---
+
 # 03 · Cherry-Picking
 
 `git cherry-pick` applies **one specific commit** from anywhere in the

@@ -1,3 +1,7 @@
+---
+description: "Reflog & Recovering Lost Work — git reflog is Git's private, local safety net: a log of every place HEAD (and each branch) has pointed, kept independently…"
+---
+
 # 08 · Reflog & Recovering Lost Work
 
 `git reflog` is Git's private, local safety net: a log of every place

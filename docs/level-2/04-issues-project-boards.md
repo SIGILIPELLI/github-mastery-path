@@ -1,3 +1,7 @@
+---
+description: "GitHub Issues & Project Boards — Issues and Project boards are GitHub's planning layer — tracking bugs, feature requests, and work items, and organizing…"
+---
+
 # 04 · GitHub Issues & Project Boards
 
 Issues and Project boards are GitHub's planning layer — tracking bugs,

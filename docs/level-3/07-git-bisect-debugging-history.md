@@ -1,3 +1,7 @@
+---
+description: "Git Bisect & Debugging History — git bisect finds the exact commit that introduced a bug using binary search over your commit history — instead of…"
+---
+
 # 07 · Git Bisect & Debugging History
 
 `git bisect` finds the exact commit that introduced a bug using binary

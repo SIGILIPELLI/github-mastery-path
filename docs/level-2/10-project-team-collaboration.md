@@ -1,3 +1,7 @@
+---
+description: "Project — Team Collaboration Workflow — This project stitches together everything from Level 2: branching, PRs, reviews, protection rules, issues, and…"
+---
+
 # 10 · Project — Team Collaboration Workflow
 
 This project stitches together everything from Level 2: branching,

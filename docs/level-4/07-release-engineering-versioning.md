@@ -1,3 +1,7 @@
+---
+description: "Release Engineering & Versioning Strategy — The type prefix (feat, fix, chore, docs, ...), optional ! or a BREAKING CHANGE: footer, and optional (scope)…"
+---
+
 # 07 · Release Engineering & Versioning Strategy
 
 A version number is a promise to consumers about what kind of change to

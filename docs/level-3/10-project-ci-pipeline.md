@@ -1,3 +1,7 @@
+---
+description: "Project — CI Pipeline for a Real Project — This capstone wires a small real project up with tests, a CI workflow, branch protection, and a tagged release…"
+---
+
 # 10 · Project — CI Pipeline for a Real Project
 
 This capstone wires a small real project up with tests, a CI workflow,
