@@ -134,6 +134,10 @@ both fixes: minimal history transferred, minimal files ever written.
   to an exact tree-diff only for commits the filter can't rule out (a
   Bloom filter can false-positive but never false-negative).
 
+## 🔀 Related lessons on other tracks
+
+- [Excel — 05 · Performance Optimization for Large Workbooks](https://sigilipelli.github.io/excel-mastery-path/level-4/05-performance-optimization-large-workbooks/)
+
 ## Exercise
 
 In a fresh repo with 20+ commits, run `git clone --depth 5` from it and

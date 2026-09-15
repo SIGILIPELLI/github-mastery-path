@@ -169,6 +169,10 @@ for handing files from one job's filesystem to another's.
   scheduling itself — this is a scheduler-level action, unrelated to
   anything in the workflow's own steps.
 
+## 🔀 Related lessons on other tracks
+
+- [Playwright — 04 · CI Integration (GitHub Actions)](https://sigilipelli.github.io/playwright-mastery-path/level-3/04-ci-integration/)
+
 ## Exercise
 
 Add a matrix testing your project against three language/runtime

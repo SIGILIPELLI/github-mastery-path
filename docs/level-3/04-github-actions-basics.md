@@ -134,6 +134,10 @@ a workflow file, since the file is plain text in the repo.
   which ties directly back into why branch protection's "up to date"
   requirement exists.
 
+## 🔀 Related lessons on other tracks
+
+- [Playwright — 04 · CI Integration (GitHub Actions)](https://sigilipelli.github.io/playwright-mastery-path/level-3/04-ci-integration/)
+
 ## Exercise
 
 Add `.github/workflows/ci.yml` (the file above, adapted to your project's

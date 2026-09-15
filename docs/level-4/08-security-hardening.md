@@ -171,6 +171,12 @@ regardless of this file's existence.
   which is why a vulnerable transitive dependency is caught even if your
   code never actually exercises the vulnerable code path.
 
+## 🔀 Related lessons on other tracks
+
+- [Cybersecurity — 03 · Linux Security Hardening](https://sigilipelli.github.io/cybersecurity-mastery-path/level-2/03-linux-security-hardening/)
+- [Embedded Linux — 08 · Security Hardening & CVE Management](https://sigilipelli.github.io/embedded-linux-mastery-path/level-4/08-security-hardening/)
+- [Embedded Python — Security Hardening — TLS & Secure Storage](https://sigilipelli.github.io/embedded-python-mastery-path/level-4/06-security-hardening/)
+
 ## Exercise
 
 Design the full `security_and_analysis` and branch protection payload

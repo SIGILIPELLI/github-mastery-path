@@ -153,6 +153,10 @@ CodeQL" everywhere at once, and repo admins cannot weaken it locally.
   mechanism that makes org-wide policy actually un-bypassable by a single
   repo's admin.
 
+## 🔀 Related lessons on other tracks
+
+- [LLM Dev — 10 · Project — Self-Hosted LLM Stack](https://sigilipelli.github.io/llm-dev-mastery-path/level-3/10-project-self-hosted-stack/)
+
 ## Exercise
 
 Design the labels and `runs-on` array for three workflow jobs that need,
