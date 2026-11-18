@@ -155,7 +155,7 @@ CodeQL" everywhere at once, and repo admins cannot weaken it locally.
 
 ## 🔀 Related lessons on other tracks
 
-- [LLM Dev — 10 · Project — Self-Hosted LLM Stack](https://sigilipelli.github.io/llm-dev-mastery-path/level-3/10-project-self-hosted-stack/)
+- [LLM Dev — 10 · Project — Self-Hosted LLM Stack](https://learnmasterypath.com/llm-dev-mastery-path/level-3/10-project-self-hosted-stack/)
 
 ## Exercise
 

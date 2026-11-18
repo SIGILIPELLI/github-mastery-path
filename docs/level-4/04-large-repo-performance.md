@@ -136,7 +136,7 @@ both fixes: minimal history transferred, minimal files ever written.
 
 ## 🔀 Related lessons on other tracks
 
-- [Excel — 05 · Performance Optimization for Large Workbooks](https://sigilipelli.github.io/excel-mastery-path/level-4/05-performance-optimization-large-workbooks/)
+- [Excel — 05 · Performance Optimization for Large Workbooks](https://learnmasterypath.com/excel-mastery-path/level-4/05-performance-optimization-large-workbooks/)
 
 ## Exercise
 

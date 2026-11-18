@@ -2,7 +2,7 @@
 
 A free, structured, module-wise Git version control and GitHub training program — entry level to master level, with real command walkthroughs in every module and a hands-on project at the end of each level.
 
-**Live site:** https://sigilipelli.github.io/github-mastery-path/
+**Live site:** https://learnmasterypath.com/github-mastery-path/
 
 ## Contents
 
@@ -21,6 +21,6 @@ python3 -m venv .venv
 
 ## Related
 
-- [Java Mastery Path](https://sigilipelli.github.io/java-mastery-path/)
-- [TypeScript Mastery Path](https://sigilipelli.github.io/typescript-mastery-path/)
-- [C++ Mastery Path](https://sigilipelli.github.io/cpp-mastery-path/)
+- [Java Mastery Path](https://learnmasterypath.com/java-mastery-path/)
+- [TypeScript Mastery Path](https://learnmasterypath.com/typescript-mastery-path/)
+- [C++ Mastery Path](https://learnmasterypath.com/cpp-mastery-path/)

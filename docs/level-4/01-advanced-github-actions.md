@@ -171,7 +171,7 @@ for handing files from one job's filesystem to another's.
 
 ## 🔀 Related lessons on other tracks
 
-- [Playwright — 04 · CI Integration (GitHub Actions)](https://sigilipelli.github.io/playwright-mastery-path/level-3/04-ci-integration/)
+- [Playwright — 04 · CI Integration (GitHub Actions)](https://learnmasterypath.com/playwright-mastery-path/level-3/04-ci-integration/)
 
 ## Exercise
 
