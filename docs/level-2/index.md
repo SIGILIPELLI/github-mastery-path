@@ -1,3 +1,7 @@
+---
+description: "Level 2 (Intermediate) of the free GitHub & Git Mastery Path. Work the way real teams work on GitHub — resolve conflicts, choose between rebase and merge…"
+---
+
 # Level 2 · Intermediate <span class="level-badge">Intermediate</span>
 
 Goal: work the way real teams work on GitHub — resolve conflicts, choose

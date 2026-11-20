@@ -1,3 +1,7 @@
+---
+description: "Level 3 (Advanced) of the free GitHub & Git Mastery Path. Understand what's actually happening inside .git, rewrite history safely, automate builds and…"
+---
+
 # Level 3 · Advanced <span class="level-badge">Advanced</span>
 
 Goal: understand what's actually happening inside `.git`, rewrite history

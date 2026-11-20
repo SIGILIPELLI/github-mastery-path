@@ -1,3 +1,7 @@
+---
+description: "Level 4 (Master) of the free GitHub & Git Mastery Path. Operate Git and GitHub at organization scale — advanced Actions patterns, monorepo and large-repo…"
+---
+
 # Level 4 · Master <span class="level-badge">Master</span>
 
 Goal: operate Git and GitHub at organization scale — advanced Actions

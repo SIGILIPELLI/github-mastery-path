@@ -1,3 +1,7 @@
+---
+description: "Level 1 (Entry) of the free GitHub & Git Mastery Path. Understand why version control matters, get comfortable with the core Git workflow on the command…"
+---
+
 # Level 1 · Entry <span class="level-badge">Foundations</span>
 
 Goal: understand why version control matters, get comfortable with the core

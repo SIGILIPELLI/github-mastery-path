@@ -1,6 +1,6 @@
 ---
 title: "Learn Git & GitHub Free: Beginner to Master Course"
-description: "Free Git version control and GitHub course from beginner to advanced -- hands-on lessons with real command walkthroughs and capstone projects. Part of a 40-course free learning library."
+description: "Free Git version control and GitHub course from beginner to advanced -- hands-on lessons with real command walkthroughs and capstone projects. Part of a 100+ course free learning library."
 ---
 
 # GitHub & Git Mastery Path
