@@ -1,0 +1,4357 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="178 GitHub & Git interview questions with answers and explanations, from beginner to advanced, organised by level. Free, from the GitHub & Git Mastery Path.">
+      
+      
+      
+        <link rel="canonical" href="https://learnmasterypath.com/github-mastery-path/interview-questions/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../cheat-sheet/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+  
+  <title>GitHub &amp; Git Interview Questions and Answers (178 Questions)</title>
+
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/progress-tracker.css">
+    
+      <link rel="stylesheet" href="../stylesheets/final-quiz.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05VBGCXN12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-05VBGCXN12');
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mastery Path">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="GitHub &amp; Git Interview Questions and Answers (178 Questions)">
+  <meta property="og:description" content="178 GitHub &amp; Git interview questions with answers and explanations, from beginner to advanced, organised by level. Free, from the GitHub &amp; Git Mastery Path.">
+  <meta property="og:url" content="https://learnmasterypath.com/github-mastery-path/interview-questions/">
+  <meta property="og:image" content="https://learnmasterypath.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mastery Path: free structured courses, beginner to master">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GitHub &amp; Git Interview Questions and Answers (178 Questions)">
+  <meta name="twitter:description" content="178 GitHub &amp; Git interview questions with answers and explanations, from beginner to advanced, organised by level. Free, from the GitHub &amp; Git Mastery Path.">
+  <meta name="twitter:image" content="https://learnmasterypath.com/og-image.png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9440969811959397"
+     crossorigin="anonymous"></script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Mastery Path", "item": "https://learnmasterypath.com/"},
+      {"@type": "ListItem", "position": 2, "name": "GitHub \u0026 Git Mastery Path", "item": "https://learnmasterypath.com/github-mastery-path/"},
+      {"@type": "ListItem", "position": 3, "name": "Interview Questions", "item": "https://learnmasterypath.com/github-mastery-path/interview-questions/"}
+    ]
+  }
+  </script>
+  <style>
+    .md-banner a:hover { text-decoration: underline !important; }
+    .mp-related { margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest); font-size: .78rem; }
+    .mp-related h2 { font-size: .9rem; margin: 0 0 .5rem; }
+    .mp-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .9rem; }
+    .mp-related li { margin: 0 !important; }
+  </style>
+  <script type="application/json" id="mp-course-meta">{"home": false, "id": "github-mastery-path", "name": "GitHub \u0026 Git Mastery Path", "repo": "https://github.com/SIGILIPELLI/github-mastery-path", "src": "interview-questions.md", "url": "https://learnmasterypath.com/github-mastery-path/"}</script>
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/learn.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/course.css?v=1">
+  <script src="https://learnmasterypath.com/assets/learn.js" defer></script>
+  <script src="https://learnmasterypath.com/assets/signup.js" defer></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#github-git-interview-questions-and-answers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://learnmasterypath.com/" style="color: inherit; text-decoration: none;">
+    &larr; Mastery Path &middot; all 100+ free courses
+  </a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/search/" style="color: inherit; text-decoration: none;">Search all courses</a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/resume/" style="color: inherit; font-weight: 700; text-decoration: none;">
+    Got the skills? Free resume ATS check &rarr;
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GitHub &amp; Git Mastery Path" class="md-header__button md-logo" aria-label="GitHub & Git Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub & Git Mastery Path
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GitHub & Git Interview Questions and Answers (178 Questions)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SIGILIPELLI/github-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github-mastery-path
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Interview Questions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cheat-sheet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 1 · Entry
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 2 · Intermediate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 3 · Advanced
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 4 · Master
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Final Quiz
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub &amp; Git Mastery Path" class="md-nav__button md-logo" aria-label="GitHub & Git Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    GitHub & Git Mastery Path
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SIGILIPELLI/github-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github-mastery-path
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-is-git-why-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What Is Git &amp; Why Version Control?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-installing-git-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Installing Git &amp; Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-the-basic-workflow-initaddcommitstatuslog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · The Basic Workflow (init/add/commit/status/log)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-branching-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Branching Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-merging-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Merging Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-remotes-clonepushpullfetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Remotes (clone/push/pull/fetch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-what-is-github-repos-issues-web-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · What Is GitHub? (repos, issues, web UI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-creating-a-github-repo-pushing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Creating a GitHub Repo &amp; Pushing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-gitignore-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · .gitignore Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-clone-fork-ship-a-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — Clone, Fork &amp; Ship a Repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Intermediate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Intermediate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-merge-conflicts-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Merge Conflicts &amp; Resolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-rebase-vs-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Rebase vs Merge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-pull-requests-create-review-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Pull Requests (create, review, merge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-github-issues-project-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · GitHub Issues &amp; Project Boards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-branch-protection-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Branch Protection Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-tags-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Tags &amp; Releases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-code-review-etiquette-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Code Review Etiquette &amp; Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-github-cli-gh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · GitHub CLI (gh)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-forking-workflow-contributing-to-oss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Forking Workflow &amp; Contributing to OSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-team-collaboration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — Team Collaboration Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Advanced
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-git-internals-objects-refs-git-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Git Internals (objects, refs, .git directory)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-interactive-rebase-history-rewriting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Interactive Rebase &amp; History Rewriting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-cherry-picking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Cherry-Picking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-github-actions-basics-a-simple-ci-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · GitHub Actions Basics (a simple CI workflow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-submodules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Submodules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-git-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Git Hooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-git-bisect-debugging-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Git Bisect &amp; Debugging History
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-reflog-recovering-lost-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Reflog &amp; Recovering Lost Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-github-secrets-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · GitHub Secrets &amp; Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-ci-pipeline-for-a-real-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — CI Pipeline for a Real Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Master
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-advanced-github-actions-matrix-caching-reusable-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Advanced GitHub Actions (matrix, caching, reusable workflows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-monorepo-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Monorepo Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-git-workflow-strategies-gitflow-trunk-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Git Workflow Strategies (GitFlow, Trunk-Based)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-large-repo-performance-sparse-checkout-partial-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Large Repo Performance (sparse checkout, partial clone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-designing-a-team-gitgithub-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Designing a Team Git/GitHub Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-github-apps-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · GitHub Apps &amp; Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-release-engineering-versioning-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Release Engineering &amp; Versioning Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-security-hardening-codeowners-signed-commits-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Security Hardening (CODEOWNERS, signed commits, SAST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-self-hosted-runners-enterprise-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Self-Hosted Runners &amp; Enterprise GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixed-questions-across-all-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed questions across all levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-coding-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical coding questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical coding questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolve-a-merge-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolve a merge conflict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cherry-pick-a-bad-reset-and-reflog-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cherry-pick, a bad reset and reflog recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 · Entry
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 1 · Entry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/01-what-is-git-why-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · What Is Git & Why Version Control?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/02-installing-git-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Installing Git & Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/03-basic-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · The Basic Workflow (init/add/commit/status/log)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/04-branching-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Branching Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/05-merging-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Merging Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/06-remotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Remotes (clone/push/pull/fetch)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/07-what-is-github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · What Is GitHub? (repos, issues, web UI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/08-creating-github-repo-pushing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Creating a GitHub Repo & Pushing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/09-gitignore-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · .gitignore Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/10-project-clone-fork-ship/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — Clone, Fork & Ship a Repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 · Intermediate
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 2 · Intermediate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/01-merge-conflicts-resolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Merge Conflicts & Resolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/02-rebase-vs-merge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Rebase vs Merge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/03-pull-requests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Pull Requests (create, review, merge)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/04-issues-project-boards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · GitHub Issues & Project Boards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/05-branch-protection-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Branch Protection Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/06-tags-releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Tags & Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/07-code-review-etiquette/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Code Review Etiquette & Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/08-github-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · GitHub CLI (gh)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/09-forking-workflow-oss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Forking Workflow & Contributing to OSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/10-project-team-collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — Team Collaboration Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 · Advanced
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 3 · Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/01-git-internals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Git Internals (objects, refs, .git directory)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/02-interactive-rebase-history-rewriting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Interactive Rebase & History Rewriting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/03-cherry-picking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Cherry-Picking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/04-github-actions-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · GitHub Actions Basics (a simple CI workflow)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/05-submodules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Submodules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/06-git-hooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Git Hooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/07-git-bisect-debugging-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Git Bisect & Debugging History
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/08-reflog-recovering-lost-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Reflog & Recovering Lost Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/09-github-secrets-environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · GitHub Secrets & Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/10-project-ci-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — CI Pipeline for a Real Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 4 · Master
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 4 · Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/01-advanced-github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Advanced GitHub Actions (matrix, caching, reusable workflows)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/02-monorepo-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Monorepo Strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/03-git-workflow-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Git Workflow Strategies (GitFlow, Trunk-Based)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/04-large-repo-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Large Repo Performance (sparse checkout, partial clone)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/05-designing-team-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Designing a Team Git/GitHub Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/06-github-apps-automation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · GitHub Apps & Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/07-release-engineering-versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Release Engineering & Versioning Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/08-security-hardening/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Security Hardening (CODEOWNERS, signed commits, SAST)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/09-self-hosted-runners-enterprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Self-Hosted Runners & Enterprise GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/10-capstone-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Capstone Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-is-git-why-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What Is Git &amp; Why Version Control?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-installing-git-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Installing Git &amp; Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-the-basic-workflow-initaddcommitstatuslog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · The Basic Workflow (init/add/commit/status/log)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-branching-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Branching Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-merging-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Merging Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-remotes-clonepushpullfetch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Remotes (clone/push/pull/fetch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-what-is-github-repos-issues-web-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · What Is GitHub? (repos, issues, web UI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-creating-a-github-repo-pushing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Creating a GitHub Repo &amp; Pushing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-gitignore-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · .gitignore Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-clone-fork-ship-a-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — Clone, Fork &amp; Ship a Repo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Intermediate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Intermediate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-merge-conflicts-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Merge Conflicts &amp; Resolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-rebase-vs-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Rebase vs Merge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-pull-requests-create-review-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Pull Requests (create, review, merge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-github-issues-project-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · GitHub Issues &amp; Project Boards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-branch-protection-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Branch Protection Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-tags-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Tags &amp; Releases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-code-review-etiquette-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Code Review Etiquette &amp; Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-github-cli-gh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · GitHub CLI (gh)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-forking-workflow-contributing-to-oss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Forking Workflow &amp; Contributing to OSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-team-collaboration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — Team Collaboration Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Advanced
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-git-internals-objects-refs-git-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Git Internals (objects, refs, .git directory)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-interactive-rebase-history-rewriting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Interactive Rebase &amp; History Rewriting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-cherry-picking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Cherry-Picking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-github-actions-basics-a-simple-ci-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · GitHub Actions Basics (a simple CI workflow)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-submodules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Submodules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-git-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Git Hooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-git-bisect-debugging-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Git Bisect &amp; Debugging History
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-reflog-recovering-lost-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Reflog &amp; Recovering Lost Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-github-secrets-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · GitHub Secrets &amp; Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-ci-pipeline-for-a-real-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — CI Pipeline for a Real Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Master
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-advanced-github-actions-matrix-caching-reusable-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Advanced GitHub Actions (matrix, caching, reusable workflows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-monorepo-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Monorepo Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-git-workflow-strategies-gitflow-trunk-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Git Workflow Strategies (GitFlow, Trunk-Based)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-large-repo-performance-sparse-checkout-partial-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Large Repo Performance (sparse checkout, partial clone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-designing-a-team-gitgithub-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Designing a Team Git/GitHub Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-github-apps-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · GitHub Apps &amp; Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-release-engineering-versioning-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Release Engineering &amp; Versioning Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-security-hardening-codeowners-signed-commits-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Security Hardening (CODEOWNERS, signed commits, SAST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-self-hosted-runners-enterprise-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Self-Hosted Runners &amp; Enterprise GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixed-questions-across-all-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed questions across all levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-coding-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical coding questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical coding questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolve-a-merge-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolve a merge conflict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cherry-pick-a-bad-reset-and-reflog-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cherry-pick, a bad reset and reflog recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="github-git-interview-questions-and-answers">GitHub &amp; Git Interview Questions and Answers<a class="headerlink" href="#github-git-interview-questions-and-answers" title="Permanent link">&para;</a></h1>
+<p><strong>178 questions</strong> with the correct answer and a short explanation, organised from beginner (Level 1) to advanced (Level 4). Every question comes from a lesson in the free GitHub &amp; Git Mastery Path, so you can open the lesson to go deeper.</p>
+<div class="admonition tip">
+<p class="admonition-title">Practise, don't just read</p>
+<p>Each lesson also ends with an interactive quiz, and the <a href="../quiz/">final quiz</a> tests all four levels. Try to answer each question below before reading the answer.</p>
+</div>
+<h2 id="level-1-entry">Level 1 · Entry<a class="headerlink" href="#level-1-entry" title="Permanent link">&para;</a></h2>
+<h3 id="01-what-is-git-why-version-control"><a href="../level-1/01-what-is-git-why-version-control/">01 · What Is Git &amp; Why Version Control?</a><a class="headerlink" href="#01-what-is-git-why-version-control" title="Permanent link">&para;</a></h3>
+<p><strong>Q1.</strong> What does version control give a team?</p>
+<p><strong>Answer:</strong> A recorded history of changes: who changed what, when and why, with the ability to go back</p>
+<p>Collaboration safety net.</p>
+<p><strong>Q2.</strong> What's the difference between Git and GitHub?</p>
+<p><strong>Answer:</strong> Git is the version control tool; GitHub hosts Git repositories and adds collaboration features</p>
+<p>Git works without GitHub.</p>
+<p><strong>Q3.</strong> Why is Git called distributed?</p>
+<p><strong>Answer:</strong> Every clone has the full history, so most operations are local</p>
+<p>Work offline.</p>
+<p><strong>Q4.</strong> What does a commit represent?</p>
+<p><strong>Answer:</strong> A snapshot of the project with a message, author and parent link(s)</p>
+<p>Content-addressed.</p>
+<h3 id="02-installing-git-configuration"><a href="../level-1/02-installing-git-config/">02 · Installing Git &amp; Configuration</a><a class="headerlink" href="#02-installing-git-configuration" title="Permanent link">&para;</a></h3>
+<p><strong>Q5.</strong> What do <code>git config --global user.name/user.email</code> set?</p>
+<p><strong>Answer:</strong> The identity recorded in your commits</p>
+<p>Set once per machine.</p>
+<p><strong>Q6.</strong> What does <code>git config --list --show-origin</code> show?</p>
+<p><strong>Answer:</strong> All settings and which file each comes from</p>
+<p>Debug config.</p>
+<p><strong>Q7.</strong> Where does global config live?</p>
+<p><strong>Answer:</strong> ~/.gitconfig (or ~/.config/git/config)</p>
+<p>Per-user.</p>
+<p><strong>Q8.</strong> What does <code>git init</code> create?</p>
+<p><strong>Answer:</strong> A .git directory making the folder a repository</p>
+<p>Local.</p>
+<h3 id="03-the-basic-workflow-initaddcommitstatuslog"><a href="../level-1/03-basic-workflow/">03 · The Basic Workflow (init/add/commit/status/log)</a><a class="headerlink" href="#03-the-basic-workflow-initaddcommitstatuslog" title="Permanent link">&para;</a></h3>
+<p><strong>Q9.</strong> What does git status --short print? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">echo</span><span class="w"> </span>hi<span class="w"> </span>&gt;<span class="w"> </span>a.txt
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>add<span class="w"> </span>a.txt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">echo</span><span class="w"> </span>more<span class="w"> </span>&gt;<span class="w"> </span>b.txt
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>git<span class="w"> </span>status<span class="w"> </span>--short
+</code></pre></div>
+<p><strong>Answer:</strong> A  a.txt
+?? b.txt</p>
+<p>A = staged new file; ?? = untracked. Verified by running it with real git.</p>
+<p><strong>Q10.</strong> What does git log print after two commits? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span><span class="s1">'first'</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">echo</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span><span class="s1">'second'</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s
+</code></pre></div>
+<p><strong>Answer:</strong> second
+first</p>
+<p>Newest first. Verified by running it with real git.</p>
+<p><strong>Q11.</strong> What does git diff show for an unstaged edit vs git diff --staged? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>diff<span class="w"> </span>--stat<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">'s/^ *//'</span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>staged:<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged<span class="w"> </span>--stat<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">'s/^ *//'</span>
+</code></pre></div>
+<p><strong>Answer:</strong> 1 file changed, 1 insertion(+)
+staged:
+1 file changed, 1 insertion(+)</p>
+<p>Diff compares working tree to the index; --staged compares the index to HEAD. Verified by running it with real git.</p>
+<p><strong>Q12.</strong> What's the staging area (index) for?</p>
+<p><strong>Answer:</strong> Choosing exactly what goes into the next commit</p>
+<p>add then commit.</p>
+<h3 id="04-branching-basics"><a href="../level-1/04-branching-basics/">04 · Branching Basics</a><a class="headerlink" href="#04-branching-basics" title="Permanent link">&para;</a></h3>
+<p><strong>Q13.</strong> What does this print? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c1
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>c2
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>git<span class="w"> </span>branch<span class="w"> </span>--format<span class="o">=</span><span class="s1">'%(refname:short)'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span>
+</code></pre></div>
+<p><strong>Answer:</strong> feature main c1</p>
+<p>main still points at c1; feature has c2. Verified by running it with real git.</p>
+<p><strong>Q14.</strong> What is a branch in Git?</p>
+<p><strong>Answer:</strong> A movable pointer to a commit</p>
+<p>Cheap.</p>
+<p><strong>Q15.</strong> Which branch are we on after this? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>branch<span class="w"> </span>topic
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>switch<span class="w"> </span>topic
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>git<span class="w"> </span>branch<span class="w"> </span>--show-current
+</code></pre></div>
+<p><strong>Answer:</strong> topic</p>
+<p>switch changes HEAD. Verified by running it with real git.</p>
+<p><strong>Q16.</strong> What does <code>git switch -c name</code> do?</p>
+<p><strong>Answer:</strong> Creates a new branch and switches to it</p>
+<p>Modern checkout -b.</p>
+<h3 id="05-merging-basics"><a href="../level-1/05-merging-basics/">05 · Merging Basics</a><a class="headerlink" href="#05-merging-basics" title="Permanent link">&para;</a></h3>
+<p><strong>Q17.</strong> Is this merge a fast-forward? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c1
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>feat
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>c2
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>git<span class="w"> </span>merge<span class="w"> </span>feat<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">'s/[0-9a-f]\{7\}\.\.[0-9a-f]\{7\}/X..Y/'</span>
+</code></pre></div>
+<p><strong>Answer:</strong> Updating X..Y</p>
+<p>main had no new commits, so Git just moves the pointer. Verified by running it with real git.</p>
+<p><strong>Q18.</strong> How many parents does the commit created by <code>git merge --no-ff</code> have? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c1
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>feat
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>c2
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>git<span class="w"> </span>merge<span class="w"> </span>-q<span class="w"> </span>--no-ff<span class="w"> </span>feat<span class="w"> </span>-m<span class="w"> </span><span class="s1">'merge feat'</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-p<span class="w"> </span>HEAD<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s1">'^parent'</span>
+</code></pre></div>
+<p><strong>Answer:</strong> 2</p>
+<p>A merge commit is created even when fast-forward is possible, with two parents. Verified by running it with real git.</p>
+<p><strong>Q19.</strong> What does a merge commit have?</p>
+<p><strong>Answer:</strong> Two parents</p>
+<p>Joins histories.</p>
+<p><strong>Q20.</strong> When can Git fast-forward?</p>
+<p><strong>Answer:</strong> When the target branch has no commits the source lacks</p>
+<p>Linear history.</p>
+<h3 id="06-remotes-clonepushpullfetch"><a href="../level-1/06-remotes/">06 · Remotes (clone/push/pull/fetch)</a><a class="headerlink" href="#06-remotes-clonepushpullfetch" title="Permanent link">&para;</a></h3>
+<p><strong>Q21.</strong> What is a remote?</p>
+<p><strong>Answer:</strong> A version of the repository hosted elsewhere (e.g. GitHub)</p>
+<p>origin by convention.</p>
+<p><strong>Q22.</strong> What does <code>git fetch</code> do?</p>
+<p><strong>Answer:</strong> Downloads new commits without changing your working branch</p>
+<p>Safe.</p>
+<p><strong>Q23.</strong> What does <code>git pull</code> do?</p>
+<p><strong>Answer:</strong> Fetches and then integrates (merge or rebase) the remote changes</p>
+<p>fetch + merge.</p>
+<p><strong>Q24.</strong> What does git remote -v show? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://example.com/me/repo.git
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</code></pre></div>
+<p><strong>Answer:</strong> origin  https://example.com/me/repo.git (fetch)
+origin  https://example.com/me/repo.git (push)</p>
+<p>Fetch and push URLs. Verified by running it with real git.</p>
+<h3 id="07-what-is-github-repos-issues-web-ui"><a href="../level-1/07-what-is-github/">07 · What Is GitHub? (repos, issues, web UI)</a><a class="headerlink" href="#07-what-is-github-repos-issues-web-ui" title="Permanent link">&para;</a></h3>
+<p><strong>Q25.</strong> What does GitHub add on top of Git?</p>
+<p><strong>Answer:</strong> Hosting, pull requests, issues, Actions and access control</p>
+<p>Collaboration platform.</p>
+<p><strong>Q26.</strong> What's a repository's default branch commonly called?</p>
+<p><strong>Answer:</strong> main</p>
+<p>Configurable.</p>
+<p><strong>Q27.</strong> What's a pull request?</p>
+<p><strong>Answer:</strong> A proposal to merge a branch with discussion and review</p>
+<p>Review unit.</p>
+<p><strong>Q28.</strong> Why use SSH keys or tokens with GitHub?</p>
+<p><strong>Answer:</strong> Passwordless secure authentication</p>
+<p>Passwords aren't accepted for Git.</p>
+<h3 id="08-creating-a-github-repo-pushing"><a href="../level-1/08-creating-github-repo-pushing/">08 · Creating a GitHub Repo &amp; Pushing</a><a class="headerlink" href="#08-creating-a-github-repo-pushing" title="Permanent link">&para;</a></h3>
+<p><strong>Q29.</strong> What does <code>git push -u origin main</code> do?</p>
+<p><strong>Answer:</strong> Pushes the branch and sets upstream tracking</p>
+<p>Later git push works alone.</p>
+<p><strong>Q30.</strong> What happens if you push to a branch whose remote has new commits?</p>
+<p><strong>Answer:</strong> The push is rejected until you integrate the remote changes</p>
+<p>Pull first.</p>
+<p><strong>Q31.</strong> What does <code>git clone</code> do?</p>
+<p><strong>Answer:</strong> Copies a repository with full history and sets origin</p>
+<p>Local copy.</p>
+<p><strong>Q32.</strong> What does <code>git remote add origin URL</code> do?</p>
+<p><strong>Answer:</strong> Registers a named remote</p>
+<p>Connect local to hosted.</p>
+<h3 id="09-gitignore-basics"><a href="../level-1/09-gitignore-basics/">09 · .gitignore Basics</a><a class="headerlink" href="#09-gitignore-basics" title="Permanent link">&para;</a></h3>
+<p><strong>Q33.</strong> Which files does git status show as untracked after .gitignore? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'*.log\nbuild/\n'</span><span class="w"> </span>&gt;<span class="w"> </span>.gitignore
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>mkdir<span class="w"> </span>build<span class="p">;</span><span class="w"> </span>touch<span class="w"> </span>build/a.o<span class="w"> </span>app.log<span class="w"> </span>keep.txt
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>git<span class="w"> </span>status<span class="w"> </span>--short
+</code></pre></div>
+<p><strong>Answer:</strong> ?? .gitignore
+?? keep.txt</p>
+<p>Ignored files don't show. Verified by running it with real git.</p>
+<p><strong>Q34.</strong> What does git check-ignore -v report? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'*.log\n'</span><span class="w"> </span>&gt;<span class="w"> </span>.gitignore
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>touch<span class="w"> </span>x.log
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>git<span class="w"> </span>check-ignore<span class="w"> </span>-v<span class="w"> </span>x.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-f1
+</code></pre></div>
+<p><strong>Answer:</strong> .gitignore:1:*.log</p>
+<p>Shows which rule matched. Verified by running it with real git.</p>
+<p><strong>Q35.</strong> Does .gitignore remove already-tracked files?</p>
+<p><strong>Answer:</strong> No: untrack them with git rm --cached</p>
+<p>Only affects untracked files.</p>
+<p><strong>Q36.</strong> Which should never be committed?</p>
+<p><strong>Answer:</strong> Secrets (.env), dependency folders and build output</p>
+<p>Ignore them.</p>
+<h3 id="10-project-clone-fork-ship-a-repo"><a href="../level-1/10-project-clone-fork-ship/">10 · Project — Clone, Fork &amp; Ship a Repo</a><a class="headerlink" href="#10-project-clone-fork-ship-a-repo" title="Permanent link">&para;</a></h3>
+<p><strong>Q37.</strong> What does the clone/fork/ship project practice?</p>
+<p><strong>Answer:</strong> The loop of forking, cloning, branching, committing and opening a PR</p>
+<p>OSS workflow.</p>
+<p><strong>Q38.</strong> Why fork instead of clone for open source?</p>
+<p><strong>Answer:</strong> You can't push to the original repo, so you push to your fork and open a PR</p>
+<p>Permission model.</p>
+<p><strong>Q39.</strong> What does <code>upstream</code> usually refer to?</p>
+<p><strong>Answer:</strong> The original repository you forked from</p>
+<p>Sync with it.</p>
+<p><strong>Q40.</strong> How do you keep your fork current?</p>
+<p><strong>Answer:</strong> Fetch upstream and merge/rebase main</p>
+<p>git fetch upstream.</p>
+<h2 id="level-2-intermediate">Level 2 · Intermediate<a class="headerlink" href="#level-2-intermediate" title="Permanent link">&para;</a></h2>
+<h3 id="01-merge-conflicts-resolution"><a href="../level-2/01-merge-conflicts-resolution/">01 · Merge Conflicts &amp; Resolution</a><a class="headerlink" href="#01-merge-conflicts-resolution" title="Permanent link">&para;</a></h3>
+<p><strong>Q41.</strong> What do conflict markers look like? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'base\n'</span>&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>base
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>a<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>A&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>a
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>b<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>B&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>b
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>git<span class="w"> </span>merge<span class="w"> </span>a<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>cat<span class="w"> </span>f
+</code></pre></div>
+<p><strong>Answer:</strong> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+B
+=======
+A
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; a</p>
+<p>HEAD side first, incoming side last. Verified by running it with real git.</p>
+<p><strong>Q42.</strong> How do you finish a conflicted merge?</p>
+<p><strong>Answer:</strong> Edit the file, git add it and git commit (or git merge --continue)</p>
+<p>Resolve then stage.</p>
+<p><strong>Q43.</strong> How do you abort a merge?</p>
+<p><strong>Answer:</strong> git merge --abort</p>
+<p>Return to the pre-merge state.</p>
+<p><strong>Q44.</strong> How do you reduce conflicts?</p>
+<p><strong>Answer:</strong> Small frequent merges and clear ownership</p>
+<p>Integrate often.</p>
+<h3 id="02-rebase-vs-merge"><a href="../level-2/02-rebase-vs-merge/">02 · Rebase vs Merge</a><a class="headerlink" href="#02-rebase-vs-merge" title="Permanent link">&para;</a></h3>
+<p><strong>Q45.</strong> What does rebasing produce? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>base
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>feat<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>f&gt;g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>feat
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>m&gt;h<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>h<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>main2
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>feat<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span>
+</code></pre></div>
+<p><strong>Answer:</strong> feat main2 base</p>
+<p>Feature commits are replayed on top of main. Verified by running it with real git.</p>
+<p><strong>Q46.</strong> What's the golden rule of rebase?</p>
+<p><strong>Answer:</strong> Don't rebase commits others have based work on (shared/public history)</p>
+<p>It rewrites commits.</p>
+<p><strong>Q47.</strong> Merge vs rebase history shape?</p>
+<p><strong>Answer:</strong> Merge keeps the branching and adds a merge commit; rebase makes it linear</p>
+<p>Trade-offs.</p>
+<p><strong>Q48.</strong> After rebasing a pushed branch, what do you need?</p>
+<p><strong>Answer:</strong> A force push (preferably --force-with-lease)</p>
+<p>History changed.</p>
+<h3 id="03-pull-requests-create-review-merge"><a href="../level-2/03-pull-requests/">03 · Pull Requests (create, review, merge)</a><a class="headerlink" href="#03-pull-requests-create-review-merge" title="Permanent link">&para;</a></h3>
+<p><strong>Q49.</strong> What's in a good PR?</p>
+<p><strong>Answer:</strong> A focused change, clear description and linked issue, with tests</p>
+<p>Reviewable.</p>
+<p><strong>Q50.</strong> What does a draft PR signal?</p>
+<p><strong>Answer:</strong> Work in progress not ready for review</p>
+<p>Early feedback.</p>
+<p><strong>Q51.</strong> What happens on 'Squash and merge'?</p>
+<p><strong>Answer:</strong> All PR commits become one commit on the base branch</p>
+<p>Cleaner history.</p>
+<p><strong>Q52.</strong> What do required status checks do?</p>
+<p><strong>Answer:</strong> Block merging until CI passes</p>
+<p>Quality gate.</p>
+<h3 id="04-github-issues-project-boards"><a href="../level-2/04-issues-project-boards/">04 · GitHub Issues &amp; Project Boards</a><a class="headerlink" href="#04-github-issues-project-boards" title="Permanent link">&para;</a></h3>
+<p><strong>Q53.</strong> How do issues link to PRs?</p>
+<p><strong>Answer:</strong> Keywords like 'Fixes #12' in the PR description close the issue on merge</p>
+<p>Traceability.</p>
+<p><strong>Q54.</strong> What are labels and milestones for?</p>
+<p><strong>Answer:</strong> Categorizing and grouping issues by release/goal</p>
+<p>Planning.</p>
+<p><strong>Q55.</strong> What does a Projects board show?</p>
+<p><strong>Answer:</strong> Work items in columns/status, with automation</p>
+<p>Kanban.</p>
+<p><strong>Q56.</strong> What's a good issue?</p>
+<p><strong>Answer:</strong> Clear title, steps to reproduce, expected vs actual behavior</p>
+<p>Actionable.</p>
+<h3 id="05-branch-protection-rules"><a href="../level-2/05-branch-protection-rules/">05 · Branch Protection Rules</a><a class="headerlink" href="#05-branch-protection-rules" title="Permanent link">&para;</a></h3>
+<p><strong>Q57.</strong> What do branch protection rules enforce?</p>
+<p><strong>Answer:</strong> Required reviews, status checks and no force-push on key branches</p>
+<p>Server-side.</p>
+<p><strong>Q58.</strong> Why require PRs for main?</p>
+<p><strong>Answer:</strong> Review and CI before changes land</p>
+<p>Quality.</p>
+<p><strong>Q59.</strong> What's 'dismiss stale approvals'?</p>
+<p><strong>Answer:</strong> New commits invalidate earlier approvals</p>
+<p>Safety.</p>
+<p><strong>Q60.</strong> Can admins bypass rules?</p>
+<p><strong>Answer:</strong> Only if 'include administrators' isn't enabled</p>
+<p>Configure carefully.</p>
+<h3 id="06-tags-releases"><a href="../level-2/06-tags-releases/">06 · Tags &amp; Releases</a><a class="headerlink" href="#06-tags-releases" title="Permanent link">&para;</a></h3>
+<p><strong>Q61.</strong> What object type does an annotated tag have, versus a lightweight tag? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s1">'first release'</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>git<span class="w"> </span>tag<span class="w"> </span>v1.0.1
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>git<span class="w"> </span>for-each-ref<span class="w"> </span>refs/tags<span class="w"> </span>--format<span class="o">=</span><span class="s1">'%(refname:short) %(objecttype)'</span>
+</code></pre></div>
+<p><strong>Answer:</strong> v1.0.0 tag
+v1.0.1 commit</p>
+<p>Annotated tags are their own objects (with a message and tagger); lightweight tags are plain refs to a commit. Verified by running it with real git.</p>
+<p><strong>Q62.</strong> What does git push --tags do?</p>
+<p><strong>Answer:</strong> Pushes local tags to the remote</p>
+<p>Tags aren't pushed by default.</p>
+<p><strong>Q63.</strong> What's a GitHub Release built on?</p>
+<p><strong>Answer:</strong> A tag, plus notes and attached assets</p>
+<p>Release engineering.</p>
+<p><strong>Q64.</strong> What does semver 2.1.4 mean?</p>
+<p><strong>Answer:</strong> Major 2, minor 1, patch 4</p>
+<p>MAJOR.MINOR.PATCH.</p>
+<h3 id="07-code-review-etiquette-workflow"><a href="../level-2/07-code-review-etiquette/">07 · Code Review Etiquette &amp; Workflow</a><a class="headerlink" href="#07-code-review-etiquette-workflow" title="Permanent link">&para;</a></h3>
+<p><strong>Q65.</strong> What makes a good review comment?</p>
+<p><strong>Answer:</strong> Specific, kind and actionable, focused on the code not the person</p>
+<p>Etiquette.</p>
+<p><strong>Q66.</strong> What should an author do with feedback?</p>
+<p><strong>Answer:</strong> Respond to each point, push fixes and re-request review</p>
+<p>Collaboration.</p>
+<p><strong>Q67.</strong> What's nitpick etiquette?</p>
+<p><strong>Answer:</strong> Mark small style preferences as optional ('nit:')</p>
+<p>Don't block on taste.</p>
+<p><strong>Q68.</strong> What should reviewers check first?</p>
+<p><strong>Answer:</strong> Correctness, design and tests before style</p>
+<p>Prioritize.</p>
+<h3 id="08-github-cli-gh"><a href="../level-2/08-github-cli/">08 · GitHub CLI (gh)</a><a class="headerlink" href="#08-github-cli-gh" title="Permanent link">&para;</a></h3>
+<p><strong>Q69.</strong> What does <code>gh pr create</code> do?</p>
+<p><strong>Answer:</strong> Opens a pull request from the terminal</p>
+<p>Fewer clicks.</p>
+<p><strong>Q70.</strong> What does <code>gh auth login</code> do?</p>
+<p><strong>Answer:</strong> Authenticates the CLI with GitHub</p>
+<p>Required first.</p>
+<p><strong>Q71.</strong> What does <code>gh pr checkout 12</code> do?</p>
+<p><strong>Answer:</strong> Checks out that pull request's branch locally</p>
+<p>Test PRs.</p>
+<p><strong>Q72.</strong> What can gh api do?</p>
+<p><strong>Answer:</strong> Call any GitHub REST/GraphQL endpoint with your auth</p>
+<p>Scripting.</p>
+<h3 id="09-forking-workflow-contributing-to-oss"><a href="../level-2/09-forking-workflow-oss/">09 · Forking Workflow &amp; Contributing to OSS</a><a class="headerlink" href="#09-forking-workflow-contributing-to-oss" title="Permanent link">&para;</a></h3>
+<p><strong>Q73.</strong> What's the forking workflow?</p>
+<p><strong>Answer:</strong> Fork, clone your fork, branch, push to your fork and open a PR to upstream</p>
+<p>OSS standard.</p>
+<p><strong>Q74.</strong> Why add an upstream remote?</p>
+<p><strong>Answer:</strong> To pull updates from the original repository</p>
+<p>Keep in sync.</p>
+<p><strong>Q75.</strong> What do CONTRIBUTING.md files tell you?</p>
+<p><strong>Answer:</strong> How to contribute: style, tests and process</p>
+<p>Read first.</p>
+<p><strong>Q76.</strong> What's a good first contribution?</p>
+<p><strong>Answer:</strong> A small, well-scoped fix or docs improvement</p>
+<p>Build trust.</p>
+<h3 id="10-project-team-collaboration-workflow"><a href="../level-2/10-project-team-collaboration/">10 · Project — Team Collaboration Workflow</a><a class="headerlink" href="#10-project-team-collaboration-workflow" title="Permanent link">&para;</a></h3>
+<p><strong>Q77.</strong> What does the team collaboration project combine?</p>
+<p><strong>Answer:</strong> Branches, PRs, reviews, protection rules, issues and tags</p>
+<p>Daily loop.</p>
+<p><strong>Q78.</strong> How do you simulate a team alone?</p>
+<p><strong>Answer:</strong> Use multiple accounts/branches and review your own PRs with checklists</p>
+<p>Practice.</p>
+<p><strong>Q79.</strong> What proves the process works?</p>
+<p><strong>Answer:</strong> Merged PRs with passing checks and linked issues</p>
+<p>Evidence.</p>
+<p><strong>Q80.</strong> What do you retrospect?</p>
+<p><strong>Answer:</strong> Where the workflow slowed you and what to change</p>
+<p>Improve.</p>
+<h2 id="level-3-advanced">Level 3 · Advanced<a class="headerlink" href="#level-3-advanced" title="Permanent link">&para;</a></h2>
+<h3 id="01-git-internals-objects-refs-git-directory"><a href="../level-3/01-git-internals/">01 · Git Internals (objects, refs, .git directory)</a><a class="headerlink" href="#01-git-internals-objects-refs-git-directory" title="Permanent link">&para;</a></h3>
+<p><strong>Q81.</strong> What's a commit's content address derived from? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">echo</span><span class="w"> </span>hi&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-t<span class="w"> </span>HEAD<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>cat-file<span class="w"> </span>-t<span class="w"> </span>HEAD^<span class="o">{</span>tree<span class="o">}</span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>cat-file<span class="w"> </span>-t<span class="w"> </span>HEAD:f
+</code></pre></div>
+<p><strong>Answer:</strong> commit
+tree
+blob</p>
+<p>Objects: blob, tree, commit, tag. Verified by running it with real git.</p>
+<p><strong>Q82.</strong> Same content, same blob? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">echo</span><span class="w"> </span>same&gt;a<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>same&gt;b<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>hash-object<span class="w"> </span>a<span class="w"> </span>b<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div>
+<p><strong>Answer:</strong> 1</p>
+<p>Content-addressed storage deduplicates. Verified by running it with real git.</p>
+<p><strong>Q83.</strong> What is a tree object?</p>
+<p><strong>Answer:</strong> A directory listing pointing to blobs and subtrees</p>
+<p>Snapshot structure.</p>
+<p><strong>Q84.</strong> What is a ref?</p>
+<p><strong>Answer:</strong> A name pointing to a commit (branches, tags, HEAD)</p>
+<p>.git/refs.</p>
+<h3 id="02-interactive-rebase-history-rewriting"><a href="../level-3/02-interactive-rebase-history-rewriting/">02 · Interactive Rebase &amp; History Rewriting</a><a class="headerlink" href="#02-interactive-rebase-history-rewriting" title="Permanent link">&para;</a></h3>
+<p><strong>Q85.</strong> What does squashing with interactive rebase produce? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>one
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">echo</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>two
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nb">echo</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>three
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nv">GIT_SEQUENCE_EDITOR</span><span class="o">=</span><span class="s2">"sed -i.bak '2s/pick/squash/;3s/pick/squash/'"</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>-qi<span class="w"> </span>--root<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div>
+<p><strong>Answer:</strong> 1</p>
+<p>Three commits become one. Verified by running it with real git.</p>
+<p><strong>Q86.</strong> What does <code>git rebase -i HEAD~3</code> let you do?</p>
+<p><strong>Answer:</strong> Reorder, squash, edit, reword or drop the last three commits</p>
+<p>Rewrites history.</p>
+<p><strong>Q87.</strong> When is it safe to rewrite history?</p>
+<p><strong>Answer:</strong> On local unpublished commits</p>
+<p>Avoid public rewrites.</p>
+<p><strong>Q88.</strong> What does <code>fixup</code> do?</p>
+<p><strong>Answer:</strong> Melds a commit into the previous one discarding its message</p>
+<p>Cleaner history.</p>
+<h3 id="03-cherry-picking"><a href="../level-3/03-cherry-picking/">03 · Cherry-Picking</a><a class="headerlink" href="#03-cherry-picking" title="Permanent link">&para;</a></h3>
+<p><strong>Q89.</strong> What does cherry-pick do? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>base
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>other<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>b&gt;g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span><span class="s1">'add g'</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>git<span class="w"> </span>cherry-pick<span class="w"> </span>other<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span><span class="p">;</span><span class="w"> </span>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span>
+</code></pre></div>
+<p><strong>Answer:</strong> add g base f g</p>
+<p>Copies the commit onto the current branch. Verified by running it with real git.</p>
+<p><strong>Q90.</strong> When use cherry-pick?</p>
+<p><strong>Answer:</strong> To apply a specific fix to another branch, e.g. a release branch</p>
+<p>Backports.</p>
+<p><strong>Q91.</strong> What's the risk?</p>
+<p><strong>Answer:</strong> Duplicate commits with different hashes can cause confusing merges later</p>
+<p>Use sparingly.</p>
+<p><strong>Q92.</strong> What does <code>-x</code> add?</p>
+<p><strong>Answer:</strong> A note referencing the original commit</p>
+<p>Traceability.</p>
+<h3 id="04-github-actions-basics-a-simple-ci-workflow"><a href="../level-3/04-github-actions-basics/">04 · GitHub Actions Basics (a simple CI workflow)</a><a class="headerlink" href="#04-github-actions-basics-a-simple-ci-workflow" title="Permanent link">&para;</a></h3>
+<p><strong>Q93.</strong> What are GitHub Actions workflows?</p>
+<p><strong>Answer:</strong> YAML files in .github/workflows triggered by events</p>
+<p>CI/CD.</p>
+<p><strong>Q94.</strong> What do <code>on:</code> triggers define?</p>
+<p><strong>Answer:</strong> Which events start the workflow (push, pull_request, schedule...)</p>
+<p>Event-driven.</p>
+<p><strong>Q95.</strong> What's a runner?</p>
+<p><strong>Answer:</strong> The machine that executes jobs</p>
+<p>Hosted or self-hosted.</p>
+<p><strong>Q96.</strong> Why pin actions to a commit SHA?</p>
+<p><strong>Answer:</strong> Tags can be moved; a SHA is immutable (supply-chain safety)</p>
+<p>Security.</p>
+<h3 id="05-submodules"><a href="../level-3/05-submodules/">05 · Submodules</a><a class="headerlink" href="#05-submodules" title="Permanent link">&para;</a></h3>
+<p><strong>Q97.</strong> What is a submodule?</p>
+<p><strong>Answer:</strong> A repository embedded at a specific commit inside another</p>
+<p>Pinned dependency.</p>
+<p><strong>Q98.</strong> How do you clone including submodules?</p>
+<p><strong>Answer:</strong> git clone --recurse-submodules</p>
+<p>Or update --init.</p>
+<p><strong>Q99.</strong> What's a common pitfall?</p>
+<p><strong>Answer:</strong> Forgetting to commit/push the submodule pointer update</p>
+<p>Two-step changes.</p>
+<p><strong>Q100.</strong> What are alternatives?</p>
+<p><strong>Answer:</strong> Package managers or subtree</p>
+<p>Choose per case.</p>
+<h3 id="06-git-hooks"><a href="../level-3/06-git-hooks/">06 · Git Hooks</a><a class="headerlink" href="#06-git-hooks" title="Permanent link">&para;</a></h3>
+<p><strong>Q101.</strong> What does a pre-commit hook that fails do? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'#!/bin/sh\necho blocked; exit 1\n'</span><span class="w"> </span>&gt;<span class="w"> </span>.git/hooks/pre-commit<span class="p">;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>rev-list<span class="w"> </span>--all<span class="w"> </span>--count
+</code></pre></div>
+<p><strong>Answer:</strong> blocked
+0</p>
+<p>A non-zero exit aborts the commit. Verified by running it with real git.</p>
+<p><strong>Q102.</strong> Are hooks shared via clone?</p>
+<p><strong>Answer:</strong> No: .git/hooks isn't versioned; share them via tools like core.hooksPath or pre-commit</p>
+<p>Team setup.</p>
+<p><strong>Q103.</strong> What's a common pre-commit use?</p>
+<p><strong>Answer:</strong> Linting and formatting checks</p>
+<p>Fast feedback.</p>
+<p><strong>Q104.</strong> Which hook runs server-side?</p>
+<p><strong>Answer:</strong> pre-receive/update (on the remote)</p>
+<p>Policy enforcement.</p>
+<h3 id="07-git-bisect-debugging-history"><a href="../level-3/07-git-bisect-debugging-history/">07 · Git Bisect &amp; Debugging History</a><a class="headerlink" href="#07-git-bisect-debugging-history" title="Permanent link">&para;</a></h3>
+<p><strong>Q105.</strong> Commits c1 to c6 exist and the bug (file b) appeared in one of them. Which commit does bisect report as the first bad one? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;<span class="w"> </span>v<span class="p">;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-ge<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>bug<span class="w"> </span>&gt;<span class="w"> </span>b<span class="p">;</span><span class="w"> </span><span class="k">fi</span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>-A<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span><span class="s2">"c</span><span class="nv">$i</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>git<span class="w"> </span>bisect<span class="w"> </span>start<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>git<span class="w"> </span>bisect<span class="w"> </span>bad<span class="w"> </span>HEAD<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>HEAD~5<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>git<span class="w"> </span>bisect<span class="w"> </span>run<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'! test -f b'</span><span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span>-1<span class="w"> </span>refs/bisect/bad
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>git<span class="w"> </span>bisect<span class="w"> </span>reset<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+<p><strong>Answer:</strong> c4</p>
+<p>Binary search over history for the first bad commit (the test succeeds while file b is absent). Verified by running it with real git.</p>
+<p><strong>Q106.</strong> What does bisect need?</p>
+<p><strong>Answer:</strong> A known good commit and a known bad commit (and a test)</p>
+<p>Automate with run.</p>
+<p><strong>Q107.</strong> Complexity of bisect?</p>
+<p><strong>Answer:</strong> O(log n) steps</p>
+<p>Binary search.</p>
+<p><strong>Q108.</strong> What makes bisect effective?</p>
+<p><strong>Answer:</strong> Small commits that each build and test</p>
+<p>Hygiene.</p>
+<h3 id="08-reflog-recovering-lost-work"><a href="../level-3/08-reflog-recovering-lost-work/">08 · Reflog &amp; Recovering Lost Work</a><a class="headerlink" href="#08-reflog-recovering-lost-work" title="Permanent link">&para;</a></h3>
+<p><strong>Q109.</strong> How do you recover a commit after a hard reset? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>one
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>two
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>git<span class="w"> </span>reset<span class="w"> </span>-q<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>git<span class="w"> </span>reflog<span class="w"> </span>--format<span class="o">=</span>%gs<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d:<span class="w"> </span>-f1
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>git<span class="w"> </span>reset<span class="w"> </span>-q<span class="w"> </span>--hard<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1
+</code></pre></div>
+<p><strong>Answer:</strong> reset
+two</p>
+<p>The reflog records HEAD movements. Verified by running it with real git.</p>
+<p><strong>Q110.</strong> What does reflog record?</p>
+<p><strong>Answer:</strong> Where HEAD and branch tips pointed, locally, for about 90 days by default</p>
+<p>Local safety net.</p>
+<p><strong>Q111.</strong> Is a commit lost after reset --hard?</p>
+<p><strong>Answer:</strong> No: it remains in the object database and reflog until garbage collected</p>
+<p>Recoverable.</p>
+<p><strong>Q112.</strong> What shows dangling commits?</p>
+<p><strong>Answer:</strong> git fsck --lost-found</p>
+<p>Last resort.</p>
+<h3 id="09-github-secrets-environments"><a href="../level-3/09-github-secrets-environments/">09 · GitHub Secrets &amp; Environments</a><a class="headerlink" href="#09-github-secrets-environments" title="Permanent link">&para;</a></h3>
+<p><strong>Q113.</strong> Where should CI secrets be stored?</p>
+<p><strong>Answer:</strong> GitHub Actions secrets (repo/environment), never in the repo</p>
+<p>Masked in logs.</p>
+<p><strong>Q114.</strong> What do environments add?</p>
+<p><strong>Answer:</strong> Protection rules like required reviewers and environment-scoped secrets</p>
+<p>Deploy gates.</p>
+<p><strong>Q115.</strong> Why not print secrets in logs?</p>
+<p><strong>Answer:</strong> Masking can be bypassed and logs are widely visible</p>
+<p>Avoid echo.</p>
+<p><strong>Q116.</strong> What's OIDC for cloud deploys?</p>
+<p><strong>Answer:</strong> Short-lived tokens without storing long-lived cloud keys</p>
+<p>Keyless.</p>
+<h3 id="10-project-ci-pipeline-for-a-real-project"><a href="../level-3/10-project-ci-pipeline/">10 · Project — CI Pipeline for a Real Project</a><a class="headerlink" href="#10-project-ci-pipeline-for-a-real-project" title="Permanent link">&para;</a></h3>
+<p><strong>Q117.</strong> What does the CI pipeline project do?</p>
+<p><strong>Answer:</strong> Builds, tests and gates merges with GitHub Actions</p>
+<p>Level 3 project.</p>
+<p><strong>Q118.</strong> How cache dependencies?</p>
+<p><strong>Answer:</strong> actions/cache or setup-* cache options keyed on lockfiles</p>
+<p>Speed.</p>
+<p><strong>Q119.</strong> What status check blocks merge?</p>
+<p><strong>Answer:</strong> A required workflow job passing</p>
+<p>Branch protection.</p>
+<p><strong>Q120.</strong> How do you debug a failing workflow?</p>
+<p><strong>Answer:</strong> Read logs, rerun with debug logging and reproduce locally (act)</p>
+<p>Iterate.</p>
+<h2 id="level-4-master">Level 4 · Master<a class="headerlink" href="#level-4-master" title="Permanent link">&para;</a></h2>
+<h3 id="01-advanced-github-actions-matrix-caching-reusable-workflows"><a href="../level-4/01-advanced-github-actions/">01 · Advanced GitHub Actions (matrix, caching, reusable workflows)</a><a class="headerlink" href="#01-advanced-github-actions-matrix-caching-reusable-workflows" title="Permanent link">&para;</a></h3>
+<p><strong>Q121.</strong> What do reusable workflows do?</p>
+<p><strong>Answer:</strong> Share a workflow across repos via workflow_call</p>
+<p>DRY CI.</p>
+<p><strong>Q122.</strong> What are matrix builds?</p>
+<p><strong>Answer:</strong> Running a job across combinations like OS and versions</p>
+<p>Coverage.</p>
+<p><strong>Q123.</strong> What do concurrency groups do?</p>
+<p><strong>Answer:</strong> Cancel or queue overlapping runs</p>
+<p>Avoid wasted/conflicting runs.</p>
+<p><strong>Q124.</strong> Why least-privilege GITHUB_TOKEN permissions?</p>
+<p><strong>Answer:</strong> Limit damage if a workflow is compromised</p>
+<p>permissions: contents: read.</p>
+<h3 id="02-monorepo-strategies"><a href="../level-4/02-monorepo-strategies/">02 · Monorepo Strategies</a><a class="headerlink" href="#02-monorepo-strategies" title="Permanent link">&para;</a></h3>
+<p><strong>Q125.</strong> What is a monorepo trade-off?</p>
+<p><strong>Answer:</strong> Atomic cross-project changes and shared tooling versus scale and CI complexity</p>
+<p>Choose deliberately.</p>
+<p><strong>Q126.</strong> How avoid running all CI for every change?</p>
+<p><strong>Answer:</strong> Path filters and affected-project detection</p>
+<p>Efficiency.</p>
+<p><strong>Q127.</strong> What helps ownership in a monorepo?</p>
+<p><strong>Answer:</strong> CODEOWNERS files</p>
+<p>Review routing.</p>
+<p><strong>Q128.</strong> What tools help?</p>
+<p><strong>Answer:</strong> Bazel/Nx/Turborepo for build graphs and caching</p>
+<p>At scale.</p>
+<h3 id="03-git-workflow-strategies-gitflow-trunk-based"><a href="../level-4/03-git-workflow-strategies/">03 · Git Workflow Strategies (GitFlow, Trunk-Based)</a><a class="headerlink" href="#03-git-workflow-strategies-gitflow-trunk-based" title="Permanent link">&para;</a></h3>
+<p><strong>Q129.</strong> What's trunk-based development?</p>
+<p><strong>Answer:</strong> Short-lived branches merged to main frequently, with feature flags</p>
+<p>Continuous integration.</p>
+<p><strong>Q130.</strong> What's GitFlow suited to?</p>
+<p><strong>Answer:</strong> Versioned releases with long support windows</p>
+<p>Heavier.</p>
+<p><strong>Q131.</strong> What's GitHub Flow?</p>
+<p><strong>Answer:</strong> Branch from main, PR, review, merge and deploy</p>
+<p>Simple.</p>
+<p><strong>Q132.</strong> How choose a workflow?</p>
+<p><strong>Answer:</strong> Match release cadence, team size and risk tolerance</p>
+<p>Fit.</p>
+<h3 id="04-large-repo-performance-sparse-checkout-partial-clone"><a href="../level-4/04-large-repo-performance/">04 · Large Repo Performance (sparse checkout, partial clone)</a><a class="headerlink" href="#04-large-repo-performance-sparse-checkout-partial-clone" title="Permanent link">&para;</a></h3>
+<p><strong>Q133.</strong> Why are big repos slow?</p>
+<p><strong>Answer:</strong> Large history and many files make clone/status heavy</p>
+<p>Mitigate.</p>
+<p><strong>Q134.</strong> What does a shallow clone do?</p>
+<p><strong>Answer:</strong> Fetches limited history (--depth)</p>
+<p>Faster CI.</p>
+<p><strong>Q135.</strong> What does sparse-checkout do?</p>
+<p><strong>Answer:</strong> Checks out only selected directories</p>
+<p>Large monorepos.</p>
+<p><strong>Q136.</strong> What's partial clone?</p>
+<p><strong>Answer:</strong> Fetches blobs on demand (--filter=blob:none)</p>
+<p>Saves bandwidth.</p>
+<h3 id="05-designing-a-team-gitgithub-workflow"><a href="../level-4/05-designing-team-workflow/">05 · Designing a Team Git/GitHub Workflow</a><a class="headerlink" href="#05-designing-a-team-gitgithub-workflow" title="Permanent link">&para;</a></h3>
+<p><strong>Q137.</strong> What should a team workflow doc define?</p>
+<p><strong>Answer:</strong> Branching, review rules, CI gates, release process and ownership</p>
+<p>Shared expectations.</p>
+<p><strong>Q138.</strong> How reduce review bottlenecks?</p>
+<p><strong>Answer:</strong> Small PRs, CODEOWNERS and clear SLAs</p>
+<p>Flow.</p>
+<p><strong>Q139.</strong> How measure workflow health?</p>
+<p><strong>Answer:</strong> PR cycle time, review time and failure rate</p>
+<p>Metrics.</p>
+<p><strong>Q140.</strong> What's a good merge policy?</p>
+<p><strong>Answer:</strong> Consistent (e.g. squash) with protected main</p>
+<p>Predictability.</p>
+<h3 id="06-github-apps-automation"><a href="../level-4/06-github-apps-automation/">06 · GitHub Apps &amp; Automation</a><a class="headerlink" href="#06-github-apps-automation" title="Permanent link">&para;</a></h3>
+<p><strong>Q141.</strong> What can GitHub Apps do?</p>
+<p><strong>Answer:</strong> Act as an app with fine-grained permissions and webhooks</p>
+<p>Better than PATs.</p>
+<p><strong>Q142.</strong> Why prefer Apps over personal tokens?</p>
+<p><strong>Answer:</strong> Scoped permissions, installable per repo and not tied to a person</p>
+<p>Security.</p>
+<p><strong>Q143.</strong> What's a webhook?</p>
+<p><strong>Answer:</strong> An HTTP callback GitHub sends on events</p>
+<p>Automation.</p>
+<p><strong>Q144.</strong> What do Probot-style bots automate?</p>
+<p><strong>Answer:</strong> Labeling, triage and policy checks</p>
+<p>Workflow help.</p>
+<h3 id="07-release-engineering-versioning-strategy"><a href="../level-4/07-release-engineering-versioning/">07 · Release Engineering &amp; Versioning Strategy</a><a class="headerlink" href="#07-release-engineering-versioning-strategy" title="Permanent link">&para;</a></h3>
+<p><strong>Q145.</strong> What does semantic-release or release-please do?</p>
+<p><strong>Answer:</strong> Automate versioning and changelogs from conventional commits</p>
+<p>Release engineering.</p>
+<p><strong>Q146.</strong> What's a conventional commit?</p>
+<p><strong>Answer:</strong> A structured message like feat:, fix: enabling automation</p>
+<p>Parseable.</p>
+<p><strong>Q147.</strong> What's a release branch for?</p>
+<p><strong>Answer:</strong> Stabilizing and patching a version while main moves on</p>
+<p>Backports.</p>
+<p><strong>Q148.</strong> Why sign tags/commits?</p>
+<p><strong>Answer:</strong> Verify authenticity of releases</p>
+<p>Supply chain.</p>
+<h3 id="08-security-hardening-codeowners-signed-commits-sast"><a href="../level-4/08-security-hardening/">08 · Security Hardening (CODEOWNERS, signed commits, SAST)</a><a class="headerlink" href="#08-security-hardening-codeowners-signed-commits-sast" title="Permanent link">&para;</a></h3>
+<p><strong>Q149.</strong> What hardens a GitHub org?</p>
+<p><strong>Answer:</strong> 2FA/SSO, least privilege, branch protection and secret scanning</p>
+<p>Defense.</p>
+<p><strong>Q150.</strong> What does secret scanning do?</p>
+<p><strong>Answer:</strong> Detects committed credentials and can block pushes</p>
+<p>Push protection.</p>
+<p><strong>Q151.</strong> What does Dependabot do?</p>
+<p><strong>Answer:</strong> Opens PRs to update vulnerable or outdated dependencies</p>
+<p>Supply chain.</p>
+<p><strong>Q152.</strong> What does CodeQL provide?</p>
+<p><strong>Answer:</strong> Static analysis to find vulnerabilities in code</p>
+<p>Code scanning.</p>
+<h3 id="09-self-hosted-runners-enterprise-github"><a href="../level-4/09-self-hosted-runners-enterprise/">09 · Self-Hosted Runners &amp; Enterprise GitHub</a><a class="headerlink" href="#09-self-hosted-runners-enterprise-github" title="Permanent link">&para;</a></h3>
+<p><strong>Q153.</strong> Why self-hosted runners?</p>
+<p><strong>Answer:</strong> Special hardware, private network access or cost at scale</p>
+<p>You maintain them.</p>
+<p><strong>Q154.</strong> What's the security risk?</p>
+<p><strong>Answer:</strong> Running untrusted PR code on persistent machines</p>
+<p>Use ephemeral runners.</p>
+<p><strong>Q155.</strong> How scale runners?</p>
+<p><strong>Answer:</strong> Autoscaling ephemeral runners (e.g. Kubernetes controller)</p>
+<p>Clean per job.</p>
+<p><strong>Q156.</strong> What isolates jobs best?</p>
+<p><strong>Answer:</strong> Ephemeral containers/VMs destroyed after each job</p>
+<p>No leftovers.</p>
+<h3 id="10-capstone-project"><a href="../level-4/10-capstone-project/">10 · Capstone Project</a><a class="headerlink" href="#10-capstone-project" title="Permanent link">&para;</a></h3>
+<p><strong>Q157.</strong> What does the capstone combine?</p>
+<p><strong>Answer:</strong> Workflow design, CI/CD, security hardening and release automation on GitHub</p>
+<p>Team-grade repo.</p>
+<p><strong>Q158.</strong> How prove it's production-ready?</p>
+<p><strong>Answer:</strong> Protected branches, required checks, secret scanning and a tested release</p>
+<p>Evidence.</p>
+<p><strong>Q159.</strong> What documentation helps contributors?</p>
+<p><strong>Answer:</strong> README, CONTRIBUTING, CODEOWNERS and templates</p>
+<p>Onboarding.</p>
+<p><strong>Q160.</strong> What sustains the repo?</p>
+<p><strong>Answer:</strong> Automation, dependency updates and clear ownership</p>
+<p>Maintenance.</p>
+<h2 id="mixed-questions-across-all-levels">Mixed questions across all levels<a class="headerlink" href="#mixed-questions-across-all-levels" title="Permanent link">&para;</a></h2>
+<p><strong>Q161.</strong> What distinguishes Git from GitHub?</p>
+<p><strong>Answer:</strong> Git is the distributed version control tool; GitHub hosts repositories and adds collaboration features</p>
+<p>Git works fully offline.</p>
+<p><strong>Q162.</strong> What does git status --short show? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">echo</span><span class="w"> </span>hi<span class="w"> </span>&gt;<span class="w"> </span>a.txt
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>git<span class="w"> </span>add<span class="w"> </span>a.txt
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nb">echo</span><span class="w"> </span>more<span class="w"> </span>&gt;<span class="w"> </span>b.txt
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>git<span class="w"> </span>status<span class="w"> </span>--short
+</code></pre></div>
+<p><strong>Answer:</strong> A  a.txt
+?? b.txt</p>
+<p>A = staged new file; ?? = untracked. Verified by running it with real git.</p>
+<p><strong>Q163.</strong> After this, which commit does main point to and what does feature have? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c1
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>feature
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>c2
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>paste<span class="w"> </span>-sd<span class="s1">' '</span><span class="w"> </span>-<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>feature<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>paste<span class="w"> </span>-sd<span class="s1">' '</span><span class="w"> </span>-
+</code></pre></div>
+<p><strong>Answer:</strong> c1
+c2 c1</p>
+<p>A branch is just a pointer; main still points at c1. Verified by running it with real git.</p>
+<p><strong>Q164.</strong> How many parents does the commit made by <code>git merge --no-ff</code> have? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c1
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>feat
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>c2
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>git<span class="w"> </span>merge<span class="w"> </span>-q<span class="w"> </span>--no-ff<span class="w"> </span>feat<span class="w"> </span>-m<span class="w"> </span><span class="s1">'merge feat'</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>git<span class="w"> </span>cat-file<span class="w"> </span>-p<span class="w"> </span>HEAD<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s1">'^parent'</span>
+</code></pre></div>
+<p><strong>Answer:</strong> 2</p>
+<p>Even when fast-forward is possible, --no-ff creates a merge commit with two parents. Verified by running it with real git.</p>
+<p><strong>Q165.</strong> What does the conflicted file contain? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'base\n'</span>&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>base
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>a<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>A&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>a
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>b<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>B&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>b
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>git<span class="w"> </span>merge<span class="w"> </span>a<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>cat<span class="w"> </span>f
+</code></pre></div>
+<p><strong>Answer:</strong> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+B
+=======
+A
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; a</p>
+<p>The current branch (HEAD) comes first, the incoming branch last. Verified by running it with real git.</p>
+<p><strong>Q166.</strong> What does the history look like after rebasing feat onto main? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">echo</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>base
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>feat<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>f&gt;g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>feat
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>m&gt;h<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>h<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>main2
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>feat<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span>
+</code></pre></div>
+<p><strong>Answer:</strong> feat main2 base</p>
+<p>Rebase replays feat's commits on top of main, producing linear history. Verified by running it with real git.</p>
+<p><strong>Q167.</strong> Which commit does cherry-pick copy? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>base
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>git<span class="w"> </span>switch<span class="w"> </span>-qc<span class="w"> </span>other<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>b&gt;g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>g<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span><span class="s1">'add g'</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-q<span class="w"> </span>main
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>git<span class="w"> </span>cherry-pick<span class="w"> </span>other<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">'\n'</span><span class="w"> </span><span class="s1">' '</span>
+</code></pre></div>
+<p><strong>Answer:</strong> add g base</p>
+<p>Cherry-pick applies that commit's change as a new commit on the current branch. Verified by running it with real git.</p>
+<p><strong>Q168.</strong> How do you get a commit back after <code>git reset --hard HEAD~1</code>? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>one
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nb">echo</span><span class="w"> </span>b&gt;&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qam<span class="w"> </span>two
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>git<span class="w"> </span>reset<span class="w"> </span>-q<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>git<span class="w"> </span>reset<span class="w"> </span>-q<span class="w"> </span>--hard<span class="w"> </span>HEAD@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1
+</code></pre></div>
+<p><strong>Answer:</strong> two</p>
+<p>The reflog records where HEAD pointed, so the commit is still reachable. Verified by running it with real git.</p>
+<p><strong>Q169.</strong> What happens to a commit when a pre-commit hook exits non-zero? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">echo</span><span class="w"> </span>a&gt;f<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>f
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'#!/bin/sh\necho blocked; exit 1\n'</span><span class="w"> </span>&gt;<span class="w"> </span>.git/hooks/pre-commit<span class="p">;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span>c<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>rev-list<span class="w"> </span>--all<span class="w"> </span>--count
+</code></pre></div>
+<p><strong>Answer:</strong> blocked
+0</p>
+<p>A failing hook aborts the commit. Verified by running it with real git.</p>
+<p><strong>Q170.</strong> Which commit does bisect report as the first bad one? (in a new empty repository, identity configured, default branch main)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>&gt;<span class="w"> </span>v<span class="p">;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-ge<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>bug<span class="w"> </span>&gt;<span class="w"> </span>b<span class="p">;</span><span class="w"> </span><span class="k">fi</span><span class="p">;</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>-A<span class="p">;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-qm<span class="w"> </span><span class="s2">"c</span><span class="nv">$i</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>git<span class="w"> </span>bisect<span class="w"> </span>start<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>git<span class="w"> </span>bisect<span class="w"> </span>bad<span class="w"> </span>HEAD<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>HEAD~5<span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>git<span class="w"> </span>bisect<span class="w"> </span>run<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'! test -f b'</span><span class="w"> </span>&gt;/dev/null
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span>%s<span class="w"> </span>-1<span class="w"> </span>refs/bisect/bad
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>git<span class="w"> </span>bisect<span class="w"> </span>reset<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+<p><strong>Answer:</strong> c4</p>
+<p>Binary search over history, O(log n). Verified by running it with real git.</p>
+<p><strong>Q171.</strong> <code>git push</code> is rejected because the remote has new commits. What do you do?</p>
+<p><strong>Answer:</strong> Fetch and integrate (merge or rebase) the remote changes, then push</p>
+<p>Never force-push shared branches casually.</p>
+<p><strong>Q172.</strong> You rebased a branch you already pushed. What push do you need?</p>
+<p><strong>Answer:</strong> A force push, preferably --force-with-lease, and only on your own branch</p>
+<p>History was rewritten.</p>
+<p><strong>Q173.</strong> A committed .env file leaked a key. What must you do besides deleting the file?</p>
+<p><strong>Answer:</strong> Revoke/rotate the key; Git history still contains it</p>
+<p>Treat it as compromised.</p>
+<p><strong>Q174.</strong> Main must never receive unreviewed or failing code. What do you configure?</p>
+<p><strong>Answer:</strong> Branch protection: required reviews, required status checks and no direct pushes</p>
+<p>Server-side enforcement.</p>
+<p><strong>Q175.</strong> A workflow deploys from forks' PRs with secrets and an attacker steals them. What went wrong?</p>
+<p><strong>Answer:</strong> Secrets were exposed to untrusted code (pull_request_target/misconfig); restrict secrets and permissions</p>
+<p>Least privilege for tokens.</p>
+<p><strong>Q176.</strong> Why pin third-party actions to a commit SHA?</p>
+<p><strong>Answer:</strong> Tags can be moved to malicious code; a SHA is immutable</p>
+<p>Supply-chain safety.</p>
+<p><strong>Q177.</strong> A monorepo's CI runs everything for every change. What helps?</p>
+<p><strong>Answer:</strong> Path filters/affected-project detection and caching</p>
+<p>Scale CI.</p>
+<p><strong>Q178.</strong> An old release needs a security fix while main has moved on. What do you do?</p>
+<p><strong>Answer:</strong> Fix on a release branch (or cherry-pick the fix), tag a patch release</p>
+<p>Backport.</p>
+<h2 id="practical-coding-questions">Practical coding questions<a class="headerlink" href="#practical-coding-questions" title="Permanent link">&para;</a></h2>
+<h3 id="resolve-a-merge-conflict">Resolve a merge conflict<a class="headerlink" href="#resolve-a-merge-conflict" title="Permanent link">&para;</a></h3>
+<p>Two branches changed the same line of doc.txt. Merge them, detect the conflict, resolve it by keeping the 'Release' wording plus the author line, finish the merge commit, and report the merge parents, history and file content.</p>
+<p>Starter code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>git init -q -b main demo &amp;&amp; cd demo
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>git config user.name "Dev" &amp;&amp; git config user.email "dev@example.com"
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>printf 'title: Draft\nauthor: Ada\n' &gt; doc.txt
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>git add doc.txt &amp;&amp; git commit -qm "base"
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>git switch -qc editor-a
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>sed -i.bak 's/Draft/Final/' doc.txt &amp;&amp; rm doc.txt.bak
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>git commit -qam "retitle"
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>git switch -q main &amp;&amp; git switch -qc editor-b
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>sed -i.bak 's/Draft/Release/' doc.txt &amp;&amp; rm doc.txt.bak
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>git commit -qam "rename to release"
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a># merge editor-a into editor-b: both changed line 1
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>git merge editor-a &gt;/dev/null 2&gt;&amp;1 || echo "conflict detected: $(git diff --name-only --diff-filter=U)"
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a># resolve: write doc.txt so it keeps the 'Release' wording and the author line, then stage and commit
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a># (finish the merge with the message "merge editor-a, keep Release")
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>echo "merge parents: $(git cat-file -p HEAD | grep -c '^parent')"
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a>echo "history: $(git log --format=%s --no-merges | tr '\n' ',' | sed 's/,$//')"
+<a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a>cat doc.txt
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>conflict detected: doc.txt
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>merge parents: 2
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>history: rename to release,retitle,base
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>title: Release
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>author: Ada
+</code></pre></div>
+<p>??? success "Show a solution"</p>
+<div class="highlight"><pre><span></span><code>```
+git init -q -b main demo &amp;&amp; cd demo
+git config user.name "Dev" &amp;&amp; git config user.email "dev@example.com"
+printf 'title: Draft\nauthor: Ada\n' &gt; doc.txt
+git add doc.txt &amp;&amp; git commit -qm "base"
+
+git switch -qc editor-a
+sed -i.bak 's/Draft/Final/' doc.txt &amp;&amp; rm doc.txt.bak
+git commit -qam "retitle"
+
+git switch -q main &amp;&amp; git switch -qc editor-b
+sed -i.bak 's/Draft/Release/' doc.txt &amp;&amp; rm doc.txt.bak
+git commit -qam "rename to release"
+
+# merge editor-a into editor-b: both changed line 1
+git merge editor-a &gt;/dev/null 2&gt;&amp;1 || echo "conflict detected: $(git diff --name-only --diff-filter=U)"
+# resolve: keep the 'Release' wording from this branch, add the author line unchanged
+printf 'title: Release\nauthor: Ada\n' &gt; doc.txt
+git add doc.txt
+git commit -qm "merge editor-a, keep Release"
+
+echo "merge parents: $(git cat-file -p HEAD | grep -c '^parent')"
+echo "history: $(git log --format=%s --no-merges | tr '\n' ',' | sed 's/,$//')"
+cat doc.txt
+```
+
+A conflict means both sides changed the same lines; you edit the file to the intended result, git add it and commit. The resulting merge commit has two parents and both branches' commits stay in the history. Verified by running the solution with real git.
+</code></pre></div>
+<h3 id="cherry-pick-a-bad-reset-and-reflog-recovery">Cherry-pick, a bad reset and reflog recovery<a class="headerlink" href="#cherry-pick-a-bad-reset-and-reflog-recovery" title="Permanent link">&para;</a></h3>
+<p>Bring a hotfix onto main with cherry-pick, then simulate an accidental <code>git reset --hard HEAD~2</code> and recover the lost commits using the reflog.</p>
+<p>Starter code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>git init -q -b main demo &amp;&amp; cd demo
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>git config user.name "Dev" &amp;&amp; git config user.email "dev@example.com"
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>for n in 1 2 3; do echo "line $n" &gt;&gt; notes.txt; git add notes.txt; git commit -qm "step $n"; done
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>git switch -qc hotfix
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>echo "fix" &gt; fix.txt; git add fix.txt; git commit -qm "hotfix: patch"
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>git switch -q main
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a># 1) bring just the hotfix commit onto main without merging the whole branch (cherry-pick)
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>echo "after cherry-pick: $(git log --format=%s | tr '\n' ',' | sed 's/,$//')"
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a># 2) an accidental hard reset destroys the last two commits...
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>git reset -q --hard HEAD~2
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>echo "after reset:       $(git log --format=%s | tr '\n' ',' | sed 's/,$//')"
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>
+<a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a># 3) ...but the reflog still has them: restore main to where it was before the reset
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>echo "after recovery:    $(git log --format=%s | tr '\n' ',' | sed 's/,$//')"
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>after cherry-pick: hotfix: patch,step 3,step 2,step 1
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>after reset:       step 2,step 1
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>after recovery:    hotfix: patch,step 3,step 2,step 1
+</code></pre></div>
+<p>??? success "Show a solution"</p>
+<div class="highlight"><pre><span></span><code>```
+git init -q -b main demo &amp;&amp; cd demo
+git config user.name "Dev" &amp;&amp; git config user.email "dev@example.com"
+for n in 1 2 3; do echo "line $n" &gt;&gt; notes.txt; git add notes.txt; git commit -qm "step $n"; done
+git switch -qc hotfix
+echo "fix" &gt; fix.txt; git add fix.txt; git commit -qm "hotfix: patch"
+git switch -q main
+
+# 1) bring just the hotfix onto main without merging the whole branch
+git cherry-pick hotfix &gt;/dev/null
+echo "after cherry-pick: $(git log --format=%s | tr '\n' ',' | sed 's/,$//')"
+
+# 2) an accidental hard reset destroys the last two commits...
+git reset -q --hard HEAD~2
+echo "after reset:       $(git log --format=%s | tr '\n' ',' | sed 's/,$//')"
+
+# 3) ...but the reflog still has them: restore main to where it was before the reset
+git reset -q --hard "HEAD@{1}"
+echo "after recovery:    $(git log --format=%s | tr '\n' ',' | sed 's/,$//')"
+```
+
+Cherry-pick copies one commit's change onto the current branch; a hard reset only moves the branch pointer, so the reflog (HEAD@{1}) still lets you get back to the previous tip. Verified by running the solution with real git.
+</code></pre></div>
+<hr />
+<p>More free practice: the <a href="../">GitHub &amp; Git Mastery Path</a> curriculum, the <a href="https://learnmasterypath.com/interview-pack/">Interview Prep Pack</a> and the <a href="https://learnmasterypath.com/resume/">free resume ATS check</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+  <nav class="mp-related" aria-label="Related free courses">
+    <h2>Related free courses</h2>
+    <ul>
+      <li><a href="https://learnmasterypath.com/server-ops-mastery-path/">Server Ops</a></li><li><a href="https://learnmasterypath.com/linux-mastery-path/">Linux</a></li><li><a href="https://learnmasterypath.com/nodemcu-mastery-path/">NodeMCU/IoT</a></li><li><a href="https://learnmasterypath.com/terraform-mastery-path/">Terraform</a></li><li><a href="https://learnmasterypath.com/kubernetes-mastery-path/">Kubernetes</a></li>
+      <li><a href="https://learnmasterypath.com/">All 100+ courses &rarr;</a></li>
+    </ul>
+  </nav>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../cheat-sheet/" class="md-footer__link md-footer__link--next" aria-label="Next: Cheat Sheet">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cheat Sheet
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="mp-foot">
+    <div class="mp-foot-inner">
+      <a class="mp-foot-brand" href="https://learnmasterypath.com/"><svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg><span>Mastery Path</span></a>
+      <nav class="mp-sitelinks" aria-label="Site and legal links">
+        <a href="https://learnmasterypath.com/">All courses</a>
+        <a href="https://learnmasterypath.com/about.html">About</a>
+        <a href="https://learnmasterypath.com/contact.html">Contact</a>
+        <a href="https://learnmasterypath.com/github-mastery-path/privacy/">Privacy Policy</a>
+        <a href="https://learnmasterypath.com/terms.html">Terms</a>
+        <a href="https://learnmasterypath.com/github-mastery-path/license/">License</a>
+        <a href="https://learnmasterypath.com/verify/">Verify a certificate</a>
+      </nav>
+    </div>
+    <p class="mp-license-note">
+      © 2026 Vinod Kumar Sigilipelli · Except where otherwise noted, lesson content is licensed under
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> and code examples under the
+      <a href="https://opensource.org/license/mit">MIT License</a>.
+    </p>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../javascripts/progress-tracker.js"></script>
+      
+        <script src="../javascripts/final-quiz.js"></script>
+      
+    
+  </body>
+</html>
